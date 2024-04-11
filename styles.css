@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+}
+
+#maxwell {
+    width: 500px;
+    position: relative;
+    left: 20px;
+}
+
+.gear {
+    position: absolute;
+}
+
+#sword {
+    width: 200px;
+    position: absolute;
+    left: 120px;
+}
+
+#armor {
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+#background {
+    position: fixed; /* Fixed position */
+    top: 0; /* Position the background at the top */
+    left: 0; /* Position the background at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Place it behind other elements */
+    background-image: url('./Image-Library/spawn.jpg'); /* The background image */
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+}
