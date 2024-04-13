@@ -12,7 +12,6 @@
     <!-- MUSIC -->
     <audio autoplay loop id="music">
         <source src="./Music-Library/menuTheme.mp3">
-        Your browser does not support the audio element.
     </audio>
 
     <div id="containerMenu">
@@ -6927,6 +6926,10 @@
     // BACKGROUND MUSIC VOLUME
     const audio = document.getElementById('music');
     audio.volume = 0.005;
+    window.addEventListener('click', () => {
+        audio.play();
+    })
+    
 
     // BACKGROUND CHANGING
     const imageList = {
