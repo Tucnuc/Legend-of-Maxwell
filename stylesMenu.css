@@ -4,10 +4,13 @@ body {
 }
 
 #containerMenu {
-    height: 100vh;
+    margin-top: 104px;
+    height: calc(100vh - 104px);
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
@@ -17,6 +20,22 @@ body {
     src: url('./Font-Library/heading.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./Font-Library/Montserrat.ttf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ANIMATIONS */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(+10deg); }
+    100% { transform: rotate(0deg); }
 }
 
 
@@ -54,11 +73,23 @@ body {
 .menuSelection {
     --heightMenu: 127px;
     --heightAdd: 104px;
-    color: ivory;
     left: 50%;
     transform: translate(-50%, -50%);
     top: var(--heightMenu);
+    font-family: Montserrat;
+    font-size: x-large;
 }
+
+a {
+    cursor: pointer;
+    transition: background-image 500ms;
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 100% 0;
+}
+
 
 #menuDiv .menuSelection:nth-child(2) {
     top: calc(var(--heightMenu) + calc(var(--heightAdd) * 1));
@@ -78,10 +109,11 @@ body {
     align-items: center;
     margin-right: 1rem;
     width: 100%;
+    animation: rotate 5s infinite;
 }
 
 #maxwell {
-    width: 500px;
+    width: 600px;
     position: relative;
 }
 
@@ -90,17 +122,17 @@ body {
 }
 
 #sword {
-    width: 200px;
+    width: 250px;
     position: absolute;
-    right: 103px;
-    top: 10px;
+    right: 120px;
+    top: 5px;
 }
 
 #armor {
-    width: 250px;
+    width: 300px;
     position: absolute;
     bottom: 8px;
-    right: 3px;
+    right: 2px;
 }
 
 
@@ -123,6 +155,7 @@ body {
     background-image: linear-gradient(0deg, #A5734A, #EDD4AE);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: default;
 }
 
 .header .top {
