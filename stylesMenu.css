@@ -45,7 +45,6 @@ body {
         transform: translateY(0%);
     }
 }
-
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -54,7 +53,6 @@ body {
         opacity: 1;
     }
 }
-
 @keyframes fade-out {
     0% {
         opacity: 1;
@@ -64,6 +62,22 @@ body {
     }
 }
 
+@keyframes turnON {
+    0% {
+        transform: translate(0px);
+    }
+    100% {
+        transform: translate(47.2px);
+    }
+}
+@keyframes turnOFF {
+    0% {
+        transform: translate(0px);
+    }
+    100% {
+        transform: translate(-47.2px);
+    }
+}
 
 /* BACKGROUND */
 .backgroundMenu {
@@ -218,4 +232,27 @@ a:hover {
 
 #openableMenu svg[close] {
     animation: fade-out 500ms forwards;
+}
+
+
+#OFF {
+    cursor: pointer;
+    position: relative;
+}
+
+#OFF2 {
+    display: none;
+    position: relative;
+}
+#OFF2[turningOFF] {
+  animation: turnOFF 500ms forwards;
+}
+
+#ON {
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+#ON[turningON] {
+    animation: turnON 500ms forwards;
 }
