@@ -18,6 +18,7 @@
 
         <!-- BACKGROUND DIV -->
         <div class="backgroundMenu" id="plains"></div>
+        <div id="backgroundBlur"></div>
 
         <!-- HEADER -->
         <div class="header">
@@ -6934,6 +6935,7 @@
     const modBtn = document.getElementById('selection4');
 
     const openableMenu = document.getElementById('openMenu');
+    const backgroundBlur = document.getElementById('backgroundBlur');
     const body = document.body;
 
     const special1 = document.getElementById('skupina1');
@@ -6944,6 +6946,8 @@
 
     function openMenu() {
         openableMenu.setAttribute('open', "");
+        backgroundBlur.style.display = 'block';
+        backgroundBlur.setAttribute('open', "");
         openableMenu.style.display = 'block';
         openableMenu.classList.add('closableMenu')
         body.style.overflow = 'hidden';
@@ -6955,10 +6959,14 @@
         let windowClickHandler = () => {
             if (openableMenu.classList.contains('closableMenu')) {
                 openableMenu.removeAttribute('open')
+                backgroundBlur.removeAttribute('open')
                 openableMenu.setAttribute('close', "")
+                backgroundBlur.setAttribute('close', "")
 
                 let animationEndHandler = () => {
                     openableMenu.removeAttribute('close')
+                    backgroundBlur.removeAttribute('close')
+                    backgroundBlur.style.display = 'none';
                     openableMenu.style.display = 'none';
                     openableMenu.classList.remove('closableMenu')
                     openableMenu.removeEventListener('animationend', animationEndHandler)
@@ -6977,6 +6985,8 @@
         const offBtn2 = document.getElementById('OFF2');
 
         openableMenu.setAttribute('open', "");
+        backgroundBlur.style.display = 'block';
+        backgroundBlur.setAttribute('open', "");
         openableMenu.style.display = 'block';
         openableMenu.classList.add('closableMenu')
         body.style.overflow = 'hidden';
@@ -7014,10 +7024,14 @@
         let windowClickHandler = (event) => {
             if (openableMenu.classList.contains('closableMenu')) {
                 openableMenu.removeAttribute('open')
+                backgroundBlur.removeAttribute('open')
                 openableMenu.setAttribute('close', "")
+                backgroundBlur.setAttribute('close', "")
 
                 let animationEndHandler = () => {
                     openableMenu.removeAttribute('close')
+                    backgroundBlur.removeAttribute('close')
+                    backgroundBlur.style.display = 'none';
                     openableMenu.style.display = 'none';
                     openableMenu.classList.remove('closableMenu')
                     openableMenu.removeEventListener('animationend', animationEndHandler)

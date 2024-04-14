@@ -61,6 +61,22 @@ body {
         opacity: 0;
     }
 }
+@keyframes fade-in2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+@keyframes fade-out2 {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 @keyframes turnON {
     0% {
@@ -232,6 +248,23 @@ a:hover {
 
 #openableMenu svg[close] {
     animation: fade-out 500ms forwards;
+}
+
+#backgroundBlur {
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    position: fixed;
+    margin-bottom: 104px;
+    display: none;
+    background-color: black;
+    opacity: 0;
+}
+#backgroundBlur[open] {
+    animation: fade-in2 300ms forwards;
+}
+#backgroundBlur[close] {
+    animation: fade-out2 300ms forwards;
 }
 
 
