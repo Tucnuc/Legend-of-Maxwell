@@ -6923,9 +6923,9 @@
     </div>
 <script>
 
-    // BACKGROUND MUSIC VOLUME
+    // BACKGROUND MUSIC
     const audio = document.getElementById('music');
-    // audio.volume = 0.002;
+    audio.volume = 0.3;
     window.addEventListener('click', () => {
         audio.play();
     })
@@ -6958,12 +6958,17 @@
     }, 5000)
 
 
-    // BUTTONS SOUND EFFECT
+    // BUTTONS SOUND EFFECTS
     const buttons = document.querySelectorAll('.button')
     buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            let buttonHover = new Audio('./Music-Library/buttonHover.wav');
+            buttonHover.volume = 1;
+            buttonHover.play()
+        });
         button.addEventListener('click', () => {
             let buttonSound = new Audio('./Music-Library/button.wav');
-            // buttonSound.volume = 0.01;
+            buttonSound.volume = 0.5;
             buttonSound.play();
         });
     });
