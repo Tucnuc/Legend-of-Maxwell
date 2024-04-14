@@ -9,8 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 
@@ -36,6 +35,33 @@ body {
     50% { transform: rotate(0deg); }
     75% { transform: rotate(+10deg); }
     100% { transform: rotate(0deg); }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -82,12 +108,14 @@ body {
 
 a {
     cursor: pointer;
-    transition: background-image 500ms;
     background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position: 100% 0;
+}
+
+a:hover {
+    background-image: linear-gradient(ivory, ivory);
 }
 
 
@@ -125,13 +153,13 @@ a {
     width: 250px;
     position: absolute;
     right: 120px;
-    top: 5px;
+    top: 0px;
 }
 
 #armor {
     width: 300px;
     position: absolute;
-    bottom: 8px;
+    bottom: 0px;
     right: 2px;
 }
 
@@ -165,4 +193,29 @@ a {
 .header .bottom {
     text-shadow: 3px 3px 10px #1A2540;
     position: absolute;
+}
+
+
+/* OPENABLE MENU */
+#openableMenu{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#openableMenu svg {
+    width: 1200px;
+    display: none;
+}
+
+#openableMenu svg[open] {
+    animation:
+        slide-up 750ms forwards,
+        fade-in 500ms forwards;
+}
+
+#openableMenu svg[close] {
+    animation: fade-out 500ms forwards;
 }
