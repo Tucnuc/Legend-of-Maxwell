@@ -1,49 +1,76 @@
+/* BASIC STUFF */
 body {
-    height: 100%;
     margin: 0;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
+#container {
+    width: 100vh;
     height: 100vh;
-    justify-content: center;
-    width: fit-content;
-    align-items: center;
+}
+.secondaryContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-#maxwell {
-    width: 500px;
+
+/* FONTS */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./Font-Library/Montserrat.ttf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* GLOBAL STATUS */
+#bottomStatus {
     position: relative;
-    left: 20px;
+    margin: 0 0 10px 10px;
+    width: fit-content
 }
 
-.gear {
+.menuSelection {
     position: absolute;
+    z-index: 2;
+    --heightMenu: 15.5px;
+    --heightAdd: 46.5px;
+    left: 74.3%;
+    transform: translate(-50%, -50%);
+    top: var(--heightAdd);
+    font-family: Montserrat;
+    font-size: x-large;
+    cursor: default;
+    white-space: nowrap;
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.menuSelection:nth-child(2) {
+    top: calc(15.5px + calc(var(--heightAdd) * 2));
+}
+.menuSelection:nth-child(3) {
+    top: calc(30.75px + calc(var(--heightAdd) * 3));
 }
 
-#sword {
-    width: 200px;
+#statusButton {
+    cursor: pointer;
+}
+#statusButton:hover {
+    background-image: linear-gradient(ivory, ivory);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#globalStatus {
+    height: 217.719px;
+}
+
+.profilePicture {
     position: absolute;
-    left: 120px;
-}
-
-#armor {
-    width: 250px;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-}
-
-#background {
-    position: fixed; /* Fixed position */
-    top: 0; /* Position the background at the top */
-    left: 0; /* Position the background at the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    z-index: -1; /* Place it behind other elements */
-    background-image: url('./Image-Library/spawn.jpg'); /* The background image */
-    background-size: cover; /* Cover the entire area of the element */
-    background-position: center; /* Center the background image */
+    width: 140px;
+    top: 48.5%;
+    transform: translate(28%, -50%);
 }
