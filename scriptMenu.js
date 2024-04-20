@@ -22,6 +22,7 @@ const text5 = document.getElementById('opmText5')
 
 let buttonSound = new Audio('./Music-Library/button.wav');
 let isMenuOpening = false;
+const onOff = document.getElementById('onOff');
 
 function openMenu() {
     isMenuOpening = true;
@@ -71,6 +72,7 @@ function openMenu() {
                 openableMenu.classList.remove('closableMenu')
                 openableMenu.removeEventListener('animationend', animationEndHandler)
                 body.style.overflow = '';
+                onOff.style.display = 'none';
             }
 
             openableMenu.addEventListener('animationend', animationEndHandler)
@@ -84,12 +86,29 @@ function openMenu2() {
     const onBtn = document.getElementById('ON');
     const offBtn2 = document.getElementById('OFF2');
 
+    textCon.style.height = '255.350px';
+    textCon.style.marginTop = '175px';
+
+    isMenuOpening = true;
     openableMenu.setAttribute('open', "");
     backgroundBlur.style.display = 'block';
     backgroundBlur.setAttribute('open', "");
     openableMenu.style.display = 'block';
     openableMenu.classList.add('closableMenu')
     body.style.overflow = 'hidden';
+
+    openableMenu.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                heading.style.display = 'block';
+                textCon.style.display = 'flex';
+                onOff.style.display = 'block';
+                heading.setAttribute('appear', "");
+                textCon.setAttribute('appear', "");
+                onOff.setAttribute('appear', "")
+            }, 250)
+        }
+    })
 
     special1.style.display = 'block';
     special2.style.display = 'block';
@@ -123,19 +142,35 @@ function openMenu2() {
 
     let windowClickHandler = (event) => {
         if (openableMenu.classList.contains('closableMenu')) {
+            isMenuOpening = false;
             openableMenu.removeAttribute('open')
             backgroundBlur.removeAttribute('open')
+            heading.removeAttribute('appear')
+            textCon.removeAttribute('appear')
+            onOff.removeAttribute('appear')
             openableMenu.setAttribute('close', "")
             backgroundBlur.setAttribute('close', "")
+            heading.setAttribute('disappear', "")
+            textCon.setAttribute('disappear', "")
+            onOff.setAttribute('disappear', "")
 
             let animationEndHandler = () => {
                 openableMenu.removeAttribute('close')
                 backgroundBlur.removeAttribute('close')
                 backgroundBlur.style.display = 'none';
                 openableMenu.style.display = 'none';
+                heading.style.display = 'none';
+                textCon.style.display = 'none';
+                onOff.style.display = 'none';
+                heading.removeAttribute('disappear')
+                textCon.removeAttribute('disappear')
+                onOff.removeAttribute('disappear')
                 openableMenu.classList.remove('closableMenu')
                 openableMenu.removeEventListener('animationend', animationEndHandler)
                 body.style.overflow = '';
+                textCon.style.height = '655.350px';
+                textCon.style.marginTop = '';
+                document.getElementById('onOff').innerHTML = "";
             }
 
             openableMenu.addEventListener('animationend', animationEndHandler)
@@ -161,8 +196,8 @@ infoBtn.addEventListener('click', () => {
 })
 creditsBtn.addEventListener('click', () => {
     heading.innerHTML = "CREDITS";
-    text1.innerHTML = "Adam: Podstatě všechno.";
-    text2.innerHTML = "Matěj: Jméno brány + random randint funnkce.";
+    text1.innerHTML = "Adam: Podstatě všechno";
+    text2.innerHTML = "Matěj: Jméno brány + random randint funkce";
     text3.innerHTML = "";
     text4.innerHTML = "";
     text5.innerHTML = "";
@@ -171,6 +206,15 @@ creditsBtn.addEventListener('click', () => {
     openMenu();
 })
 modBtn.addEventListener('click', () => {
+    heading.innerHTML = "MÓD";
+    text1.innerHTML = "Je na výběr normální a těžký mód.";
+    text2.innerHTML = "Při normálním módu se hráč po smrti vždy oživí.";
+    text3.innerHTML = "V těžkém módu ale, se po smrti hra ukončí.";
+    text4.innerHTML = "";
+    text5.innerHTML = "";
+
+    document.getElementById('onOff').innerHTML = "Normální / Těžký";
+
     event.stopPropagation();
     openMenu2();
 })

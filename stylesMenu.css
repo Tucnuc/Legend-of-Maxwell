@@ -293,7 +293,6 @@ a:hover {
 
 #openableMenu .text {
     font-family: Montserrat;
-    /* position: absolute; */
     font-size: x-large;
     top: 83px;
     background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
@@ -305,7 +304,17 @@ a:hover {
 #openableMenu #opmHeading {
     font-size: xx-large;
     position: absolute;
-    top: 115px;
+    top: 114px;
+}
+
+#openableMenu #onOff {
+    font-size: xx-large;
+    position: absolute;
+    top: 420px;
+}
+
+.container2 {
+    position: absolute;
 }
 
 .textContainer {
@@ -319,18 +328,19 @@ a:hover {
     gap: 0.8rem;
 }
 
-#opmHeading, .textContainer {
+#opmHeading, .textContainer, #onOff {
     display: none;
     opacity: 0;
     z-index: 99;
 }
 
-#opmHeading[appear], .textContainer[appear] {
+#opmHeading[appear], .textContainer[appear], #onOff[appear] {
     animation: fade-in 300ms forwards;
 }
-#opmHeading[disappear], .textContainer[disappear] {
+#opmHeading[disappear], .textContainer[disappear], #onOff[disappear] {
     animation: fade-out 300ms forwards;
 }
+
 
 @media screen and (height < 760px) {
     #openableMenu {
