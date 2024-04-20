@@ -4,6 +4,10 @@ body {
     overflow: hidden;
 }
 
+p {
+    margin: 0;
+}
+
 #container {
     width: 100%;
     height: 100%;
@@ -131,6 +135,7 @@ body {
 #openMenu {
     width: 500px;
     z-index: 5;
+    position: absolute;
     display: none;
 }
 #openMenu[open] {
@@ -158,3 +163,51 @@ body {
     animation: fade-out2 300ms forwards;
 }
 
+.headingCon {
+    width: 500px;
+    height: 731.025px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#statusHeading {
+    position: absolute;
+    top: 104px;
+    font-family: Montserrat;
+    font-size: xx-large;
+}
+
+.statusContainer {
+    position: absolute;
+    width: 500px;
+    height: 631.025px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-family: Montserrat;
+    gap: 0.5rem;
+    margin-top: 100px;
+}
+
+.statusContainer p, #statusHeading {
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.statusContainer, #statusHeading {
+    z-index: 10;
+    cursor: default;
+    display: none;
+}
+
+#statusHeading[appear], .statusContainer[appear] {
+    animation: fade-in 300ms forwards;
+}
+#statusHeading[disappear], .statusContainer[disappear] {
+    animation: fade-out 300ms forwards;
+}

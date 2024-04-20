@@ -311,6 +311,7 @@ a:hover {
     font-size: xx-large;
     position: absolute;
     top: 420px;
+    cursor: default;
 }
 
 .container2 {
@@ -326,6 +327,7 @@ a:hover {
     align-items: center;
     flex-direction: column;
     gap: 0.8rem;
+    cursor: default;
 }
 
 #opmHeading, .textContainer, #onOff {

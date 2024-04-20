@@ -19,10 +19,10 @@ const text2 = document.getElementById('opmText2')
 const text3 = document.getElementById('opmText3')
 const text4 = document.getElementById('opmText4')
 const text5 = document.getElementById('opmText5')
+const onOff = document.getElementById('onOff');
 
 let buttonSound = new Audio('./Music-Library/button.wav');
 let isMenuOpening = false;
-const onOff = document.getElementById('onOff');
 
 function openMenu() {
     isMenuOpening = true;
