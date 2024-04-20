@@ -12,9 +12,19 @@ const special1 = document.getElementById('skupina1');
 const special2 = document.getElementById('skupina2');
 const special3 = document.getElementById('BACKGROUND');
 
+const heading = document.getElementById('opmHeading')
+const textCon = document.querySelector('.textContainer')
+const text1 = document.getElementById('opmText1')
+const text2 = document.getElementById('opmText2')
+const text3 = document.getElementById('opmText3')
+const text4 = document.getElementById('opmText4')
+const text5 = document.getElementById('opmText5')
+
 let buttonSound = new Audio('./Music-Library/button.wav');
+let isMenuOpening = false;
 
 function openMenu() {
+    isMenuOpening = true;
     openableMenu.setAttribute('open', "");
     backgroundBlur.style.display = 'block';
     backgroundBlur.setAttribute('open', "");
@@ -22,20 +32,40 @@ function openMenu() {
     openableMenu.classList.add('closableMenu')
     body.style.overflow = 'hidden';
 
+    openableMenu.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                heading.style.display = 'block';
+                textCon.style.display = 'flex';
+                heading.setAttribute('appear', "");
+                textCon.setAttribute('appear', "");
+            }, 250)
+        }
+    })
+
     special1.style.display = 'none';
     special2.style.display = 'none';
     special3.style.display = 'none';
 
     let windowClickHandler = () => {
         if (openableMenu.classList.contains('closableMenu')) {
+            isMenuOpening = false;
             openableMenu.removeAttribute('open')
             backgroundBlur.removeAttribute('open')
+            heading.removeAttribute('appear')
+            textCon.removeAttribute('appear')
             openableMenu.setAttribute('close', "")
             backgroundBlur.setAttribute('close', "")
+            heading.setAttribute('disappear', "")
+            textCon.setAttribute('disappear', "")
 
             let animationEndHandler = () => {
                 openableMenu.removeAttribute('close')
                 backgroundBlur.removeAttribute('close')
+                heading.style.display = 'none';
+                textCon.style.display = 'none';
+                heading.removeAttribute('disappear')
+                textCon.removeAttribute('disappear')
                 backgroundBlur.style.display = 'none';
                 openableMenu.style.display = 'none';
                 openableMenu.classList.remove('closableMenu')
@@ -119,10 +149,24 @@ playBtn.addEventListener('click', () => {
     console.log('Představ is hru')
 })
 infoBtn.addEventListener('click', () => {
+    heading.innerHTML = "INFORMACE";
+    text1.innerHTML = "Ve hře je 10 zón, kterými hráč musí projít aby dokončil hru.";
+    text2.innerHTML = "Hráč může procházet mezi zónami jak chce.";
+    text3.innerHTML = "Nedoporučuje se ale chodit do vyšších zón se špatným vybavením.";
+    text4.innerHTML = "V každé zóně je také Boss monstrum. Má 25% šanci, že zaútočí.";
+    text5.innerHTML = "Poté je 50% šance, že hráč dostane zbraň příslušné úrovně.";
+    
     event.stopPropagation();
     openMenu();
 })
 creditsBtn.addEventListener('click', () => {
+    heading.innerHTML = "CREDITS";
+    text1.innerHTML = "Adam: Podstatě všechno.";
+    text2.innerHTML = "Matěj: Jméno brány + random randint funnkce.";
+    text3.innerHTML = "";
+    text4.innerHTML = "";
+    text5.innerHTML = "";
+
     event.stopPropagation();
     openMenu();
 })

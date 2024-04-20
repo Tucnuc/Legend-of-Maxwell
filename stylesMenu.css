@@ -289,3 +289,55 @@ a:hover {
 #ON[turningON] {
     animation: turnON 500ms forwards;
 }
+
+
+#openableMenu .text {
+    font-family: Montserrat;
+    /* position: absolute; */
+    font-size: x-large;
+    top: 83px;
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+#openableMenu #opmHeading {
+    font-size: xx-large;
+    position: absolute;
+    top: 115px;
+}
+
+.textContainer {
+    position: absolute;
+    height: 655.350px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#opmHeading, .textContainer {
+    display: none;
+    opacity: 0;
+    z-index: 99;
+}
+
+#opmHeading[appear], .textContainer[appear] {
+    animation: fade-in 300ms forwards;
+}
+#opmHeading[disappear], .textContainer[disappear] {
+    animation: fade-out 300ms forwards;
+}
+
+@media screen and (height < 760px) {
+    #openableMenu {
+        margin-bottom: 50px;
+    }
+
+    .header p {
+        margin-top: 3rem;
+    }
+}
