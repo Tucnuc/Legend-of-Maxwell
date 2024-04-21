@@ -80,3 +80,44 @@ statusButton.addEventListener('click', () => {
     }
     window.addEventListener('click', windowClickHandler)
 })
+
+// BACKGROUND
+const imageList = {
+    spawn: "url('./Image-Library/spawn.jpg')",
+    plains: "url('./Image-Library/plains.jpg')",
+    desert: "url('./Image-Library/desert.jpg')",
+    iceLands: "url('./Image-Library/icelands.jpg')",
+    skeletonCastle: "url('./Image-Library/skeletoncastle.jpg')",
+    magmaLands: "url('./Image-Library/magmalands.jpg')",
+    swamp: "url('./Image-Library/swamp.jpg')",
+    orcCastle: "url('./Image-Library/orccastle.jpg')",
+    clouds: "url('./Image-Library/clouds.jpg')",
+    vampireForest: "url('./Image-Library/vampireforest.jpg')",
+    corruption: "url('./Image-Library/corruption.jpg')",
+    altar: "url('./Image-Library/altar.jpg')"
+} 
+
+const keys = Object.keys(imageList);
+
+function zoneChange(index) {
+    console.log("Změněno");
+    let background = document.querySelector('.backgroundMenu');
+    background.style.backgroundImage = imageList[keys[index]];
+    background.id = keys[index];
+}
+
+const testBtn = document.getElementById('hola');
+testBtn.addEventListener('click', () => {
+    zoneChange(11);
+})
+
+
+// setInterval(function() {
+//     console.log('Změněno');
+//     let background = document.querySelector('.backgroundMenu');
+//     let index = keys.indexOf(background.id);
+//     console.log(index);
+//     let nextIndex = (index + 1) % keys.length;
+//     background.style.backgroundImage = imageList[keys[nextIndex]];
+//     background.id = keys[nextIndex];
+// }, 2000)

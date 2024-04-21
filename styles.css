@@ -78,6 +78,24 @@ p {
     }
 }
 
+/* BACKGROUND */
+.backgroundMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('./Image-Library/spawn.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: 500ms;
+}
+
+#hola {
+    position: absolute;
+    top: 0;
+}
 
 /* GLOBAL STATUS */
 #bottomStatus {
