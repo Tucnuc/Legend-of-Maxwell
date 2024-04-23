@@ -2,10 +2,12 @@
 let buttonSound = new Audio('./Music-Library/button.wav');
 const buttons = document.querySelectorAll('.button')
 buttons.forEach(button => {
-    button.addEventListener('mouseover', () => {
-        let buttonHover = new Audio('./Music-Library/buttonHover.wav');
-        buttonHover.volume = 0.4;
-        buttonHover.play()
+    button.addEventListener('mouseenter', () => {
+        if (event.target === button) {
+            let buttonHover = new Audio('./Music-Library/buttonHover.wav');
+            buttonHover.volume = 0.4;
+            buttonHover.play()
+        }
     });
     button.addEventListener('click', () => {
         buttonSound.volume = 0.3;
@@ -112,12 +114,16 @@ testBtn.addEventListener('click', () => {
 })
 
 
-// setInterval(function() {
-//     console.log('Změněno');
-//     let background = document.querySelector('.backgroundMenu');
-//     let index = keys.indexOf(background.id);
-//     console.log(index);
-//     let nextIndex = (index + 1) % keys.length;
-//     background.style.backgroundImage = imageList[keys[nextIndex]];
-//     background.id = keys[nextIndex];
-// }, 2000)
+// NAME MENU
+const nameBlur = document.getElementById('backgroundStartBlur');
+const nameMenu = document.querySelector('.containerName');
+
+document.getElementById('playBtn').addEventListener('click', () => {
+    const name = document.getElementById('nameInput').value;
+    nameBlur.setAttribute('closing', "");
+    nameMenu.setAttribute('closing', "");
+    nameMenu.addEventListener('animationend', () => {
+        nameBlur.style.display = 'none';
+        nameMenu.style.display = 'none';
+    })
+})

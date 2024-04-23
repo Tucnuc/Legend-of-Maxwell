@@ -26,6 +26,13 @@ p {
     justify-content: center;
 }
 
+.text {
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Montserrat;
+}
 
 /* FONTS */
 @font-face {
@@ -116,10 +123,6 @@ p {
     font-size: x-large;
     cursor: default;
     white-space: nowrap;
-    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
-    background-size: 200%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 .menuSelection:nth-child(2) {
     top: calc(15.5px + calc(var(--heightAdd) * 2));
@@ -228,4 +231,95 @@ p {
 }
 #statusHeading[disappear], .statusContainer[disappear] {
     animation: fade-out 300ms forwards;
+}
+
+
+/* NAME MENU */
+#backgroundStartBlur {
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    position: fixed;
+    display: block;
+    background-color: black;
+    opacity: 0.5;
+}
+#backgroundStartBlur[closing] {
+    animation: fade-out2 500ms forwards;
+}
+
+.containerName {
+    z-index: 60;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerName[closing] {
+    animation: fade-out 500ms forwards;
+}
+
+#nameMenu {
+    width: 1200px;
+}
+
+.nameTxtContainer {
+    width: 1200px;
+    height: 555.344px;
+    margin-top: 100px;
+    position: absolute;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameTxtContainer p {
+    font-size: x-large;
+}
+
+.headingName {
+    position: absolute;
+    font-size: xx-large;
+    top: 115px;
+}
+
+.relNameDiv {
+    position: absolute;
+    width: 1200px;
+    height: 655.344px;
+    display: flex;
+    justify-content: center;
+}
+
+#nameInput {
+    font-size: xx-large;
+    outline: none;
+    border-width: 2.5px;
+    border-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory) 1;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    caret-color: #b3947b;
+}
+
+#playArrow {
+    fill: url(#gradient);
+    width: 60px;
+    height: 60px;
+}
+#playBtn:hover #playArrow {
+    fill: ivory;
+}
+
+#playBtn {
+    background: transparent;
+    outline: none;
+    border-width: 2.5px;
+    border-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory) 1;
+    padding: 10px 50px 10px 55px;
+    cursor: pointer;
+    border-radius: 1rem;
 }
