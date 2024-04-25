@@ -16,6 +16,23 @@ buttons.forEach(button => {
 });
 
 
+// NAME MENU
+const nameBlur = document.getElementById('backgroundStartBlur');
+const nameMenu = document.querySelector('.containerName');
+
+let name = '';
+
+document.getElementById('playBtn').addEventListener('click', () => {
+    name = document.getElementById('nameInput').value;
+    nameBlur.setAttribute('closing', "");
+    nameMenu.setAttribute('closing', "");
+    nameMenu.addEventListener('animationend', () => {
+        nameBlur.style.display = 'none';
+        nameMenu.style.display = 'none';
+    })
+})
+
+
 // OPENABLE STATUS
 const openableMenu = document.getElementById('openMenu');
 const backgroundBlur = document.getElementById('backgroundBlur');
@@ -44,6 +61,10 @@ statusButton.addEventListener('click', () => {
             setTimeout(() => {
                 heading.style.display = 'block';
                 textCon.style.display = 'flex';
+
+                // ASSIGNING VALUES
+                document.querySelector('.statusName').innerHTML = `Jméno: ${name}`;
+
                 heading.setAttribute('appear', "");
                 textCon.setAttribute('appear', "");
             }, 250)
@@ -114,16 +135,3 @@ testBtn.addEventListener('click', () => {
 })
 
 
-// NAME MENU
-const nameBlur = document.getElementById('backgroundStartBlur');
-const nameMenu = document.querySelector('.containerName');
-
-document.getElementById('playBtn').addEventListener('click', () => {
-    const name = document.getElementById('nameInput').value;
-    nameBlur.setAttribute('closing', "");
-    nameMenu.setAttribute('closing', "");
-    nameMenu.addEventListener('animationend', () => {
-        nameBlur.style.display = 'none';
-        nameMenu.style.display = 'none';
-    })
-})
