@@ -203,6 +203,17 @@ testBtn.addEventListener('click', () => {
 const textDiv = document.getElementById('textUI');
 let isWriting = false;
 
+const hlUp = document.getElementById('hlUp');
+const hlDown = document.getElementById('hlDown');
+const hlRight = document.getElementById('hlRight');
+const hlLeft = document.getElementById('hlLeft');
+
+nameMenu.addEventListener('animationend', () => {
+    setTimeout(() => {
+        textDiv.dispatchEvent(new Event('click'));
+    }, 1000);
+})
+
 function aniText(textArray) {
     const keys = Object.keys(textArray);
     let index = 0;
@@ -210,6 +221,37 @@ function aniText(textArray) {
     textDiv.addEventListener('click', () => {
         if (isWriting === false) {
             isWriting = true;
+
+            const opaCheck = window.getComputedStyle(hlUp);
+            if (opaCheck.opacity != 0) {
+                const style = document.createElement('style');
+                style.innerHTML = `
+                    @keyframes unglow {
+                        0% { opacity: ${opaCheck.opacity}; }
+                        100% { opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+
+                hlUp.style.animation = 'unglow 500ms'
+                hlDown.style.animation = 'unglow 500ms'
+                hlRight.style.animation = 'unglow 500ms'
+                hlLeft.style.animation = 'unglow 500ms'
+
+                hlUp.addEventListener('animationend', () => {
+                    hlUp.style.animation = '';
+                    hlDown.style.animation = '';
+                    hlRight.style.animation = '';
+                    hlLeft.style.animation = '';
+                    document.head.removeChild(style);
+                });
+            };
+
+            hlUp.removeAttribute('glow');
+            hlDown.removeAttribute('glow');
+            hlRight.removeAttribute('glow');
+            hlLeft.removeAttribute('glow');
+
             aniText2(textArray[keys[index]]);
             index = (index + 1) % keys.length;
         }
@@ -225,6 +267,10 @@ function aniText2(text, i = 0) {
         setTimeout(() => aniText2(text, i + 1), 15);
     } else {
         isWriting = false;
+        hlUp.setAttribute('glow', "");
+        hlDown.setAttribute('glow', "");
+        hlRight.setAttribute('glow', "");
+        hlLeft.setAttribute('glow', "");
     }
 };
 
