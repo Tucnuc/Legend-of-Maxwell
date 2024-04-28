@@ -221,6 +221,7 @@ function aniText(textArray) {
     textDiv.addEventListener('click', () => {
         if (isWriting === false) {
             isWriting = true;
+            textDiv.style.cursor = 'default';
 
             const opaCheck = window.getComputedStyle(hlUp);
             if (opaCheck.opacity != 0) {
@@ -275,7 +276,10 @@ function aniText2(text, i = 0) {
         hlDown.setAttribute('glow', "");
         hlRight.setAttribute('glow', "");
         hlLeft.setAttribute('glow', "");
-    }
+        setTimeout(() => {
+            textDiv.style.cursor = 'pointer';
+        }, 50);
+    };
 };
 
 aniText(spawnText);
