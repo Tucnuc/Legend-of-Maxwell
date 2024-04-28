@@ -252,8 +252,12 @@ function aniText(textArray) {
             hlRight.removeAttribute('glow');
             hlLeft.removeAttribute('glow');
 
+            if (index > keys.length) {
+                return
+            }
+
             aniText2(textArray[keys[index]]);
-            index = (index + 1) % keys.length;
+            index++;
         }
     });
 };
