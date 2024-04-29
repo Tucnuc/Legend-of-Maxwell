@@ -186,18 +186,18 @@ const imageList = {
 } 
 
 const keys = Object.keys(imageList);
+let background = document.querySelector('.backgroundMenu');
 
 function zoneChange(index) {
     console.log("Změněno");
-    let background = document.querySelector('.backgroundMenu');
     background.style.backgroundImage = imageList[keys[index]];
     background.id = keys[index];
 }
 
 const testBtn = document.getElementById('hola');
-testBtn.addEventListener('click', () => {
-    zoneChange(11);
-})
+// testBtn.addEventListener('click', () => {
+//     zoneChange(11);
+// })
 
 // TEXT UI
 const textDiv = document.getElementById('textUI');
@@ -208,60 +208,75 @@ const hlDown = document.getElementById('hlDown');
 const hlRight = document.getElementById('hlRight');
 const hlLeft = document.getElementById('hlLeft');
 
-nameMenu.addEventListener('animationend', () => {
-    setTimeout(() => {
-        textDiv.dispatchEvent(new Event('click'));
-    }, 1000);
-})
+let index = 0;
+
+function resetAniText() {
+    index = 0;
+}
+
+let currentTextArray = {};
+let currentKeys = [];
 
 function aniText(textArray) {
     const keys = Object.keys(textArray);
-    let index = 0;
+    console.log(index)
 
-    textDiv.addEventListener('click', () => {
-        if (isWriting === false) {
-            isWriting = true;
-            textDiv.style.cursor = 'default';
-
-            const opaCheck = window.getComputedStyle(hlUp);
-            if (opaCheck.opacity != 0) {
-                const style = document.createElement('style');
-                style.innerHTML = `
-                    @keyframes unglow {
-                        0% { opacity: ${opaCheck.opacity}; }
-                        100% { opacity: 0; }
-                    }
-                `;
-                document.head.appendChild(style);
-
-                hlUp.style.animation = 'unglow 500ms'
-                hlDown.style.animation = 'unglow 500ms'
-                hlRight.style.animation = 'unglow 500ms'
-                hlLeft.style.animation = 'unglow 500ms'
-
-                hlUp.addEventListener('animationend', () => {
-                    hlUp.style.animation = '';
-                    hlDown.style.animation = '';
-                    hlRight.style.animation = '';
-                    hlLeft.style.animation = '';
-                    document.head.removeChild(style);
-                });
-            };
-
-            hlUp.removeAttribute('glow');
-            hlDown.removeAttribute('glow');
-            hlRight.removeAttribute('glow');
-            hlLeft.removeAttribute('glow');
-
-            if (index > keys.length) {
-                return
-            }
-
+    if (keys.length > 0) {
+        setTimeout(() => {
+            console.log('F TO PAY RESPECT BITCH')
             aniText2(textArray[keys[index]]);
-            index++;
-        }
-    });
-};
+            index++
+        }, 1000);
+    }
+
+    currentTextArray = textArray;
+    currentKeys = keys;
+
+    textDiv.removeEventListener('click', handleClick);
+    textDiv.addEventListener('click', handleClick);
+}
+
+function handleClick() {
+    if (isWriting === false) {
+        console.log(loc);
+
+        isWriting = true;
+        textDiv.style.cursor = 'default';
+
+        const opaCheck = window.getComputedStyle(hlUp);
+        if (opaCheck.opacity != 0) {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes unglow {
+                    0% { opacity: ${opaCheck.opacity}; }
+                    100% { opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            hlUp.style.animation = 'unglow 500ms'
+            hlDown.style.animation = 'unglow 500ms'
+            hlRight.style.animation = 'unglow 500ms'
+            hlLeft.style.animation = 'unglow 500ms'
+
+            hlUp.addEventListener('animationend', () => {
+                hlUp.style.animation = '';
+                hlDown.style.animation = '';
+                hlRight.style.animation = '';
+                hlLeft.style.animation = '';
+                document.head.removeChild(style);
+            });
+        };
+
+        hlUp.removeAttribute('glow');
+        hlDown.removeAttribute('glow');
+        hlRight.removeAttribute('glow');
+        hlLeft.removeAttribute('glow');
+
+        aniText2(currentTextArray[currentKeys[index]]);
+        index++;
+    }
+}
 
 function aniText2(text, i = 0) {
     if (i === 0) {
@@ -282,4 +297,112 @@ function aniText2(text, i = 0) {
     };
 };
 
-aniText(spawnText);
+
+// BACKGROUND MUSIC
+const audio = document.getElementById('music');
+audio.volume = 1;
+window.addEventListener('click', () => {
+    audio.play();
+})
+
+
+// ZONE CHANGE FUNCTION
+let loc = 'spawn';
+
+const zones = {
+    shop: {
+        text: {
+            text1: 'Zdravím tě, zákazníku. Konstantin jméno mé. Lepší zboží nenajdeš široko daleko!',
+            text2: 'Mohu ti nabídnout zbraně a brnění všeho druhu. V nejlepší kvalitě samozřejmě a za nejlepší cenu!'
+        },
+        background: "url('./Image-Library/shop.jpg')",
+        music: './Music-Library/menuTheme.mp3'
+    },
+    spawn: {
+        text: {
+            text1: 'Nacházíš se na spawnu. Rozhlédneš se kolem sebe.',
+            text2: 'Na levo vidíš obchod. Můžeš jít nakupovat k obchodníkovi Konstantinovi. Prodává zboží z celé říše!',
+            text3: 'Před sebou také vidíš magickou fontánu se zářící vodou. Zdejší léčící fontána z legend. Vyléčí vše.',
+            text4: 'Za fontánou zahlédneš obří bránu. Je to ta brána o které si četl ve všech těch knížkách.',
+            text5: 'Porta Magnifica! Magická brána, která tě může udělat silnějším. Drží v sobě nepředstavitelné bohatství. Ale také spoustu nebezpečí...'
+        },
+        background: "url('./Image-Library/spawn.jpg')",
+        music: './Music-Library/spawnTheme.mp3'
+    },
+    fountain: {
+        text: {},
+        background: "url('./Image-Library/fountain.jpg')",
+        music: ''
+    },
+    gate: {
+        text: {},
+        background: "url('./Image-Library/gate.jpeg')",
+        music: ''
+    },
+    plains: {
+        text: {},
+        background: "url('./Image-Library/plains.jpg')",
+        music: ''
+    },
+}
+
+function zoneChange(direction) {
+    const keys = Object.keys(zones);
+    let index = keys.indexOf(loc);
+    let nextIndex = index + direction
+    console.log('pouští se')
+
+    if (nextIndex >= 0 && nextIndex < keys.length) {
+        console.log('změněno?')
+        loc = keys[nextIndex];
+        console.log(loc);
+
+        const opaCheck = window.getComputedStyle(hlUp);
+        if (opaCheck.opacity != 0) {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes unglow {
+                    0% { opacity: ${opaCheck.opacity}; }
+                    100% { opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            hlUp.style.animation = 'unglow 500ms'
+            hlDown.style.animation = 'unglow 500ms'
+            hlRight.style.animation = 'unglow 500ms'
+            hlLeft.style.animation = 'unglow 500ms'
+
+            hlUp.addEventListener('animationend', () => {
+                hlUp.style.animation = '';
+                hlDown.style.animation = '';
+                hlRight.style.animation = '';
+                hlLeft.style.animation = '';
+                document.head.removeChild(style);
+            });
+        };
+
+        hlUp.removeAttribute('glow');
+        hlDown.removeAttribute('glow');
+        hlRight.removeAttribute('glow');
+        hlLeft.removeAttribute('glow');
+
+        background.style.backgroundImage = zones[loc].background;
+        resetAniText();
+        aniText(zones[loc].text);
+    } else {
+        console.log("Konec světa. Bariéra chuj.");
+    }
+};
+
+nameMenu.addEventListener('animationend', () => {
+    aniText(zones[loc].text);
+})
+
+document.getElementById('leftBtn').addEventListener('click', () => {
+    zoneChange(-1);
+})
+
+document.getElementById('rightBtn').addEventListener('click', () => {
+    zoneChange(1);
+})
