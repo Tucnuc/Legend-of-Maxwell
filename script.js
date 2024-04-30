@@ -357,10 +357,91 @@ const zones = {
     },
     plains: {
         text: {
-            text1: 'Rozhlédneš se kolem sebe, kam tě brána transportovala.',
-            text2: 'Ocitáš se na pláni. O podál zahlédneš skupinku Goblinů.'
+            text1: 'Rozhlédneš se kolem sebe, kam tě brána transportovala. Přivítá tě příjemná vůně přírody. Tohle není tak špatný začátek.',
+            text2: 'Nacházíš se na pláni. Příjemné místo. Snad to tak bude i následovat..'
         },
         background: "url('./Image-Library/plains.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    desert: {
+        text: {
+            text1: 'Než se vůbec stihneš probrat z teleportace, oslepí tě žhnoucí slunce a obrovské teplo.',
+            text2: 'Nacházíš se na poušti. Velké, horké, poušti.'
+        },
+        background: "url('./Image-Library/desert.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    iceLands: {
+        text: {
+            text1: 'Z jednoho extrému do druhého extrému. Už ti není teplo, teď začínáš pro změnu mrznout.',
+            text2: 'Všude jen bílo a ledovce. nacházíš se v ledové pustině.'
+        },
+        background: "url('./Image-Library/icelands.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    skeletonCastle: {
+        text: {
+            text1: 'Jakmile se probereš po změně prostředí, mile tě překvapí nynější zóna. Normální teplota.',
+            text2: 'Nacházíš se v lehce rozpadajícím se hradě. V dáli jdou slyšet divné klepací a skřípací zvuky. Připomíná ti to.. kosti?'
+        },
+        background: "url('./Image-Library/skeletoncastle.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    magmaLands: {
+        text: {
+            text1: 'Ihned začneš litovat tvého dalšího přesunu. Na tohle prostředí nemá ani dřívější poušť.',
+            text2: 'Nacházíš se v lávové pustině. Sopka a láva všude kam se podíváš. Je ti hodně.. teplo.'
+        },
+        background: "url('./Image-Library/magmalands.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    swamp: {
+        text: {
+            text1: 'Oddychneš si, že tě tady nečekalo místo, s obří zimou. Místo toho se zaboříš do bahna.',
+            text2: 'Nacházíš se v bažině. Stále jedno z nejvíc přívětivých míst, za tuhle cestu.'
+        },
+        background: "url('./Image-Library/swamp.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    orcCastle: {
+        text: {
+            text1: 'Hezky tě přivítá povědomá struktura. Tentokrát to nevypadá na úplnou zříceninu jak posledně.',
+            text2: 'Nacházíš se v hradě. Vypadá vyspěle. To neznamená že bude čas na odpočinek.'
+        },
+        background: "url('./Image-Library/orccastle.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    clouds: {
+        text: {
+            text1: 'Ocitáš se v ještě nespatřeném prostředí. Uklidnující pocit projde tvým tělem, kvůli krásným výhledům.',
+            text2: 'Nacházíš se v mracích. Líbí se ti tady. Dokud ti nedojde, že na každém rohu čeká nebezpečí. A tahle zóna není výjimkou. Tvá cesta se blíží ke konci..'
+        },
+        background: "url('./Image-Library/clouds.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    vampireForest: {
+        text: {
+            text1: 'Z hezky světlého místa do temného. Cítíš že je tady něco špatně. Všude jde cítít krev.',
+            text2: 'Nacházíš se v temném lese. Jediný zdroj světla je daleký měsíc na obloze. Co lehce prosvýtá skrz stromy. Jsi v předposlední zóně. Už jen kousek.'
+        },
+        background: "url('./Image-Library/vampireforest.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    corruptionZone: {
+        text: {
+            text1: 'Došel jsi do poslední zóny. Možná si čekal trochu příjemnější místo. v okolí je nepříjemná energie. Pravý opak, co si cítil z fontány.',
+            text2: 'Nacházíš se v zóně korupce. Asi by si tu neměl strávit moc času. Zdejší energie není moc přátelská.'
+        },
+        background: "url('./Image-Library/corruption.jpg')",
+        music: "./Music-Library/zonesTheme.mp3"
+    },
+    altar: {
+        text: {
+            text1: 'Cítíš se zmaten. Všichni totiž ví, že v bráně je jen deset zón. Co je tedy tohle za místo?',
+            text2: 'Nacházíš se u oltáře. Vypadá, že tohle místo blokuje nechtěnou energii z předchozí zóny.',
+            text3: 'Po chvíli co se koukáš po okolí, si všimneš v oltáři kulatého otvoru. Vypadá důležitě..'
+        },
+        background: "url('./Image-Library/altar.jpg')",
         music: "./Music-Library/zonesTheme.mp3"
     },
 }
