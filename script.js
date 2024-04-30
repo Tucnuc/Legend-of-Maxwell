@@ -214,6 +214,10 @@ function resetAniText() {
     index = 0;
 }
 
+function removeClickListener() {
+    textDiv.removeEventListener('click', handleClick);
+}
+
 let currentTextArray = {};
 let currentKeys = [];
 
@@ -236,6 +240,33 @@ function aniText(textArray) {
     textDiv.addEventListener('click', handleClick);
 }
 
+function opacityRemover() {
+    const opaCheck = window.getComputedStyle(hlUp);
+    if (opaCheck.opacity != 0) {
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes unglow {
+                0% { opacity: ${opaCheck.opacity}; }
+                100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        hlUp.style.animation = 'unglow 500ms';
+        hlDown.style.animation = 'unglow 500ms';
+        hlRight.style.animation = 'unglow 500ms';
+        hlLeft.style.animation = 'unglow 500ms';
+
+        hlUp.addEventListener('animationend', () => {
+            hlUp.style.animation = '';
+            hlDown.style.animation = '';
+            hlRight.style.animation = '';
+            hlLeft.style.animation = '';
+            document.head.removeChild(style);
+        });
+    };
+};
+
 function handleClick() {
     if (isWriting === false) {
         console.log(loc);
@@ -243,30 +274,7 @@ function handleClick() {
         isWriting = true;
         textDiv.style.cursor = 'default';
 
-        const opaCheck = window.getComputedStyle(hlUp);
-        if (opaCheck.opacity != 0) {
-            const style = document.createElement('style');
-            style.innerHTML = `
-                @keyframes unglow {
-                    0% { opacity: ${opaCheck.opacity}; }
-                    100% { opacity: 0; }
-                }
-            `;
-            document.head.appendChild(style);
-
-            hlUp.style.animation = 'unglow 500ms'
-            hlDown.style.animation = 'unglow 500ms'
-            hlRight.style.animation = 'unglow 500ms'
-            hlLeft.style.animation = 'unglow 500ms'
-
-            hlUp.addEventListener('animationend', () => {
-                hlUp.style.animation = '';
-                hlDown.style.animation = '';
-                hlRight.style.animation = '';
-                hlLeft.style.animation = '';
-                document.head.removeChild(style);
-            });
-        };
+        opacityRemover()
 
         hlUp.removeAttribute('glow');
         hlDown.removeAttribute('glow');
@@ -316,7 +324,7 @@ const zones = {
             text2: 'Mohu ti nabídnout zbraně a brnění všeho druhu. V nejlepší kvalitě samozřejmě a za nejlepší cenu!'
         },
         background: "url('./Image-Library/shop.jpg')",
-        music: './Music-Library/menuTheme.mp3'
+        music: "./Music-Library/spawnTheme.mp3"
     },
     spawn: {
         text: {
@@ -327,22 +335,33 @@ const zones = {
             text5: 'Porta Magnifica! Magická brána, která tě může udělat silnějším. Drží v sobě nepředstavitelné bohatství. Ale také spoustu nebezpečí...'
         },
         background: "url('./Image-Library/spawn.jpg')",
-        music: './Music-Library/spawnTheme.mp3'
+        music: "./Music-Library/spawnTheme.mp3"
     },
     fountain: {
-        text: {},
+        text: {
+            text1: 'Přijdeš k fontáně. Ihned cítíš tu velkou magickou moc, která uniká z její léčivé křišťálové vody.',
+            text2: 'Letí kolem lehce zraněný ptáček. Už po jedné vypité kapce zase radostně zpívá a letí dál. Opravdu dar z nebes.'
+        },
         background: "url('./Image-Library/fountain.jpg')",
-        music: ''
+        music: "./Music-Library/fountainTheme.mp3"
     },
     gate: {
-        text: {},
+        text: {
+            text1: 'Už z dálky ji zahlédneš. Jak se tyčí mezi útesy. Je ještě větší než sis ji představoval.',
+            text2: 'Je s ní vázaných několik příběhu a teoriích o jejím vzniku. Jedna říká, že byla vystavěna velmi vyspělou civilizací. Nyní už zapomenutou v čase.',
+            text3: 'Jiná říká, že ji stvořili bohové. A že našim úkolem je ji prozkoumávat. Abychom získali sílu a mohli zachránit náš svět. Kdyby přišla kalamita.',
+            text4: 'Všechno jsou to ovšem jen spekulace, o kterých se mluví už po staletí. Možná se ale dozvíš pravdu na konci své cesty.'
+        },
         background: "url('./Image-Library/gate.jpeg')",
-        music: ''
+        music: "./Music-Library/gateTheme.mp3"
     },
     plains: {
-        text: {},
+        text: {
+            text1: 'Rozhlédneš se kolem sebe, kam tě brána transportovala.',
+            text2: 'Ocitáš se na pláni. O podál zahlédneš skupinku Goblinů.'
+        },
         background: "url('./Image-Library/plains.jpg')",
-        music: ''
+        music: "./Music-Library/zonesTheme.mp3"
     },
 }
 
@@ -357,30 +376,7 @@ function zoneChange(direction) {
         loc = keys[nextIndex];
         console.log(loc);
 
-        const opaCheck = window.getComputedStyle(hlUp);
-        if (opaCheck.opacity != 0) {
-            const style = document.createElement('style');
-            style.innerHTML = `
-                @keyframes unglow {
-                    0% { opacity: ${opaCheck.opacity}; }
-                    100% { opacity: 0; }
-                }
-            `;
-            document.head.appendChild(style);
-
-            hlUp.style.animation = 'unglow 500ms'
-            hlDown.style.animation = 'unglow 500ms'
-            hlRight.style.animation = 'unglow 500ms'
-            hlLeft.style.animation = 'unglow 500ms'
-
-            hlUp.addEventListener('animationend', () => {
-                hlUp.style.animation = '';
-                hlDown.style.animation = '';
-                hlRight.style.animation = '';
-                hlLeft.style.animation = '';
-                document.head.removeChild(style);
-            });
-        };
+        opacityRemover()
 
         hlUp.removeAttribute('glow');
         hlDown.removeAttribute('glow');
@@ -388,6 +384,10 @@ function zoneChange(direction) {
         hlLeft.removeAttribute('glow');
 
         background.style.backgroundImage = zones[loc].background;
+        if (audio.src.split('/').pop() !== zones[loc].music.split('/').pop()) {
+            audio.src = zones[loc].music;
+        }
+
         resetAniText();
         aniText(zones[loc].text);
     } else {
@@ -397,7 +397,10 @@ function zoneChange(direction) {
 
 nameMenu.addEventListener('animationend', () => {
     aniText(zones[loc].text);
-})
+});
+document.addEventListener('DOMContentLoaded', () => {
+    audio.src = zones[loc].music;
+});
 
 document.getElementById('leftBtn').addEventListener('click', () => {
     zoneChange(-1);
