@@ -139,7 +139,12 @@ p {
 }
 
 #statusButton {
+    height: 55px;
     cursor: pointer;
+    display: flex;
+    width: 210px;
+    align-items: center;
+    justify-content: center;
 }
 #statusButton:hover {
     background-image: linear-gradient(ivory, ivory);

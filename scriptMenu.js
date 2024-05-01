@@ -21,7 +21,6 @@ const text4 = document.getElementById('opmText4')
 const text5 = document.getElementById('opmText5')
 const onOff = document.getElementById('onOff');
 
-let buttonSound = new Audio('./Music-Library/button.wav');
 let isMenuOpening = false;
 
 function openMenu() {
@@ -256,12 +255,15 @@ setInterval(function() {
 
 
 // BUTTONS SOUND EFFECTS
+let buttonSound = new Audio('./Music-Library/button.wav');
 const buttons = document.querySelectorAll('.button')
 buttons.forEach(button => {
-    button.addEventListener('mouseover', () => {
-        let buttonHover = new Audio('./Music-Library/buttonHover.wav');
-        buttonHover.volume = 0.4;
-        buttonHover.play()
+    button.addEventListener('mouseenter', () => {
+        if (event.target === button) {
+            let buttonHover = new Audio('./Music-Library/buttonHover.wav');
+            buttonHover.volume = 0.4;
+            buttonHover.play()
+        }
     });
     button.addEventListener('click', () => {
         buttonSound.volume = 0.3;

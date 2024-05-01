@@ -136,15 +136,20 @@ body {
     font-size: x-large;
 }
 
-a {
-    cursor: pointer;
+.menuBtn {
     background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    height: 70px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-a:hover {
+.menuBtn:hover {
     background-image: linear-gradient(ivory, ivory);
 }
 
