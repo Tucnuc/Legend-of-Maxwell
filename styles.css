@@ -400,7 +400,7 @@ p {
 }
 
 #leftBtn, #rightBtn {
-    z-index: 10;
+    z-index: 2;
     width: 60px;
     cursor: pointer;
 }
@@ -410,4 +410,185 @@ p {
 }
 #rightBtn {
     margin-right: 10px;
+}
+
+
+/* SHOP STUFF */
+.shopBtnCon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.shopBtnCon2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 150px;
+}
+
+.shopBtnImg {
+    width: 250px;
+    z-index: 2;
+    position: relative;
+}
+
+.glow.glowing {
+    animation: glow 1s infinite alternate;
+}
+
+.imgGlowCon {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.shopCon .glow {
+    width: 210px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.swordGlow, .shopSwordGlow {
+    top: 55px;
+}
+.armorGlow {
+    top: 65px;
+}
+
+
+.shopText {
+    position: absolute;
+    font-size: x-large;
+    bottom: 78px;
+    cursor: default;
+    margin: 0;
+}
+
+.shopSelection {
+    width: 400px;
+}
+
+/* SCROLLER */
+.shopScroller {
+    width: 1050px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    z-index: 2;
+    gap: 1rem;
+    margin-top: calc(1rem + 15px);
+    scroll-behavior: smooth;
+    z-index: 5;
+
+    opacity: 0;
+    display: none;
+}
+.itemElement {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.item {
+    position: absolute;
+    width: 200px;
+    top: 60px;
+    z-index: 2;
+}
+.armor {
+    top: 70px;
+}
+.scrollerBase {
+    width: 1200px;
+    position: absolute;
+    z-index: 4;
+
+    opacity: 0;
+    display: none;
+}
+.shopCon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    height: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: 2px solid #C59563;
+    border-radius: 100vw;
+    margin-inline: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    border: 2px solid #BA895A;
+    border-radius: 100vw;
+}
+
+
+.shopProductChoice {
+    width: 1050px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-evenly;
+
+    opacity: 0;
+    display: none;
+}
+
+.choiceElement {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#shopChoiceBtn {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#shopChoiceBtn:hover ~ .shopText, .swordForSaleBtn:hover ~ .shopText {
+    background-image: linear-gradient(ivory, ivory);
+}
+
+.swordForSaleBtn {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 25px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.scrollerBase[open] {
+    animation:
+        slide-up 750ms forwards,
+        fade-in 500ms forwards;
+}
+.scrollerBase[close] {
+    animation: fade-out 500ms forwards;
+}
+
+.shopProductChoice[appear], .shopScrollerWeapons[appear] {
+    animation: fade-in 300ms forwards;
+}
+.shopProductChoice[disappear], .shopScrollerWeapons[disappear] {
+    animation: fade-out 300ms forwards;
 }

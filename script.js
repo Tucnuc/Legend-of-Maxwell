@@ -29,19 +29,6 @@ let userArmorTier = 0;
 let shopBan = false;
 
 // TEXT OBJECTS
-const spawnText = {
-    text1: 'Nacházíš se na spawnu. Rozhlédneš se kolem sebe.',
-    text2: 'Na levo vidíš obchod. Můžeš jít nakupovat k obchodníkovi Konstantinovi. Prodává zboží z celé říše!',
-    text3: 'Před sebou také vidíš magickou fontánu se zářící vodou. Zdejší léčící fontána z legend. Vyléčí vše.',
-    text4: 'Za fontánou zahlédneš obří bránu. Je to ta brána o které si četl ve všech těch knížkách.',
-    text5: 'Porta Magnifica! Magická brána, která tě může udělat silnějším. Drží v sobě nepředstavitelné bohatství. Ale také spoustu nebezpečí...'
-}
-
-const shopText = {
-    text1: 'Zdravím tě, zákazníku. Konstantin jméno mé. Lepší zboží nenajdeš široko daleko!',
-    text2: 'Mohu ti nabídnout zbraně a brnění všeho druhu. V nejlepší kvalitě samozřejmě a za nejlepší cenu!'
-}
-
 const weaponText = {
     text1: 'Potřebujete nějakou zbraň? Drahý zákazníku, hned vám něco dobrého nabídnu...'
 }
@@ -471,6 +458,10 @@ function zoneChange(direction) {
 
         resetAniText();
         aniText(zones[loc].text);
+
+        if (loc === 'shop') {
+            console.log('nakupováníčko')
+        }
     } else {
         console.log("Konec světa. Bariéra chuj.");
     }
@@ -490,3 +481,361 @@ document.getElementById('leftBtn').addEventListener('click', () => {
 document.getElementById('rightBtn').addEventListener('click', () => {
     zoneChange(1);
 })
+
+
+// SHOP
+const swordBtn = document.querySelector('.shopSwordBtn');
+const armorBtn = document.querySelector('.shopArmorBtn');
+const swordGlow = document.querySelector('.swordGlow');
+const armorGlow = document.querySelector('.armorGlow');
+
+function shopOpaSwordRemover(item) {
+    const shopOpaCheck = window.getComputedStyle(item).opacity;
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes unglow {
+            0% { opacity: ${shopOpaCheck}; }
+            100% { opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+    item.style.animation = 'unglow 500ms';
+
+    item.addEventListener('animationend', () => {
+        item.style.animation = '';
+        document.head.removeChild(style);
+    });
+};
+function shopOpaArmorRemover(item) {
+    const shopOpaCheck = window.getComputedStyle(item);
+    if (shopOpaCheck != 0) {
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes unglow {
+                0% { opacity: ${shopOpaCheck.opacity}; }
+                100% { opacity: 0; }
+            }
+        `;
+
+        document.head.appendChild(style);
+        item.style.animation = 'unglow 500ms';
+
+        item.addEventListener('animationend', () => {
+            item.style.animation = '';
+            document.head.removeChild(style);
+        });
+    };
+};
+
+swordBtn.addEventListener('mouseenter', () => {
+    console.log('MEČ')
+    swordGlow.classList.add('glowing');
+    swordBtn.addEventListener('mouseleave', () => {
+        shopOpaSwordRemover(swordGlow);
+        swordGlow.classList.remove('glowing');
+    });
+});
+armorBtn.addEventListener('mouseenter', () => {
+    console.log('BRNKO')
+    armorGlow.classList.add('glowing');
+    armorBtn.addEventListener('mouseleave', () => {
+        shopOpaArmorRemover(armorGlow);
+        armorGlow.classList.remove('glowing');
+    });
+});
+
+let scrollHorizontal = document.querySelector('.shopScroller');
+scrollHorizontal.addEventListener('wheel', function(e) {
+    this.scrollLeft += e.deltaY*5;
+    e.preventDefault();
+}, { passive: false });
+
+function itemGlow(element, wepOrArmor) {
+    if (wepOrArmor === 1) {
+        console.log('weaponChosen')
+        let productGlow = document.getElementById(element.id + 'Glow');
+        productGlow.classList.add('glowing');
+        element.addEventListener('mouseleave', () => {
+            shopOpaSwordRemover(productGlow);
+            productGlow.classList.remove('glowing');
+        });
+    } else {
+        console.log('armorChosen')
+        let productGlow = document.getElementById(element.id + 'Glow');
+        productGlow.classList.add('glowing');
+        element.addEventListener('mouseleave', () => {
+            shopOpaArmorRemover(productGlow);
+            productGlow.classList.remove('glowing');
+        });
+    };
+};
+
+let itemElements = document.querySelectorAll('.itemElement');
+itemElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        console.log(element.id);
+        itemGlow(element, 1);
+    });
+});
+
+const shopMenu = document.querySelector('.scrollerBase');
+const categoryChoice = document.querySelector('.shopProductChoice');
+const shopWeaponsList = document.querySelector('.shopScrollerWeapons');
+const shopArmorsList = '?';
+
+const choiceElement1 = document.querySelector('.choiceElement1');
+const choiceElement2 = document.querySelector('.choiceElement2');
+
+const swordsForPurchase = document.querySelectorAll('.itemSwordElement');
+
+let isWeaponScrollerOpen = false
+
+const shopBtn = document.querySelector('.testShopBtn');
+shopBtn.addEventListener('click', () => {
+    event.stopPropagation();
+
+    // BEGIN OPENING SEQUENCE
+    isMenuOpening = true;
+    shopMenu.setAttribute('open', "");
+    backgroundBlur.style.display = 'block';
+    backgroundBlur.setAttribute('open', "");
+    shopMenu.style.display = 'block';
+    shopMenu.classList.add('closableMenu')
+    body.style.overflow = 'hidden';
+
+    shopMenu.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                categoryChoice.style.display = 'flex';
+                categoryChoice.setAttribute('appear', "");
+            }, 250)
+        }
+    })
+
+    function handleAnimationEnd() {
+        categoryChoice.removeAttribute('disappear');
+        categoryChoice.style.display = 'none';
+        setTimeout(() => {
+            shopWeaponsList.style.display = 'grid';
+            shopWeaponsList.setAttribute('appear', "");
+        }, 250);
+    }
+
+    choiceElement1.addEventListener('click', event => {     // WEAPONS
+        event.stopPropagation();
+    
+        if (isWeaponScrollerOpen === false) {
+            isWeaponScrollerOpen = true;
+            categoryChoice.setAttribute('disappear', "");
+            categoryChoice.addEventListener('animationend', handleAnimationEnd, { once: true });
+        };
+    });
+    choiceElement2.addEventListener('click', event => {     // ARMORS
+        event.stopPropagation();
+        categoryChoice.setAttribute('disappear', "");
+    });
+
+    shopWeaponsList.addEventListener('click', () => {
+        event.stopPropagation();
+    });
+
+    let windowClickHandler = () => {    // CLOSING DOWN
+        if (shopMenu.classList.contains('closableMenu')) {
+            isMenuOpening = false;
+            shopMenu.removeAttribute('open');
+            backgroundBlur.removeAttribute('open');
+            categoryChoice.removeAttribute('appear');
+            shopMenu.setAttribute('close', "");
+            backgroundBlur.setAttribute('close', "");
+            categoryChoice.setAttribute('disappear', "");
+
+            if (isWeaponScrollerOpen) {
+                shopWeaponsList.removeAttribute('appear');
+                shopWeaponsList.setAttribute('disappear', "");
+            }
+
+            let animationEndHandler = () => {
+                shopMenu.removeAttribute('close');
+                backgroundBlur.removeAttribute('close');
+                categoryChoice.removeAttribute('disappear');
+                backgroundBlur.style.display = 'none';
+                shopMenu.style.display = 'none';
+                categoryChoice.style.display = 'none';
+                shopMenu.classList.remove('closableMenu');
+                shopMenu.removeEventListener('animationend', animationEndHandler);
+                body.style.overflow = '';
+
+                if (isWeaponScrollerOpen) {
+                    shopWeaponsList.removeAttribute('disappear');
+                    shopWeaponsList.style.display = 'none';
+                    isWeaponScrollerOpen = false;
+                }
+            };
+
+            shopMenu.addEventListener('animationend', animationEndHandler);
+            window.removeEventListener('click', windowClickHandler);
+        };
+    };
+    window.addEventListener('click', windowClickHandler);
+});
+
+const weapons = {
+    bronzeSword: {
+        name: 'Bronzový Meč',
+        minDmg: 3,
+        maxDmg: 10,
+        tier: 1,
+        price: 100
+    },
+    goldSword: {
+        name: 'Zlatý Meč',
+        minDmg: 5,
+        maxDmg: 15,
+        tier: 2,
+        price: 250
+    },
+    ironSword: {
+        name: 'Železný Meč',
+        minDmg: 6,
+        maxDmg: 20,
+        tier: 3,
+        price: 750
+    },
+    steelSword: {
+        name: 'Ocelový Meč',
+        minDmg: 9,
+        maxDmg: 25,
+        tier: 4,
+        price: 2000
+    },
+    diamondSword: {
+        name: 'Diamantový Meč',
+        minDmg: 10,
+        maxDmg: 30,
+        tier: 5,
+        price: 5000
+    },
+    stormyxSword: {
+        name: 'Stormyxový Meč',
+        minDmg: 15,
+        maxDmg: 40,
+        tier: 6,
+        price: 10000
+    },
+    mythrilSword: {
+        name: 'Mythrilový Meč',
+        minDmg: 20,
+        maxDmg: 50,
+        tier: 7,
+        price: 25000
+    },
+    adamantiteSword: {
+        name: 'Adamantiový Meč',
+        minDmg: 25,
+        maxDmg: 75,
+        tier: 8,
+        price: 50000
+    },
+    orichalcumSword: {
+        name: 'Orichalcový Meč',
+        minDmg: 45,
+        maxDmg: 90,
+        tier: 9,
+        price: 80000
+    },
+    celestialSword: {
+        name: 'Nebeský Meč',
+        minDmg: 60,
+        maxDmg: 100,
+        tier: 10,
+        price: 125000
+    }
+  }
+  
+const armors = {
+leatherArmor: {
+    name: 'Kožené Brnění',
+    health: 50,
+    tier: 1,
+    price: 50
+},
+chainArmor: {
+    name: 'Řetězové Brnění',
+    health: 100,
+    tier: 2,
+    price: 100
+},
+ironArmor: {
+    name: 'Železné Brnění',
+    health: 175,
+    tier: 3,
+    price: 250
+},
+steelArmor: {
+    name: 'Ocelové Brnění',
+    health: 250,
+    tier: 4,
+    price: 1500
+},
+diamondArmor: {
+    name: 'Diamantové Brnění',
+    health: 325,
+    tier: 5,
+    price: 5000
+},
+stormyxArmor: {
+    name: 'Stormyxové Brnění',
+    health: 450,
+    tier: 6,
+    price: 15000
+},
+mythrilArmor: {
+    name: 'Mythrilové Brnění',
+    health: 600,
+    tier: 7,
+    price: 40000
+},
+adamantiteArmor: {
+    name: 'Adamantiové Brnění',
+    health: 700,
+    tier: 8,
+    price: 100000
+},
+orichalcumArmor: {
+    name: 'Orichalcové Brnění',
+    health: 800,
+    tier: 9,
+    price: 150000
+},
+celestialArmor: {
+    name: 'Nebeské Brnění',
+    health: 1000,
+    tier: 10,
+    price: 200000
+}
+}
+
+// let keysWeapon = Object.keys(weapons);
+// let keysArmor = Object.keys(armors);
+
+// let userTier = 0;
+// const elementID = 'mythrilSword';
+// let indexOfID = keysWeapon.indexOf(elementID);
+
+// let text1 = '';
+// let text2 = '';
+// let text3 = '';
+// let text4 = '';
+
+// function getWeaponStats (elementID) {
+// let indexOfID = keysWeapon.indexOf(elementID);
+// text1 = weapons[keysWeapon[indexOfID]].name;
+// text2 = `Útočná síla: ${weapons[keysWeapon[indexOfID]].minDmg}-${weapons[keysWeapon[indexOfID]].maxDmg}`;
+// text3 = `Úroveň: ${weapons[keysWeapon[indexOfID]].tier}`;
+// text4 = `Cena: ${weapons[keysWeapon[indexOfID]].price}`;
+// }
+
+// getWeaponStats(elementID);
+// console.log(text1);
+// console.log(text2);
+// console.log(text3);
