@@ -4,6 +4,10 @@ body {
     overflow: hidden;
 }
 
+:root {
+    --dynamicOpacity: 1;
+}
+
 p {
     margin: 0;
 }
@@ -92,6 +96,14 @@ p {
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes unglow {
+    0% {
+        opacity: var(--dynamicOpacity);
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -458,7 +470,7 @@ p {
 .swordGlow, .shopSwordGlow {
     top: 55px;
 }
-.armorGlow {
+.armorGlow, .shopArmorGlow {
     top: 65px;
 }
 
@@ -487,10 +499,17 @@ p {
     margin-top: calc(1rem + 15px);
     scroll-behavior: smooth;
     z-index: 5;
+}
 
+.shopScrollerWeapons {
     opacity: 0;
     display: none;
 }
+.shopScrollerArmors {
+    opacity: 0;
+    display: none;
+}
+
 .itemElement {
     position: relative;
     display: flex;
@@ -503,8 +522,14 @@ p {
     top: 60px;
     z-index: 2;
 }
-.armor {
+.armor, .itemArmorElement .item {
     top: 70px;
+}
+.chainBRUH {
+    top: 60px !important;
+}
+#chainArmorGlow {
+    top: 55px;
 }
 .scrollerBase {
     width: 1200px;
@@ -564,11 +589,11 @@ p {
     z-index: 5;
 }
 
-#shopChoiceBtn:hover ~ .shopText, .swordForSaleBtn:hover ~ .shopText {
+#shopChoiceBtn:hover ~ .shopText, .swordForSaleBtn:hover ~ .shopText, .armorForSaleBtn:hover ~ .shopText {
     background-image: linear-gradient(ivory, ivory);
 }
 
-.swordForSaleBtn {
+.swordForSaleBtn, .armorForSaleBtn {
     width: 350px;
     height: 350px;
     position: absolute;
@@ -586,9 +611,9 @@ p {
     animation: fade-out 500ms forwards;
 }
 
-.shopProductChoice[appear], .shopScrollerWeapons[appear] {
+.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear] {
     animation: fade-in 300ms forwards;
 }
-.shopProductChoice[disappear], .shopScrollerWeapons[disappear] {
+.shopProductChoice[disappear], .shopScrollerWeapons[disappear], .shopScrollerArmors[disappear] {
     animation: fade-out 300ms forwards;
 }

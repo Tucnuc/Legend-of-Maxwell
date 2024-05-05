@@ -491,38 +491,23 @@ const armorGlow = document.querySelector('.armorGlow');
 
 function shopOpaSwordRemover(item) {
     const shopOpaCheck = window.getComputedStyle(item).opacity;
-    const style = document.createElement('style');
-    style.innerHTML = `
-        @keyframes unglow {
-            0% { opacity: ${shopOpaCheck}; }
-            100% { opacity: 0; }
-        }
-    `;
-    document.head.appendChild(style);
-    item.style.animation = 'unglow 500ms';
-
-    item.addEventListener('animationend', () => {
-        item.style.animation = '';
-        document.head.removeChild(style);
-    });
-};
-function shopOpaArmorRemover(item) {
-    const shopOpaCheck = window.getComputedStyle(item);
     if (shopOpaCheck != 0) {
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes unglow {
-                0% { opacity: ${shopOpaCheck.opacity}; }
-                100% { opacity: 0; }
-            }
-        `;
-
-        document.head.appendChild(style);
+        item.style.setProperty('--dynamicOpacity', shopOpaCheck);
         item.style.animation = 'unglow 500ms';
 
         item.addEventListener('animationend', () => {
             item.style.animation = '';
-            document.head.removeChild(style);
+        });
+    };
+};
+function shopOpaArmorRemover(item) {
+    const shopOpaCheck = window.getComputedStyle(item).opacity;
+    if (shopOpaCheck != 0) {
+        item.style.setProperty('--dynamicOpacity', shopOpaCheck);
+        item.style.animation = 'unglow 500ms';
+
+        item.addEventListener('animationend', () => {
+            item.style.animation = '';
         });
     };
 };
@@ -544,8 +529,13 @@ armorBtn.addEventListener('mouseenter', () => {
     });
 });
 
-let scrollHorizontal = document.querySelector('.shopScroller');
+let scrollHorizontal = document.querySelector('.shopScrollerWeapons');
 scrollHorizontal.addEventListener('wheel', function(e) {
+    this.scrollLeft += e.deltaY*5;
+    e.preventDefault();
+}, { passive: false });
+let scrollHorizontal2 = document.querySelector('.shopScrollerArmors');
+scrollHorizontal2.addEventListener('wheel', function(e) {
     this.scrollLeft += e.deltaY*5;
     e.preventDefault();
 }, { passive: false });
@@ -581,14 +571,15 @@ itemElements.forEach(element => {
 const shopMenu = document.querySelector('.scrollerBase');
 const categoryChoice = document.querySelector('.shopProductChoice');
 const shopWeaponsList = document.querySelector('.shopScrollerWeapons');
-const shopArmorsList = '?';
+const shopArmorsList = document.querySelector('.shopScrollerArmors');
 
 const choiceElement1 = document.querySelector('.choiceElement1');
 const choiceElement2 = document.querySelector('.choiceElement2');
 
 const swordsForPurchase = document.querySelectorAll('.itemSwordElement');
 
-let isWeaponScrollerOpen = false
+let isWeaponScrollerOpen = false;
+let isArmorScrollerOpen = false;
 
 const shopBtn = document.querySelector('.testShopBtn');
 shopBtn.addEventListener('click', () => {
@@ -612,12 +603,20 @@ shopBtn.addEventListener('click', () => {
         }
     })
 
-    function handleAnimationEnd() {
+    function handleAnimationEndWeapons() {
         categoryChoice.removeAttribute('disappear');
         categoryChoice.style.display = 'none';
         setTimeout(() => {
             shopWeaponsList.style.display = 'grid';
             shopWeaponsList.setAttribute('appear', "");
+        }, 250);
+    }
+    function handleAnimationEndArmors() {
+        categoryChoice.removeAttribute('disappear');
+        categoryChoice.style.display = 'none';
+        setTimeout(() => {
+            shopArmorsList.style.display = 'grid';
+            shopArmorsList.setAttribute('appear', "");
         }, 250);
     }
 
@@ -627,15 +626,23 @@ shopBtn.addEventListener('click', () => {
         if (isWeaponScrollerOpen === false) {
             isWeaponScrollerOpen = true;
             categoryChoice.setAttribute('disappear', "");
-            categoryChoice.addEventListener('animationend', handleAnimationEnd, { once: true });
+            categoryChoice.addEventListener('animationend', handleAnimationEndWeapons, { once: true });
         };
     });
     choiceElement2.addEventListener('click', event => {     // ARMORS
         event.stopPropagation();
-        categoryChoice.setAttribute('disappear', "");
+
+        if (isArmorScrollerOpen === false) {
+            isArmorScrollerOpen = true;
+            categoryChoice.setAttribute('disappear', "");
+            categoryChoice.addEventListener('animationend', handleAnimationEndArmors, { once: true });
+        }
     });
 
     shopWeaponsList.addEventListener('click', () => {
+        event.stopPropagation();
+    });
+    shopArmorsList.addEventListener('click', () => {
         event.stopPropagation();
     });
 
@@ -653,6 +660,10 @@ shopBtn.addEventListener('click', () => {
                 shopWeaponsList.removeAttribute('appear');
                 shopWeaponsList.setAttribute('disappear', "");
             }
+            if (isArmorScrollerOpen) {
+                shopArmorsList.removeAttribute('appear');
+                shopArmorsList.setAttribute('disappear', "");
+            }
 
             let animationEndHandler = () => {
                 shopMenu.removeAttribute('close');
@@ -669,6 +680,11 @@ shopBtn.addEventListener('click', () => {
                     shopWeaponsList.removeAttribute('disappear');
                     shopWeaponsList.style.display = 'none';
                     isWeaponScrollerOpen = false;
+                }
+                if (isArmorScrollerOpen) {
+                    shopArmorsList.removeAttribute('disappear');
+                    shopArmorsList.style.display = 'none';
+                    isArmorScrollerOpen = false;
                 }
             };
 
