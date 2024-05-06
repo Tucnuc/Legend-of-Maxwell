@@ -581,6 +581,8 @@ const swordsForPurchase = document.querySelectorAll('.itemSwordElement');
 let isWeaponScrollerOpen = false;
 let isArmorScrollerOpen = false;
 
+let isBuyingMenuOpen = false;
+
 const shopBtn = document.querySelector('.testShopBtn');
 shopBtn.addEventListener('click', () => {
     event.stopPropagation();
@@ -647,7 +649,7 @@ shopBtn.addEventListener('click', () => {
     });
 
     let windowClickHandler = () => {    // CLOSING DOWN
-        if (shopMenu.classList.contains('closableMenu')) {
+        if (!isBuyingMenuOpen && shopMenu.classList.contains('closableMenu')) {
             isMenuOpening = false;
             shopMenu.removeAttribute('open');
             backgroundBlur.removeAttribute('open');
@@ -831,27 +833,126 @@ celestialArmor: {
 }
 }
 
-// let keysWeapon = Object.keys(weapons);
-// let keysArmor = Object.keys(armors);
+let keysWeapon = Object.keys(weapons);
+let keysArmor = Object.keys(armors);
 
-// let userTier = 0;
-// const elementID = 'mythrilSword';
-// let indexOfID = keysWeapon.indexOf(elementID);
+let descripHeading = document.getElementById('descripHeading');
+let descripBonusProperty = document.querySelector('.descripBonusProperty');
+let descripTier = document.querySelector('.descripTier');
+let descripCurrentBonusProperty = document.querySelector('.descripCurrentBonusProperty');
+let descripCurrentTier = document.querySelector('.descripCurrentTier');
+let descripPrice = document.querySelector('.descripPrice');
 
-// let text1 = '';
-// let text2 = '';
-// let text3 = '';
-// let text4 = '';
+function getWeaponStats (elementID) {
+    let indexOfID = keysWeapon.indexOf(elementID);
 
-// function getWeaponStats (elementID) {
-// let indexOfID = keysWeapon.indexOf(elementID);
-// text1 = weapons[keysWeapon[indexOfID]].name;
-// text2 = `Útočná síla: ${weapons[keysWeapon[indexOfID]].minDmg}-${weapons[keysWeapon[indexOfID]].maxDmg}`;
-// text3 = `Úroveň: ${weapons[keysWeapon[indexOfID]].tier}`;
-// text4 = `Cena: ${weapons[keysWeapon[indexOfID]].price}`;
-// }
+    descripHeading.innerHTML = weapons[keysWeapon[indexOfID]].name;
+    descripBonusProperty.innerHTML = `Útočná síla: ${weapons[keysWeapon[indexOfID]].minDmg}-${weapons[keysWeapon[indexOfID]].maxDmg}`;
+    descripTier.innerHTML = `Úroveň zbraně: ${weapons[keysWeapon[indexOfID]].tier}`;
 
-// getWeaponStats(elementID);
-// console.log(text1);
-// console.log(text2);
-// console.log(text3);
+    descripCurrentBonusProperty.innerHTML = `Tvoje útočná síla: ${userMinDmg}-${userMaxDmg}`
+    descripCurrentTier.innerHTML = `Tvoje úroveň zbraně: ${userWeaponTier}`
+
+    descripPrice.innerHTML = `Cena: ${weapons[keysWeapon[indexOfID]].price}`;
+}
+
+function getArmorStats (elementID) {
+    let indexOfID = keysArmor.indexOf(elementID);
+
+    descripHeading.innerHTML = armors[keysArmor[indexOfID]].name;
+    descripBonusProperty.innerHTML = `Bonusové životy: ${armors[keysArmor[indexOfID]].health}`;
+    descripTier.innerHTML = `Úroveň brnění: ${armors[keysArmor[indexOfID]].tier}`;
+
+    descripCurrentBonusProperty.innerHTML = `Tvoje bonusové životy: ${userArmorBonus}`
+    descripCurrentTier.innerHTML = `Tvoje úroveň brnění: ${userArmorTier}`
+
+    descripPrice.innerHTML = `Cena: ${armors[keysArmor[indexOfID]].price}`;
+}
+
+function openBuyingMenu () {
+    let isMenuOpening = false;
+
+    isMenuOpening = true;
+    isBuyingMenuOpen = true;
+    itemDescription.setAttribute('open', "");
+    backgroundBlur2.style.display = 'block';
+    backgroundBlur2.setAttribute('open', "");
+    itemDescription.style.display = 'block';
+    itemDescription.classList.add('closableMenu');
+    body.style.overflow = 'hidden';
+
+    itemDescription.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                descripTextCon.style.display = 'flex';
+                descripTextCon.setAttribute('appear', "");
+                descripHeadingCon.style.display = 'flex';
+                descripHeadingCon.setAttribute('appear', "");
+            }, 250);
+        };
+    });
+
+    shopBuyingBtn.addEventListener('click', () => {
+        event.stopPropagation();
+    });
+
+    let windowClickHandler = () => {    // CLOSING DOWN
+        if (itemDescription.classList.contains('closableMenu')) {
+            isMenuOpening = false;
+            itemDescription.removeAttribute('open');
+            backgroundBlur2.removeAttribute('open');
+            itemDescription.setAttribute('close', "");
+            backgroundBlur2.setAttribute('close', "");
+
+            descripTextCon.removeAttribute('appear');
+            descripHeadingCon.removeAttribute('appear');
+            descripTextCon.setAttribute('disappear', "");
+            descripHeadingCon.setAttribute('disappear', "");
+
+            let animationEndHandler = () => {
+                itemDescription.removeAttribute('close');
+                backgroundBlur2.removeAttribute('close');
+                backgroundBlur2.style.display = 'none';
+                itemDescription.style.display = 'none';
+
+                descripTextCon.removeAttribute('disappear');
+                descripHeadingCon.removeAttribute('disappear');
+                descripTextCon.style.display = 'none';
+                descripHeadingCon.style.display = 'none';
+
+                itemDescription.classList.remove('closableMenu');
+                itemDescription.removeEventListener('animationend', animationEndHandler);
+                body.style.overflow = '';
+                isBuyingMenuOpen = false;
+            };
+
+            itemDescription.addEventListener('animationend', animationEndHandler);
+            window.removeEventListener('click', windowClickHandler);
+        };
+    };
+    window.addEventListener('click', windowClickHandler);
+};
+
+
+const itemDescription = document.getElementById('itemDescription');
+const descripTextCon = document.querySelector('.descripTextCon');
+const descripHeadingCon = document.querySelector('.descripHeadingCon');
+const shopBuyingBtn = document.getElementById('shopBuyingBtn');
+const backgroundBlur2 = document.getElementById('backgroundBlur2');
+
+const shopWeaponBtns = document.querySelectorAll('.swordForSaleBtn');
+shopWeaponBtns.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const parentElement = event.target.parentNode;
+        getWeaponStats(parentElement.id);
+        openBuyingMenu();
+    });
+});
+const shopArmorBtns = document.querySelectorAll('.armorForSaleBtn');
+shopArmorBtns.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const parentElement = event.target.parentNode;
+        getArmorStats(parentElement.id);
+        openBuyingMenu();
+    });
+});

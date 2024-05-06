@@ -192,7 +192,7 @@ p {
     animation: fade-out 500ms forwards;
 }
 
-#backgroundBlur {
+.blur {
     height: 100%;
     width: 100%;
     z-index: 4;
@@ -201,10 +201,13 @@ p {
     background-color: black;
     opacity: 0;
 }
-#backgroundBlur[open] {
+#backgroundBlur2 {
+    z-index: 12;
+}
+.blur[open] {
     animation: fade-in2 300ms forwards;
 }
-#backgroundBlur[close] {
+.blur[close] {
     animation: fade-out2 300ms forwards;
 }
 
@@ -602,18 +605,73 @@ p {
     cursor: pointer;
 }
 
-.scrollerBase[open] {
+.scrollerBase[open], #itemDescription[open] {
     animation:
         slide-up 750ms forwards,
         fade-in 500ms forwards;
 }
-.scrollerBase[close] {
+.scrollerBase[close], #itemDescription[close] {
     animation: fade-out 500ms forwards;
 }
 
-.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear] {
+.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear], .descripTextCon[appear], .descripHeadingCon[appear] {
     animation: fade-in 300ms forwards;
 }
-.shopProductChoice[disappear], .shopScrollerWeapons[disappear], .shopScrollerArmors[disappear] {
+.shopProductChoice[disappear], .shopScrollerWeapons[disappear], .shopScrollerArmors[disappear], .descripTextCon[disappear], .descripHeadingCon[disappear] {
     animation: fade-out 300ms forwards;
+}
+
+#itemDescription {
+    z-index: 13;
+    width: 500px;
+    position: absolute;
+}
+
+.descripTextCon, .descripHeadingCon {
+    position: absolute;
+    height: 731.016px;
+    width: 500px;
+    font-family: Montserrat;
+    z-index: 14;
+    display: flex;
+    justify-content: center;
+}
+
+.descripTextCon {
+    font-size: x-large;
+    flex-direction: column;
+    align-items: center;
+    height: 631.016px;
+    margin-top: 100px;
+    cursor: default;
+}
+.descripHeadingCon {
+    font-size: xx-large;
+}
+
+#descripHeading {
+    position: absolute;
+    top: 104px;
+}
+
+#shopBuyingBtn {
+    z-index: 14;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    bottom: 155.2px;
+    width: 235px;
+    height: 61.703px;
+    cursor: pointer;
+}
+
+#shopBuyingBtn:hover > .buyingText {
+    background-image: linear-gradient(ivory, ivory);
+}
+
+.descripTextCon, .descripHeadingCon, #itemDescription {
+    display: none;
+    opacity: 0;
 }

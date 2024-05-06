@@ -12,7 +12,8 @@
 
         <!-- BACKGROUND -->
         <div class="backgroundMenu" id="spawn"></div>
-        <div id="backgroundBlur"></div>
+        <div id="backgroundBlur" class="blur"></div>
+        <div id="backgroundBlur2" class="blur"></div>
 
         <!-- MUSIC -->
         <audio autoplay loop id="music">
@@ -130,6 +131,26 @@
         <button class="testShopBtn" style="position: absolute; z-index: 2;">SHOP</button>
 
         <div class="shopCon">
+
+            <div class="descripHeadingCon">
+                <p id="descripHeading" class="text">Bronzový Meč</p>
+            </div>
+            <div class="descripTextCon">
+                <p class="descripBonusProperty text">Útočná síla: 99-999</p>
+                <p class="descripTier text">Úroveň zbraně: 10</p>
+                <br>
+                <p class="descripCurrentBonusProperty text">Tvoje útočná síla: 2-5</p>
+                <p class="descripCurrentTier text">Tvoje úroveň zbraně: 1</p>
+                <br>
+                <p class="descripPrice text">Cena: 200000</p>
+                <br><br>
+                <div id="shopBuyingBtn" class="button">
+                    <p class="text buyingText">Koupit</p>
+                </div>
+                <img src="./SVG-Library/button.svg">
+            </div>
+            <img src="./SVG-Library/statusMenu.svg" id="itemDescription">
+
             <!-- LISTS OF ITEMS -->
 
             <!-- WEAPONS -->
