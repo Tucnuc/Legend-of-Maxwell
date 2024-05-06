@@ -14,7 +14,7 @@ let name = "";
 let userRank = "Začátečník";
 let userHP = 100;
 let userMaxHP = 100;
-let userGold = 0;
+let userGold = 999999999999999;
 
 let userWeapon = "Dřevěný Meč";
 let userWeaponTier = 0;
@@ -102,6 +102,19 @@ statusButton.addEventListener('click', () => {
             setTimeout(() => {
                 heading.style.display = 'block';
                 textCon.style.display = 'flex';
+
+                // RANK CHANGE
+                if (userWeaponTier === 10 && userArmorTier === 10) {
+                    userRank = "Overlord"
+                } else if (userWeaponTier >= 8 && userArmorTier >= 8) {
+                    userRank = "Warlord"
+                } else if (userWeaponTier >= 6 && userArmorTier >= 6) {
+                    userRank = "Lord"
+                } else if (userWeaponTier >= 4 && userArmorTier >= 4) {
+                    userRank = "Bojovník"
+                } else if (userWeaponTier >= 2 && userArmorTier >= 2) {
+                    userRank = "Dobrodruh"
+                };
 
                 // ASSIGNING VALUES
                 document.querySelector('.statusName').innerHTML = `Jméno: ${name}`;
@@ -483,7 +496,11 @@ document.getElementById('rightBtn').addEventListener('click', () => {
 })
 
 
-// SHOP
+
+// --------
+//   SHOP
+// --------
+
 const swordBtn = document.querySelector('.shopSwordBtn');
 const armorBtn = document.querySelector('.shopArmorBtn');
 const swordGlow = document.querySelector('.swordGlow');
@@ -561,11 +578,23 @@ function itemGlow(element, wepOrArmor) {
 };
 
 let itemElements = document.querySelectorAll('.itemElement');
-itemElements.forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        console.log(element.id);
-        itemGlow(element, 1);
+
+let observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+            let element = mutation.target;
+            if (element.classList.contains('unlocked')) {
+                element.addEventListener('mouseenter', () => {
+                    console.log(element.id);
+                    itemGlow(element, 1);
+                });
+            };
+        };
     });
+});
+
+itemElements.forEach(element => {
+    observer.observe(element, { attributes: true });
 });
 
 const shopMenu = document.querySelector('.scrollerBase');
@@ -611,16 +640,30 @@ shopBtn.addEventListener('click', () => {
         setTimeout(() => {
             shopWeaponsList.style.display = 'grid';
             shopWeaponsList.setAttribute('appear', "");
+
+            const bronzeSword = document.getElementById('bronzeSword');
+            if (!bronzeSword.classList.contains('unlocked')) {
+                setTimeout(() => {
+                    unlockingItem(bronzeSword);
+                }, 600);
+            };
         }, 250);
-    }
+    };
     function handleAnimationEndArmors() {
         categoryChoice.removeAttribute('disappear');
         categoryChoice.style.display = 'none';
         setTimeout(() => {
             shopArmorsList.style.display = 'grid';
             shopArmorsList.setAttribute('appear', "");
+
+            const leatherArmor = document.getElementById('leatherArmor');
+            if (!leatherArmor.classList.contains('unlocked')) {
+                setTimeout(() => {
+                    unlockingItem(leatherArmor);
+                }, 600);
+            };
         }, 250);
-    }
+    };
 
     choiceElement1.addEventListener('click', event => {     // WEAPONS
         event.stopPropagation();
@@ -843,8 +886,12 @@ let descripCurrentBonusProperty = document.querySelector('.descripCurrentBonusPr
 let descripCurrentTier = document.querySelector('.descripCurrentTier');
 let descripPrice = document.querySelector('.descripPrice');
 
+let currentPrice = '';
+let currentProductId = '';
+
 function getWeaponStats (elementID) {
     let indexOfID = keysWeapon.indexOf(elementID);
+    currentProductId = elementID;
 
     descripHeading.innerHTML = weapons[keysWeapon[indexOfID]].name;
     descripBonusProperty.innerHTML = `Útočná síla: ${weapons[keysWeapon[indexOfID]].minDmg}-${weapons[keysWeapon[indexOfID]].maxDmg}`;
@@ -854,10 +901,12 @@ function getWeaponStats (elementID) {
     descripCurrentTier.innerHTML = `Tvoje úroveň zbraně: ${userWeaponTier}`
 
     descripPrice.innerHTML = `Cena: ${weapons[keysWeapon[indexOfID]].price}`;
+    currentPrice = weapons[keysWeapon[indexOfID]].price;
 }
 
 function getArmorStats (elementID) {
     let indexOfID = keysArmor.indexOf(elementID);
+    currentProductId = elementID;
 
     descripHeading.innerHTML = armors[keysArmor[indexOfID]].name;
     descripBonusProperty.innerHTML = `Bonusové životy: ${armors[keysArmor[indexOfID]].health}`;
@@ -867,10 +916,12 @@ function getArmorStats (elementID) {
     descripCurrentTier.innerHTML = `Tvoje úroveň brnění: ${userArmorTier}`
 
     descripPrice.innerHTML = `Cena: ${armors[keysArmor[indexOfID]].price}`;
+    currentPrice = armors[keysArmor[indexOfID]].price;
 }
 
 function openBuyingMenu () {
     let isMenuOpening = false;
+    let currentProduct = document.getElementById(currentProductId);
 
     isMenuOpening = true;
     isBuyingMenuOpen = true;
@@ -880,6 +931,14 @@ function openBuyingMenu () {
     itemDescription.style.display = 'block';
     itemDescription.classList.add('closableMenu');
     body.style.overflow = 'hidden';
+
+    if (currentProduct.classList.contains('purchased')) {
+        shopBuyingBtn.style.display = 'none';
+        shopBtnBackground.style.display = 'none';
+    } else {
+        shopBuyingBtn.style.display = 'flex';
+        shopBtnBackground.style.display = 'block';
+    };
 
     itemDescription.addEventListener('animationend', () => {
         if (isMenuOpening) {
@@ -892,11 +951,21 @@ function openBuyingMenu () {
         };
     });
 
-    shopBuyingBtn.addEventListener('click', () => {
+    function shopBuyingBtnHandler(event) {
         event.stopPropagation();
-    });
 
-    let windowClickHandler = () => {    // CLOSING DOWN
+        console.log(currentPrice);
+        if (currentPrice <= userGold) {
+            windowClickHandlerShop();
+            buyingItem();
+            console.log('kupil si šuhaji, gratulujem');
+        } else {
+            console.log('No money? L')
+        };
+    };
+    shopBuyingBtn.addEventListener('click', shopBuyingBtnHandler);
+
+    function windowClickHandlerShop() {    // CLOSING DOWN
         if (itemDescription.classList.contains('closableMenu')) {
             isMenuOpening = false;
             itemDescription.removeAttribute('open');
@@ -924,13 +993,14 @@ function openBuyingMenu () {
                 itemDescription.removeEventListener('animationend', animationEndHandler);
                 body.style.overflow = '';
                 isBuyingMenuOpen = false;
+                shopBuyingBtn.removeEventListener('click', shopBuyingBtnHandler);
             };
 
             itemDescription.addEventListener('animationend', animationEndHandler);
-            window.removeEventListener('click', windowClickHandler);
+            window.removeEventListener('click', windowClickHandlerShop);
         };
     };
-    window.addEventListener('click', windowClickHandler);
+    window.addEventListener('click', windowClickHandlerShop);
 };
 
 
@@ -938,6 +1008,7 @@ const itemDescription = document.getElementById('itemDescription');
 const descripTextCon = document.querySelector('.descripTextCon');
 const descripHeadingCon = document.querySelector('.descripHeadingCon');
 const shopBuyingBtn = document.getElementById('shopBuyingBtn');
+const shopBtnBackground = document.getElementById('shopBtnBackground');
 const backgroundBlur2 = document.getElementById('backgroundBlur2');
 
 const shopWeaponBtns = document.querySelectorAll('.swordForSaleBtn');
@@ -956,3 +1027,61 @@ shopArmorBtns.forEach(button => {
         openBuyingMenu();
     });
 });
+
+function unlockingItem (element) {
+    element.classList.add('unlocked');
+    lockId = document.getElementById(element.id + 'Lock');
+    lockId.addEventListener('animationend', () => {
+        setTimeout(() => {
+            lockId.setAttribute('disappear', "");
+            lockId.addEventListener('animationend', () => {
+                lockId.removeAttribute('disappear')
+                lockId.setAttribute('unlocked', "");
+            }, {once: true});
+        }, 100);
+    }, {once: true});
+};
+
+function buyingItem() {
+    userGold = userGold - currentPrice;
+    console.log('odečteno')
+
+    let checkmark = document.getElementById(currentProductId + 'Check');
+    console.log(currentProductId)
+    itemDescription.addEventListener('animationend', () => {
+        setTimeout(() => {
+            // CHECKMARK
+            checkmark.style.display = 'block';
+            checkmark.setAttribute('appear', "");
+            checkmark.addEventListener('animationend', () => {
+                checkmark.removeAttribute('appear')
+                document.getElementById(currentProductId).classList.add('purchased');
+            }, {once: true});
+
+            // LOCK + VALUES
+            let indexOfID = keysWeapon.indexOf(currentProductId);
+            let currentLock = '';
+            if (indexOfID === -1) {
+                indexOfID = keysArmor.indexOf(currentProductId);
+                let nextIndex = indexOfID + 1;
+                currentLock = document.getElementById(keysArmor[nextIndex]);
+                console.log(indexOfID)
+
+                userArmor = armors[keysArmor[indexOfID]].name;
+                userHP = 100 + armors[keysArmor[indexOfID]].health;
+                userMaxHP = 100 + armors[keysArmor[indexOfID]].health;
+                userArmorBonus = armors[keysArmor[indexOfID]].health;
+                userArmorTier = armors[keysArmor[indexOfID]].tier;
+            } else {
+                let nextIndex = indexOfID + 1;
+                currentLock = document.getElementById(keysWeapon[nextIndex]);
+
+                userWeapon = weapons[keysWeapon[indexOfID]].name;
+                userMinDmg = weapons[keysWeapon[indexOfID]].minDmg;
+                userMaxDmg = weapons[keysWeapon[indexOfID]].maxDmg;
+                userWeaponTier = weapons[keysWeapon[indexOfID]].tier;
+            };
+            unlockingItem(currentLock);
+        }, 250);
+    }, {once: true});
+};

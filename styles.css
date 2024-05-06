@@ -32,7 +32,7 @@ p {
 }
 
 .text {
-    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, ivory);
+    background-image: linear-gradient(0deg, #A5734A, #EDD4AE, #fffff0);
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -104,6 +104,11 @@ p {
     }
     100% {
         opacity: 0;
+    }
+}
+@keyframes unlocking {
+    100% {
+        transform: translate(0, -10px);
     }
 }
 
@@ -614,7 +619,7 @@ p {
     animation: fade-out 500ms forwards;
 }
 
-.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear], .descripTextCon[appear], .descripHeadingCon[appear] {
+.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear], .descripTextCon[appear], .descripHeadingCon[appear], .checkmarkIcon[appear] {
     animation: fade-in 300ms forwards;
 }
 .shopProductChoice[disappear], .shopScrollerWeapons[disappear], .shopScrollerArmors[disappear], .descripTextCon[disappear], .descripHeadingCon[disappear] {
@@ -674,4 +679,35 @@ p {
 .descripTextCon, .descripHeadingCon, #itemDescription {
     display: none;
     opacity: 0;
+}
+
+
+.productLocked {
+    position: absolute;
+    z-index: 5;
+}
+
+.itemElement.unlocked #lockArm {
+    animation: unlocking 1s ease forwards;
+}
+.productLocked[disappear] {
+    animation: fade-out 300ms forwards;
+}
+.productLocked[unlocked] {
+    opacity: 0;
+    z-index: -1;
+}
+
+.checkmarkIcon {
+    position: absolute;
+    width: 30px;
+    bottom: 50px;
+    right: 50px;
+
+    opacity: 0;
+    display: none;
+}
+.itemElement.purchased .checkmarkIcon {
+    opacity: 1;
+    display: block;
 }
