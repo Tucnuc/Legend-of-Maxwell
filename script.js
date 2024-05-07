@@ -194,12 +194,12 @@ function zoneChange(index) {
     background.id = keys[index];
 }
 
-const testBtn = document.getElementById('hola');
-// testBtn.addEventListener('click', () => {
-//     zoneChange(11);
-// })
 
-// TEXT UI
+
+// -----------
+//   TEXT UI
+// -----------
+
 const textDiv = document.getElementById('textUI');
 let isWriting = false;
 
@@ -305,7 +305,6 @@ function aniText2(text, i = 0) {
     };
 };
 
-
 // BACKGROUND MUSIC
 const audio = document.getElementById('music');
 audio.volume = 1;
@@ -314,7 +313,11 @@ window.addEventListener('click', () => {
 })
 
 
-// ZONE CHANGE FUNCTION
+
+// -----------------
+//   ZONE CHANGING
+// -----------------
+
 let loc = 'spawn';
 
 const zones = {
@@ -473,8 +476,17 @@ function zoneChange(direction) {
         aniText(zones[loc].text);
 
         if (loc === 'shop') {
-            console.log('nakupováníčko')
-        }
+            shopBtn.style.display = 'block';
+            shopBtn.setAttribute('appear', "");
+        } else if (shopBtn.style.display === 'block') {
+            shopBtn.setAttribute('disappear', "");
+            shopBtn.addEventListener('animationend', () => {
+                shopBtn.style.display = 'none';
+                shopBtn.removeAttribute('appear');
+                shopBtn.removeAttribute('disappear')
+            }, {once: true});
+        };
+
     } else {
         console.log("Konec světa. Bariéra chuj.");
     }
@@ -612,7 +624,7 @@ let isArmorScrollerOpen = false;
 
 let isBuyingMenuOpen = false;
 
-const shopBtn = document.querySelector('.testShopBtn');
+const shopBtn = document.getElementById('shopEventBtn');
 shopBtn.addEventListener('click', () => {
     event.stopPropagation();
 
@@ -1042,8 +1054,11 @@ function unlockingItem (element) {
     }, {once: true});
 };
 
+const statusGold = document.getElementById('statusGold');
+const statusHealth = document.getElementById('statusHp');
 function buyingItem() {
     userGold = userGold - currentPrice;
+    statusGold.innerHTML = `ZLATO: ${userGold}`;
     console.log('odečteno')
 
     let checkmark = document.getElementById(currentProductId + 'Check');
@@ -1072,6 +1087,8 @@ function buyingItem() {
                 userMaxHP = 100 + armors[keysArmor[indexOfID]].health;
                 userArmorBonus = armors[keysArmor[indexOfID]].health;
                 userArmorTier = armors[keysArmor[indexOfID]].tier;
+
+                statusHealth.innerHTML = `HP: ${userMaxHP}`;
             } else {
                 let nextIndex = indexOfID + 1;
                 currentLock = document.getElementById(keysWeapon[nextIndex]);

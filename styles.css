@@ -691,7 +691,7 @@ p {
     animation: unlocking 1s ease forwards;
 }
 .productLocked[disappear] {
-    animation: fade-out 300ms forwards;
+    animation: fade-out 500ms forwards;
 }
 .productLocked[unlocked] {
     opacity: 0;
@@ -710,4 +710,32 @@ p {
 .itemElement.purchased .checkmarkIcon {
     opacity: 1;
     display: block;
+}
+
+#shopEventBtn {
+    width: 150px;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+
+    opacity: 0;
+    display: none;
+}
+
+#shopIcon {
+    fill: url(#myGradientUltraMega);
+}
+
+#shopEventBtn:hover #shopIcon {
+    fill: ivory;
+}
+
+#shopEventBtn[appear] {
+    animation: fade-in 500ms ease forwards;
+}
+#shopEventBtn[disappear] {
+    animation: fade-out 500ms ease forwards;
 }
