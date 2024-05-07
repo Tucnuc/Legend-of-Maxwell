@@ -449,6 +449,13 @@ const zones = {
     },
 }
 
+const spawnEventBtn = document.getElementById('spawnEventBtn');
+const shopEventBtn = document.getElementById('shopEventBtn');
+const fountainEventBtn = document.getElementById('fountainEventBtn');
+const gateEventBtn = document.getElementById('gateEventBtn');
+
+let currentEventBtn = spawnEventBtn;
+
 function zoneChange(direction) {
     const keys = Object.keys(zones);
     let index = keys.indexOf(loc);
@@ -475,22 +482,83 @@ function zoneChange(direction) {
         resetAniText();
         aniText(zones[loc].text);
 
-        if (loc === 'shop') {
-            shopBtn.style.display = 'block';
-            shopBtn.setAttribute('appear', "");
-        } else if (shopBtn.style.display === 'block') {
-            shopBtn.setAttribute('disappear', "");
-            shopBtn.addEventListener('animationend', () => {
-                shopBtn.style.display = 'none';
-                shopBtn.removeAttribute('appear');
-                shopBtn.removeAttribute('disappear')
-            }, {once: true});
+        switch(loc) {
+            case 'spawn':
+                currentEventBtn.removeAttribute('appear');
+                currentEventBtn.setAttribute('disappear', "");
+                currentEventBtn.addEventListener('animationend', () => {
+                    currentEventBtn.style.visibility = 'hidden';
+                    currentEventBtn.style.zIndex = '-1';
+                    currentEventBtn.removeAttribute('disappear');
+            
+                    spawnEventBtn.style.visibility = 'visible';
+                    spawnEventBtn.style.zIndex = '3';
+                    spawnEventBtn.setAttribute('appear', "");
+                    currentEventBtn = spawnEventBtn;
+                }, {once: true});
+                break
+            case 'shop':
+                currentEventBtn.removeAttribute('appear');
+                currentEventBtn.setAttribute('disappear', "");
+                currentEventBtn.addEventListener('animationend', () => {
+                    currentEventBtn.style.visibility = 'hidden';
+                    currentEventBtn.style.zIndex = '-1';
+                    currentEventBtn.removeAttribute('disappear');
+            
+                    shopEventBtn.style.visibility = 'visible';
+                    shopEventBtn.style.zIndex = '3';
+                    shopEventBtn.setAttribute('appear', "");
+                    currentEventBtn = shopEventBtn;
+                }, {once: true});
+                break
+            case 'fountain':
+                currentEventBtn.removeAttribute('appear');
+                currentEventBtn.setAttribute('disappear', "");
+                currentEventBtn.addEventListener('animationend', () => {
+                    currentEventBtn.style.visibility = 'hidden';
+                    currentEventBtn.style.zIndex = '-1';
+                    currentEventBtn.removeAttribute('disappear');
+            
+                    fountainEventBtn.style.visibility = 'visible';
+                    fountainEventBtn.style.zIndex = '3';
+                    fountainEventBtn.setAttribute('appear', "");
+                    currentEventBtn = fountainEventBtn;
+                }, {once: true});
+                break
+            case 'gate':
+                currentEventBtn.removeAttribute('appear');
+                currentEventBtn.setAttribute('disappear', "");
+                currentEventBtn.addEventListener('animationend', () => {
+                    currentEventBtn.style.visibility = 'hidden';
+                    currentEventBtn.style.zIndex = '-1';
+                    currentEventBtn.removeAttribute('disappear');
+            
+                    gateEventBtn.style.visibility = 'visible';
+                    gateEventBtn.style.zIndex = '3';
+                    gateEventBtn.setAttribute('appear', "");
+                    currentEventBtn = gateEventBtn;
+                }, {once: true});
+                break
         };
 
     } else {
         console.log("Konec světa. Bariéra chuj.");
     }
 };
+
+spawnEventBtn.addEventListener('click', () => {
+    console.log('SPAWN CHUJ');
+});
+shopEventBtn.addEventListener('click', () => {
+    console.log('SHOP CHUJ');
+});
+fountainEventBtn.addEventListener('click', () => {
+    console.log('FONTAN CHUJ');
+});
+gateEventBtn.addEventListener('click', () => {
+    console.log('GATE CHUJ');
+});
+
 
 nameMenu.addEventListener('animationend', () => {
     aniText(zones[loc].text);

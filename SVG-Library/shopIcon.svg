@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 214.5 214.5">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82.7 82.7">
   <defs>
     <style>
       .cls-1 {
-        fill: url(#Nepojmenovaný_přechod_3);
+        fill: url(#Nepojmenovaný_přechod_45);
         stroke-width: 0px;
       }
     </style>
-    <linearGradient id="Nepojmenovaný_přechod_3" data-name="Nepojmenovaný přechod 3" x1="30.7" y1="29.7" x2="181.4" y2="182.3" gradientUnits="userSpaceOnUse">
+    <linearGradient id="Nepojmenovaný_přechod_45" data-name="Nepojmenovaný přechod 45" x1="29.6" y1="2085.7" x2="55.5" y2="2111.9" gradientTransform="translate(0 -2056.3)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="ivory"/>
       <stop offset=".2" stop-color="#edd4ae"/>
       <stop offset=".3" stop-color="#d7b790"/>
@@ -18,5 +18,5 @@
       <stop offset="1" stop-color="#a5734a"/>
     </linearGradient>
   </defs>
-  <path id="shopIcon" class="cls-1" d="M93.9,203.8c14.3,14.3,37.7,14.3,52,0l57.9-57.9c14.3-14.3,14.3-37.7,0-52L126.5,16.6C115.8,5.9,101.5,0,86.4,0H27.9C12.5,0,0,12.5,0,27.9v58.5c0,15.2,5.9,29.4,16.6,40.1l77.2,77.2ZM37.9,25.2c7,0,12.6,5.7,12.6,12.6s-5.6,12.6-12.6,12.6-12.6-5.7-12.6-12.6,5.7-12.6,12.6-12.6Z"/>
+  <path id="shopIcon" class="cls-1" d="M40.5,59.2c2.5,2.5,6.5,2.5,8.9,0l9.9-9.9c2.5-2.5,2.5-6.5,0-8.9l-13.3-13.3c-1.8-1.8-4.3-2.8-6.9-2.8h-10c-2.6,0-4.8,2.1-4.8,4.8v10c0,2.6,1,5,2.8,6.9l13.2,13.2s.2,0,.2,0ZM30.9,28.6c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2-2.2-1-2.2-2.2,1-2.2,2.2-2.2Z"/>
 </svg>
