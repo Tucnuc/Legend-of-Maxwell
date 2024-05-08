@@ -1193,3 +1193,56 @@ function buyingItem() {
         }, 250);
     }, {once: true});
 };
+
+
+const worldMapBase = document.getElementById('worldMapBase');
+const worldMap = document.getElementById('worldMap');
+
+spawnEventBtn.addEventListener('click', () => {
+    event.stopPropagation();
+
+    isMenuOpening = true;
+    worldMapBase.setAttribute('open', "");
+    backgroundBlur.style.display = 'block';
+    backgroundBlur.setAttribute('open', "");
+    worldMapBase.style.display = 'block';
+    worldMapBase.classList.add('closableMenu');
+    body.style.overflow = 'hidden';
+
+    worldMapBase.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                worldMap.style.display = 'block';
+                worldMap.setAttribute('appear', "");
+            }, 250);
+        };
+    });
+    
+    let windowClickHandler = () => {
+        if (worldMapBase.classList.contains('closableMenu')) {
+            isMenuOpening = false;
+            worldMapBase.removeAttribute('open')
+            backgroundBlur.removeAttribute('open')
+            worldMap.removeAttribute('appear')
+            worldMapBase.setAttribute('close', "")
+            backgroundBlur.setAttribute('close', "")
+            worldMap.setAttribute('disappear', "")
+    
+            let animationEndHandler = () => {
+                worldMapBase.removeAttribute('close')
+                backgroundBlur.removeAttribute('close')
+                worldMap.style.display = 'none';
+                worldMap.removeAttribute('disappear')
+                backgroundBlur.style.display = 'none';
+                worldMapBase.style.display = 'none';
+                worldMapBase.classList.remove('closableMenu')
+                worldMapBase.removeEventListener('animationend', animationEndHandler)
+                body.style.overflow = '';
+            }
+    
+            worldMapBase.addEventListener('animationend', animationEndHandler)
+            window.removeEventListener('click', windowClickHandler)
+        }
+    }
+    window.addEventListener('click', windowClickHandler)
+});

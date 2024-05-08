@@ -610,19 +610,19 @@ p {
     cursor: pointer;
 }
 
-.scrollerBase[open], #itemDescription[open] {
+.scrollerBase[open], #itemDescription[open], #worldMapBase[open] {
     animation:
         slide-up 750ms forwards,
         fade-in 500ms forwards;
 }
-.scrollerBase[close], #itemDescription[close] {
+.scrollerBase[close], #itemDescription[close], #worldMapBase[close] {
     animation: fade-out 500ms forwards;
 }
 
-.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear], .descripTextCon[appear], .descripHeadingCon[appear], .checkmarkIcon[appear] {
+.shopProductChoice[appear], .shopScrollerWeapons[appear], .shopScrollerArmors[appear], .descripTextCon[appear], .descripHeadingCon[appear], .checkmarkIcon[appear], #worldMap[appear] {
     animation: fade-in 300ms forwards;
 }
-.shopProductChoice[disappear], .shopScrollerWeapons[disappear], .shopScrollerArmors[disappear], .descripTextCon[disappear], .descripHeadingCon[disappear] {
+.shopProductChoice[disappear], .shopScrollerWeapons[disappear], .shopScrollerArmors[disappear], .descripTextCon[disappear], .descripHeadingCon[disappear], #worldMap[disappear] {
     animation: fade-out 300ms forwards;
 }
 
@@ -782,4 +782,24 @@ p {
     visibility: hidden;
     z-index: -1;
     opacity: 0;
+}
+
+.worldMapCon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#worldMapBase, #worldMap {
+    position: absolute;
+    width: 1200px;
+    z-index: 5;
+
+    display: none;
+    opacity: 0;
+}
+#worldMap {
+    z-index: 6;
 }
