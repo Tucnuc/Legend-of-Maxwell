@@ -711,6 +711,7 @@ let isWeaponScrollerOpen = false;
 let isArmorScrollerOpen = false;
 
 let isBuyingMenuOpen = false;
+let isItemUnlocking = false;
 
 const shopBtn = document.getElementById('shopEventBtn');
 shopBtn.addEventListener('click', () => {
@@ -745,7 +746,7 @@ shopBtn.addEventListener('click', () => {
             if (!bronzeSword.classList.contains('unlocked')) {
                 setTimeout(() => {
                     unlockingItem(bronzeSword);
-                }, 600);
+                }, 400);
             };
         }, 250);
     };
@@ -760,7 +761,7 @@ shopBtn.addEventListener('click', () => {
             if (!leatherArmor.classList.contains('unlocked')) {
                 setTimeout(() => {
                     unlockingItem(leatherArmor);
-                }, 600);
+                }, 400);
             };
         }, 250);
     };
@@ -792,7 +793,7 @@ shopBtn.addEventListener('click', () => {
     });
 
     let windowClickHandler = () => {    // CLOSING DOWN
-        if (!isBuyingMenuOpen && shopMenu.classList.contains('closableMenu')) {
+        if (!isBuyingMenuOpen && shopMenu.classList.contains('closableMenu') && !isItemUnlocking) {
             isMenuOpening = false;
             shopMenu.removeAttribute('open');
             backgroundBlur.removeAttribute('open');
@@ -1129,6 +1130,7 @@ shopArmorBtns.forEach(button => {
 });
 
 function unlockingItem (element) {
+    isItemUnlocking = true;
     element.classList.add('unlocked');
     lockId = document.getElementById(element.id + 'Lock');
     lockId.addEventListener('animationend', () => {
@@ -1137,6 +1139,7 @@ function unlockingItem (element) {
             lockId.addEventListener('animationend', () => {
                 lockId.removeAttribute('disappear')
                 lockId.setAttribute('unlocked', "");
+                isItemUnlocking = false;
             }, {once: true});
         }, 100);
     }, {once: true});
