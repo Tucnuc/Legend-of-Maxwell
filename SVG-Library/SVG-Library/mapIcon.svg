@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 82.7 82.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="mapIcon">
+    <path id="mapPiece3" class="cls-1" d="M57.2,25.8c-.2-.1-.4-.2-.5-.1l-9.3,2.3v28.8l9.6-2.4c.3,0,.5-.3.5-.6v-27.5c0-.2,0-.4-.2-.5Z"/>
+    <path id="mapPiece2" class="cls-1" d="M26.1,28.8v27.5c0,.2,0,.4.2.5.1,0,.2.1.4.1s.1,0,.2,0l9.3-2.3v-28.8l-9.6,2.4c-.3,0-.5.3-.5.6Z"/>
+    <path id="mapPiece1" class="cls-1" d="M37.4,54.6l8.8,2.2v-28.8l-8.8-2.2v28.8Z"/>
+  </g>
+</svg>

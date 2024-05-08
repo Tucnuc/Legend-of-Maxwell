@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="lockIcon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 416 408.9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Nepojmenovaný_přechod_26-2);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Nepojmenovaný_přechod_26-4);
+      }
+
+      .cls-3 {
+        fill: url(#Nepojmenovaný_přechod_26);
+      }
+
+      .cls-4 {
+        fill: url(#Nepojmenovaný_přechod_26-3);
+      }
+    </style>
+    <linearGradient id="Nepojmenovaný_přechod_26" data-name="Nepojmenovaný přechod 26" x1="207.7" y1="0" x2="208" y2="231.3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="ivory"/>
+      <stop offset=".2" stop-color="#edd4ae"/>
+      <stop offset=".3" stop-color="#d7b790"/>
+      <stop offset=".4" stop-color="#c59e76"/>
+      <stop offset=".5" stop-color="#b68b62"/>
+      <stop offset=".6" stop-color="#ac7d54"/>
+      <stop offset=".8" stop-color="#a6754c"/>
+      <stop offset="1" stop-color="#a5734a"/>
+    </linearGradient>
+    <linearGradient id="Nepojmenovaný_přechod_26-2" data-name="Nepojmenovaný přechod 26" x1="208.1" y1="161.2" x2="207.8" y2="409.2" xlink:href="#Nepojmenovaný_přechod_26"/>
+    <linearGradient id="Nepojmenovaný_přechod_26-3" data-name="Nepojmenovaný přechod 26" x1="55.1" y1="161.4" x2="54.8" y2="409" xlink:href="#Nepojmenovaný_přechod_26"/>
+    <linearGradient id="Nepojmenovaný_přechod_26-4" data-name="Nepojmenovaný přechod 26" x1="361.2" y1="161.4" x2="360.9" y2="409" xlink:href="#Nepojmenovaný_přechod_26"/>
+  </defs>
+  <path id="lockArm" class="cls-3" d="M356.9,148.9C356.9,66.8,290.1,0,208,0S59.1,66.8,59.1,148.9v82.6h56.1v-82.6c0-51.2,41.6-92.8,92.8-92.8s92.8,41.6,92.8,92.8v22.2h56.1v-22.2Z"/>
+  <g id="lockBase">
+    <path class="cls-1" d="M374.8,160.3H41.1c-22.7,0-41.1,18.4-41.1,41.1v166.3c0,22.7,18.4,41.1,41.1,41.1h10v-215.1c0-2.2,1.8-4,4-4s4,1.8,4,4v215.1h297.8v-215.1c0-2.2,1.8-4,4-4s4,1.8,4,4v215.1h10c22.7,0,41.1-18.4,41.1-41.1v-166.3c0-22.7-18.4-41.1-41.1-41.1Z"/>
+    <rect class="cls-4" x="49.5" y="160.3" width="10.9" height="248.6"/>
+    <rect class="cls-2" x="355.1" y="160.3" width="11.8" height="248.6"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82.7 82.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Nepojmenovaný_přechod_45);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Nepojmenovaný_přechod_45" data-name="Nepojmenovaný přechod 45" x1="29.6" y1="2085.7" x2="55.5" y2="2111.9" gradientTransform="translate(0 -2056.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="ivory"/>
+      <stop offset=".2" stop-color="#edd4ae"/>
+      <stop offset=".3" stop-color="#d7b790"/>
+      <stop offset=".4" stop-color="#c59e76"/>
+      <stop offset=".5" stop-color="#b68b62"/>
+      <stop offset=".6" stop-color="#ac7d54"/>
+      <stop offset=".8" stop-color="#a6754c"/>
+      <stop offset="1" stop-color="#a5734a"/>
+    </linearGradient>
+  </defs>
+  <path id="shopIcon" class="cls-1" d="M40.5,59.2c2.5,2.5,6.5,2.5,8.9,0l9.9-9.9c2.5-2.5,2.5-6.5,0-8.9l-13.3-13.3c-1.8-1.8-4.3-2.8-6.9-2.8h-10c-2.6,0-4.8,2.1-4.8,4.8v10c0,2.6,1,5,2.8,6.9l13.2,13.2s.2,0,.2,0ZM30.9,28.6c1.2,0,2.2,1,2.2,2.2s-1,2.2-2.2,2.2-2.2-1-2.2-2.2,1-2.2,2.2-2.2Z"/>
+</svg>

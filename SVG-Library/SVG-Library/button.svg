@@ -1,0 +1,5567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 270.40001 61.700001"
+   id="svg2671"
+   sodipodi:docname="buttonsvg.svg"
+   width="270.39999"
+   height="61.700001"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2673"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.8568714"
+     inkscape:cx="135.46287"
+     inkscape:cy="38.853691"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2671" />
+  <defs
+     id="defs1961">
+    <style
+       id="style824">
+      .cls-1 {
+        fill: url(#Nepojmenovaný_přechod_156);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-39, .cls-40, .cls-41, .cls-42, .cls-43, .cls-44, .cls-45, .cls-46, .cls-47, .cls-48, .cls-49, .cls-50, .cls-51, .cls-52, .cls-53, .cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-61, .cls-62, .cls-63, .cls-64, .cls-65, .cls-66, .cls-67, .cls-68, .cls-69, .cls-70, .cls-71, .cls-72, .cls-73, .cls-74, .cls-75, .cls-76, .cls-77, .cls-78, .cls-79, .cls-80, .cls-81, .cls-82, .cls-83, .cls-84, .cls-85, .cls-86, .cls-87, .cls-88, .cls-89, .cls-90, .cls-91, .cls-92, .cls-93, .cls-94, .cls-95, .cls-96, .cls-97, .cls-98, .cls-99, .cls-100, .cls-101, .cls-102, .cls-103, .cls-104, .cls-105, .cls-106, .cls-107, .cls-108, .cls-109, .cls-110, .cls-111, .cls-112, .cls-113, .cls-114, .cls-115, .cls-116, .cls-117, .cls-118, .cls-119, .cls-120, .cls-121, .cls-122, .cls-123, .cls-124, .cls-125, .cls-126, .cls-127, .cls-128, .cls-129, .cls-130, .cls-131, .cls-132, .cls-133, .cls-134, .cls-135, .cls-136, .cls-137, .cls-138, .cls-139, .cls-140, .cls-141, .cls-142, .cls-143, .cls-144, .cls-145, .cls-146, .cls-147, .cls-148, .cls-149, .cls-150, .cls-151, .cls-152, .cls-153, .cls-154, .cls-155, .cls-156, .cls-157, .cls-158, .cls-159, .cls-160, .cls-161, .cls-162, .cls-163, .cls-164, .cls-165, .cls-166, .cls-167, .cls-168, .cls-169, .cls-170, .cls-171, .cls-172, .cls-173, .cls-174, .cls-175, .cls-176, .cls-177, .cls-178, .cls-179, .cls-180, .cls-181, .cls-182, .cls-183, .cls-184, .cls-185, .cls-186, .cls-187, .cls-188, .cls-189, .cls-190, .cls-191, .cls-192, .cls-193, .cls-194, .cls-195, .cls-196, .cls-197, .cls-198, .cls-199, .cls-200, .cls-201, .cls-202, .cls-203, .cls-204, .cls-205, .cls-206, .cls-207, .cls-208, .cls-209, .cls-210, .cls-211, .cls-212, .cls-213, .cls-214, .cls-215, .cls-216, .cls-217, .cls-218, .cls-219, .cls-220, .cls-221, .cls-222, .cls-223, .cls-224, .cls-225, .cls-226, .cls-227, .cls-228, .cls-229, .cls-230, .cls-231, .cls-232, .cls-233, .cls-234, .cls-235, .cls-236, .cls-237, .cls-238, .cls-239, .cls-240 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-5, .cls-6, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-39, .cls-40, .cls-41, .cls-42, .cls-43, .cls-44, .cls-45, .cls-46, .cls-47, .cls-48, .cls-49, .cls-50, .cls-51, .cls-52, .cls-53, .cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-61, .cls-62, .cls-63, .cls-64, .cls-65, .cls-66, .cls-67, .cls-68, .cls-69, .cls-70, .cls-71, .cls-72, .cls-73, .cls-74, .cls-75, .cls-76, .cls-77, .cls-78, .cls-79, .cls-80, .cls-81, .cls-82, .cls-83, .cls-84, .cls-85, .cls-86, .cls-87, .cls-88, .cls-89, .cls-90, .cls-91, .cls-92, .cls-93, .cls-94, .cls-95, .cls-96, .cls-97, .cls-98, .cls-99, .cls-100, .cls-101, .cls-102, .cls-103, .cls-104, .cls-105, .cls-106, .cls-107, .cls-108, .cls-109, .cls-110, .cls-111, .cls-112, .cls-113, .cls-114, .cls-115, .cls-116, .cls-117, .cls-118, .cls-119, .cls-120, .cls-121, .cls-122, .cls-123, .cls-124, .cls-125, .cls-126, .cls-127, .cls-128, .cls-129, .cls-130, .cls-131, .cls-132, .cls-133, .cls-134, .cls-135, .cls-136, .cls-137, .cls-138, .cls-139, .cls-140, .cls-142, .cls-143, .cls-144, .cls-145, .cls-146, .cls-147, .cls-148, .cls-149, .cls-150, .cls-151, .cls-152, .cls-153, .cls-154, .cls-155, .cls-156, .cls-157, .cls-158, .cls-159, .cls-160, .cls-161, .cls-162, .cls-163, .cls-164, .cls-165, .cls-166, .cls-167, .cls-168, .cls-169, .cls-170, .cls-171, .cls-172, .cls-173, .cls-174, .cls-175, .cls-176, .cls-177, .cls-178, .cls-179, .cls-180, .cls-181, .cls-182, .cls-183, .cls-184, .cls-185, .cls-186, .cls-187, .cls-188, .cls-189, .cls-190, .cls-191, .cls-192, .cls-193, .cls-194, .cls-195, .cls-196, .cls-197, .cls-198, .cls-199, .cls-200, .cls-201, .cls-202, .cls-203, .cls-204, .cls-205, .cls-206, .cls-207, .cls-208, .cls-209, .cls-210, .cls-211, .cls-212, .cls-213, .cls-214, .cls-215, .cls-216, .cls-217, .cls-218, .cls-219, .cls-220, .cls-221, .cls-222, .cls-223, .cls-224, .cls-225, .cls-226, .cls-227, .cls-228, .cls-229, .cls-230, .cls-231, .cls-232, .cls-233, .cls-234, .cls-235, .cls-236, .cls-237, .cls-238, .cls-239, .cls-240 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: url(#Nepojmenovaný_přechod_62);
+      }
+
+      .cls-3 {
+        fill: url(#Nepojmenovaný_přechod_36);
+      }
+
+      .cls-4 {
+        fill: #ccc;
+      }
+
+      .cls-5 {
+        fill: url(#Nepojmenovaný_přechod_185);
+      }
+
+      .cls-6 {
+        fill: url(#Nepojmenovaný_přechod_96);
+      }
+
+      .cls-7 {
+        fill: #c93;
+      }
+
+      .cls-8 {
+        fill: url(#Nepojmenovaný_přechod_21);
+      }
+
+      .cls-9 {
+        fill: url(#Nepojmenovaný_přechod_19);
+      }
+
+      .cls-10 {
+        fill: url(#Nepojmenovaný_přechod_204);
+      }
+
+      .cls-11 {
+        fill: url(#Nepojmenovaný_přechod_146);
+      }
+
+      .cls-12 {
+        fill: url(#Nepojmenovaný_přechod_110);
+      }
+
+      .cls-13 {
+        fill: url(#Nepojmenovaný_přechod_192);
+      }
+
+      .cls-14 {
+        fill: url(#Nepojmenovaný_přechod_212);
+      }
+
+      .cls-15 {
+        fill: url(#Nepojmenovaný_přechod_181);
+      }
+
+      .cls-16 {
+        fill: url(#Nepojmenovaný_přechod_43);
+      }
+
+      .cls-17 {
+        fill: url(#Nepojmenovaný_přechod_45);
+      }
+
+      .cls-18 {
+        fill: url(#Nepojmenovaný_přechod_51);
+      }
+
+      .cls-19 {
+        fill: url(#Nepojmenovaný_přechod_10);
+      }
+
+      .cls-20 {
+        fill: url(#Nepojmenovaný_přechod_93);
+      }
+
+      .cls-21 {
+        fill: url(#Nepojmenovaný_přechod_22);
+      }
+
+      .cls-22 {
+        fill: #203d6b;
+      }
+
+      .cls-23 {
+        fill: #143566;
+      }
+
+      .cls-24 {
+        fill: url(#Nepojmenovaný_přechod_222);
+      }
+
+      .cls-25 {
+        fill: url(#Nepojmenovaný_přechod_70);
+      }
+
+      .cls-26 {
+        fill: url(#Nepojmenovaný_přechod_183);
+      }
+
+      .cls-26, .cls-241, .cls-59, .cls-64, .cls-72, .cls-92, .cls-98, .cls-175, .cls-177, .cls-223 {
+        isolation: isolate;
+      }
+
+      .cls-26, .cls-59, .cls-64, .cls-72, .cls-92, .cls-98, .cls-242, .cls-175, .cls-177, .cls-223 {
+        mix-blend-mode: screen;
+      }
+
+      .cls-27 {
+        fill: url(#Nepojmenovaný_přechod_54);
+      }
+
+      .cls-28 {
+        fill: url(#Nepojmenovaný_přechod_27);
+      }
+
+      .cls-29 {
+        fill: url(#Nepojmenovaný_přechod_58);
+      }
+
+      .cls-30 {
+        fill: url(#Nepojmenovaný_přechod_148);
+      }
+
+      .cls-31 {
+        fill: url(#Nepojmenovaný_přechod_191);
+      }
+
+      .cls-32 {
+        fill: url(#Nepojmenovaný_přechod_216);
+      }
+
+      .cls-33 {
+        fill: url(#Nepojmenovaný_přechod_17);
+      }
+
+      .cls-34 {
+        fill: url(#Nepojmenovaný_přechod_168);
+      }
+
+      .cls-35 {
+        fill: url(#Nepojmenovaný_přechod_174);
+      }
+
+      .cls-36 {
+        fill: url(#Nepojmenovaný_přechod_139);
+      }
+
+      .cls-37 {
+        fill: url(#Nepojmenovaný_přechod_104);
+      }
+
+      .cls-38 {
+        fill: url(#Nepojmenovaný_přechod_134);
+      }
+
+      .cls-39 {
+        fill: url(#Nepojmenovaný_přechod_65);
+      }
+
+      .cls-40 {
+        fill: url(#Nepojmenovaný_přechod_120);
+      }
+
+      .cls-41 {
+        fill: url(#Nepojmenovaný_přechod_112);
+      }
+
+      .cls-42 {
+        fill: url(#Nepojmenovaný_přechod_197);
+      }
+
+      .cls-43 {
+        fill: url(#Nepojmenovaný_přechod_203);
+      }
+
+      .cls-44 {
+        fill: url(#Nepojmenovaný_přechod_18);
+      }
+
+      .cls-45 {
+        fill: url(#Nepojmenovaný_přechod_28);
+      }
+
+      .cls-46 {
+        fill: url(#Nepojmenovaný_přechod_125);
+      }
+
+      .cls-47 {
+        fill: url(#Nepojmenovaný_přechod_38);
+      }
+
+      .cls-48 {
+        fill: url(#Nepojmenovaný_přechod_129);
+      }
+
+      .cls-49 {
+        fill: url(#Nepojmenovaný_přechod_187);
+      }
+
+      .cls-50 {
+        fill: url(#Nepojmenovaný_přechod_220);
+      }
+
+      .cls-51 {
+        fill: url(#Nepojmenovaný_přechod_50);
+      }
+
+      .cls-52 {
+        fill: url(#Nepojmenovaný_přechod_153);
+      }
+
+      .cls-53 {
+        fill: url(#Nepojmenovaný_přechod_113);
+      }
+
+      .cls-54 {
+        fill: url(#Nepojmenovaný_přechod_74);
+      }
+
+      .cls-55 {
+        fill: url(#Nepojmenovaný_přechod_167);
+      }
+
+      .cls-56 {
+        fill: url(#Nepojmenovaný_přechod_171);
+      }
+
+      .cls-57 {
+        fill: url(#Nepojmenovaný_přechod_151);
+      }
+
+      .cls-58 {
+        fill: url(#Nepojmenovaný_přechod_124);
+      }
+
+      .cls-59 {
+        fill: url(#Nepojmenovaný_přechod_227);
+      }
+
+      .cls-60 {
+        fill: url(#Nepojmenovaný_přechod_64);
+      }
+
+      .cls-61 {
+        fill: url(#Nepojmenovaný_přechod_81);
+      }
+
+      .cls-62 {
+        fill: url(#Nepojmenovaný_přechod_119);
+      }
+
+      .cls-63 {
+        fill: url(#Nepojmenovaný_přechod_173);
+      }
+
+      .cls-64 {
+        fill: url(#Nepojmenovaný_přechod_122);
+      }
+
+      .cls-65 {
+        fill: url(#Nepojmenovaný_přechod_14);
+      }
+
+      .cls-66 {
+        fill: url(#Nepojmenovaný_přechod_73);
+      }
+
+      .cls-67 {
+        fill: url(#Nepojmenovaný_přechod_155);
+      }
+
+      .cls-68 {
+        fill: url(#Nepojmenovaný_přechod_83);
+      }
+
+      .cls-69 {
+        fill: url(#Nepojmenovaný_přechod_101);
+      }
+
+      .cls-70 {
+        fill: url(#Nepojmenovaný_přechod_123);
+      }
+
+      .cls-71 {
+        fill: url(#Nepojmenovaný_přechod_111);
+      }
+
+      .cls-72 {
+        fill: url(#Nepojmenovaný_přechod_225);
+        opacity: .6;
+      }
+
+      .cls-73 {
+        fill: url(#Nepojmenovaný_přechod_114);
+      }
+
+      .cls-74 {
+        fill: url(#Nepojmenovaný_přechod_219);
+      }
+
+      .cls-75 {
+        fill: url(#Nepojmenovaný_přechod_132);
+      }
+
+      .cls-76 {
+        fill: url(#Nepojmenovaný_přechod_199);
+      }
+
+      .cls-77 {
+        fill: url(#Nepojmenovaný_přechod_85);
+      }
+
+      .cls-78 {
+        fill: url(#Nepojmenovaný_přechod_176);
+      }
+
+      .cls-79 {
+        fill: url(#Nepojmenovaný_přechod_147);
+      }
+
+      .cls-80 {
+        fill: url(#Nepojmenovaný_přechod_144);
+      }
+
+      .cls-81 {
+        fill: url(#Nepojmenovaný_přechod_135);
+      }
+
+      .cls-82 {
+        fill: url(#Nepojmenovaný_přechod_3);
+      }
+
+      .cls-83 {
+        fill: url(#Nepojmenovaný_přechod_48);
+      }
+
+      .cls-84 {
+        fill: url(#Nepojmenovaný_přechod_16);
+      }
+
+      .cls-85 {
+        fill: url(#Nepojmenovaný_přechod_215);
+      }
+
+      .cls-86 {
+        fill: url(#Nepojmenovaný_přechod_109);
+      }
+
+      .cls-87 {
+        fill: url(#Nepojmenovaný_přechod_221);
+      }
+
+      .cls-88 {
+        fill: url(#Nepojmenovaný_přechod_82);
+      }
+
+      .cls-89 {
+        fill: url(#Nepojmenovaný_přechod_217);
+      }
+
+      .cls-90 {
+        fill: url(#Nepojmenovaný_přechod_214);
+      }
+
+      .cls-91 {
+        fill: url(#Nepojmenovaný_přechod_49);
+      }
+
+      .cls-92 {
+        fill: url(#Nepojmenovaný_přechod_121);
+      }
+
+      .cls-93 {
+        fill: url(#Nepojmenovaný_přechod_4);
+      }
+
+      .cls-94 {
+        fill: #0e2444;
+      }
+
+      .cls-95 {
+        fill: url(#Nepojmenovaný_přechod_175);
+      }
+
+      .cls-96 {
+        fill: url(#Nepojmenovaný_přechod_29);
+      }
+
+      .cls-97 {
+        fill: url(#Nepojmenovaný_přechod_11);
+      }
+
+      .cls-98 {
+        fill: url(#Nepojmenovaný_přechod_182);
+      }
+
+      .cls-99 {
+        fill: url(#Nepojmenovaný_přechod_102);
+      }
+
+      .cls-100 {
+        fill: url(#Nepojmenovaný_přechod_13);
+      }
+
+      .cls-101 {
+        fill: url(#Nepojmenovaný_přechod);
+      }
+
+      .cls-102 {
+        fill: url(#Nepojmenovaný_přechod_209);
+      }
+
+      .cls-103 {
+        fill: url(#Nepojmenovaný_přechod_207);
+      }
+
+      .cls-104 {
+        fill: url(#Nepojmenovaný_přechod_24);
+      }
+
+      .cls-105 {
+        fill: url(#Nepojmenovaný_přechod_31);
+      }
+
+      .cls-106 {
+        fill: url(#Nepojmenovaný_přechod_76);
+      }
+
+      .cls-107 {
+        fill: url(#Nepojmenovaný_přechod_41);
+      }
+
+      .cls-108 {
+        fill: url(#Nepojmenovaný_přechod_66);
+      }
+
+      .cls-109 {
+        fill: url(#Nepojmenovaný_přechod_25);
+      }
+
+      .cls-110 {
+        fill: url(#Nepojmenovaný_přechod_206);
+      }
+
+      .cls-111 {
+        fill: url(#Nepojmenovaný_přechod_131);
+      }
+
+      .cls-112 {
+        fill: url(#Nepojmenovaný_přechod_193);
+      }
+
+      .cls-113 {
+        fill: url(#Nepojmenovaný_přechod_94);
+      }
+
+      .cls-114 {
+        fill: url(#Nepojmenovaný_přechod_40);
+      }
+
+      .cls-115 {
+        fill: url(#Nepojmenovaný_přechod_170);
+      }
+
+      .cls-116 {
+        fill: url(#Nepojmenovaný_přechod_177);
+      }
+
+      .cls-117 {
+        fill: url(#Nepojmenovaný_přechod_99);
+      }
+
+      .cls-118 {
+        fill: url(#Nepojmenovaný_přechod_106);
+      }
+
+      .cls-119 {
+        fill: url(#Nepojmenovaný_přechod_136);
+      }
+
+      .cls-120 {
+        fill: url(#Nepojmenovaný_přechod_79);
+      }
+
+      .cls-121 {
+        fill: url(#Nepojmenovaný_přechod_218);
+      }
+
+      .cls-122 {
+        fill: url(#Nepojmenovaný_přechod_8);
+      }
+
+      .cls-123 {
+        fill: #214a72;
+      }
+
+      .cls-124 {
+        fill: url(#Nepojmenovaný_přechod_142);
+      }
+
+      .cls-125 {
+        fill: url(#Nepojmenovaný_přechod_201);
+      }
+
+      .cls-126 {
+        fill: url(#Nepojmenovaný_přechod_164);
+      }
+
+      .cls-127 {
+        fill: url(#Nepojmenovaný_přechod_100);
+      }
+
+      .cls-128 {
+        fill: #132d54;
+      }
+
+      .cls-129 {
+        fill: url(#Nepojmenovaný_přechod_172);
+      }
+
+      .cls-130 {
+        fill: url(#Nepojmenovaný_přechod_128);
+      }
+
+      .cls-131 {
+        fill: url(#Nepojmenovaný_přechod_37);
+      }
+
+      .cls-132 {
+        fill: url(#Nepojmenovaný_přechod_55);
+      }
+
+      .cls-133 {
+        fill: url(#Nepojmenovaný_přechod_26);
+      }
+
+      .cls-134 {
+        fill: url(#Nepojmenovaný_přechod_72);
+      }
+
+      .cls-135 {
+        fill: url(#Nepojmenovaný_přechod_68);
+      }
+
+      .cls-136 {
+        fill: url(#Nepojmenovaný_přechod_84);
+      }
+
+      .cls-137 {
+        fill: url(#Nepojmenovaný_přechod_44);
+      }
+
+      .cls-138 {
+        fill: url(#Nepojmenovaný_přechod_210);
+      }
+
+      .cls-139 {
+        fill: url(#Nepojmenovaný_přechod_15);
+      }
+
+      .cls-140 {
+        fill: url(#Nepojmenovaný_přechod_77);
+      }
+
+      .cls-141, .cls-207 {
+        fill: gray;
+      }
+
+      .cls-142 {
+        fill: url(#Nepojmenovaný_přechod_163);
+      }
+
+      .cls-143 {
+        fill: url(#Nepojmenovaný_přechod_88);
+      }
+
+      .cls-144 {
+        fill: url(#Nepojmenovaný_přechod_161);
+      }
+
+      .cls-145 {
+        fill: url(#Nepojmenovaný_přechod_166);
+      }
+
+      .cls-146 {
+        fill: url(#Nepojmenovaný_přechod_32);
+      }
+
+      .cls-147 {
+        fill: url(#Nepojmenovaný_přechod_118);
+      }
+
+      .cls-148 {
+        fill: url(#Nepojmenovaný_přechod_34);
+      }
+
+      .cls-149 {
+        fill: url(#Nepojmenovaný_přechod_157);
+      }
+
+      .cls-150 {
+        fill: url(#Nepojmenovaný_přechod_127);
+      }
+
+      .cls-151 {
+        fill: url(#Nepojmenovaný_přechod_149);
+      }
+
+      .cls-152 {
+        fill: url(#Nepojmenovaný_přechod_63);
+      }
+
+      .cls-153 {
+        fill: url(#Nepojmenovaný_přechod_150);
+      }
+
+      .cls-154 {
+        fill: #000;
+      }
+
+      .cls-155 {
+        fill: url(#Nepojmenovaný_přechod_179);
+      }
+
+      .cls-156 {
+        fill: url(#Nepojmenovaný_přechod_95);
+      }
+
+      .cls-157 {
+        fill: url(#Nepojmenovaný_přechod_103);
+      }
+
+      .cls-158 {
+        fill: url(#Nepojmenovaný_přechod_98);
+      }
+
+      .cls-159 {
+        fill: url(#Nepojmenovaný_přechod_211);
+      }
+
+      .cls-160 {
+        fill: url(#Nepojmenovaný_přechod_71);
+      }
+
+      .cls-161 {
+        fill: url(#Nepojmenovaný_přechod_126);
+      }
+
+      .cls-162 {
+        fill: url(#Nepojmenovaný_přechod_9);
+      }
+
+      .cls-163 {
+        fill: url(#Nepojmenovaný_přechod_97);
+      }
+
+      .cls-164 {
+        fill: url(#Nepojmenovaný_přechod_57);
+      }
+
+      .cls-165 {
+        fill: url(#Nepojmenovaný_přechod_59);
+      }
+
+      .cls-166 {
+        fill: url(#Nepojmenovaný_přechod_188);
+      }
+
+      .cls-167 {
+        fill: url(#Nepojmenovaný_přechod_186);
+      }
+
+      .cls-168 {
+        fill: url(#Nepojmenovaný_přechod_138);
+      }
+
+      .cls-169 {
+        fill: url(#Nepojmenovaný_přechod_30);
+      }
+
+      .cls-170 {
+        fill: url(#Nepojmenovaný_přechod_159);
+      }
+
+      .cls-171 {
+        fill: url(#Nepojmenovaný_přechod_56);
+      }
+
+      .cls-172 {
+        fill: url(#Nepojmenovaný_přechod_141);
+      }
+
+      .cls-173 {
+        fill: url(#Nepojmenovaný_přechod_224);
+      }
+
+      .cls-174 {
+        fill: url(#Nepojmenovaný_přechod_184);
+      }
+
+      .cls-175 {
+        fill: url(#Nepojmenovaný_přechod_226);
+      }
+
+      .cls-176 {
+        fill: url(#Nepojmenovaný_přechod_67);
+      }
+
+      .cls-177 {
+        fill: url(#Nepojmenovaný_přechod_60);
+      }
+
+      .cls-178 {
+        fill: url(#Nepojmenovaný_přechod_7);
+      }
+
+      .cls-179 {
+        fill: url(#Nepojmenovaný_přechod_162);
+      }
+
+      .cls-180 {
+        fill: url(#Nepojmenovaný_přechod_75);
+      }
+
+      .cls-181 {
+        fill: url(#Nepojmenovaný_přechod_208);
+      }
+
+      .cls-182 {
+        fill: url(#Nepojmenovaný_přechod_180);
+      }
+
+      .cls-183 {
+        fill: url(#Nepojmenovaný_přechod_213);
+      }
+
+      .cls-184 {
+        fill: url(#Nepojmenovaný_přechod_105);
+      }
+
+      .cls-185 {
+        fill: url(#Nepojmenovaný_přechod_202);
+      }
+
+      .cls-186 {
+        fill: url(#Nepojmenovaný_přechod_86);
+      }
+
+      .cls-187 {
+        fill: url(#Nepojmenovaný_přechod_116);
+      }
+
+      .cls-188 {
+        fill: #010716;
+      }
+
+      .cls-189 {
+        fill: url(#Nepojmenovaný_přechod_69);
+      }
+
+      .cls-190 {
+        fill: url(#Nepojmenovaný_přechod_160);
+      }
+
+      .cls-191 {
+        fill: url(#Nepojmenovaný_přechod_205);
+      }
+
+      .cls-192 {
+        fill: url(#Nepojmenovaný_přechod_152);
+      }
+
+      .cls-193 {
+        fill: url(#Nepojmenovaný_přechod_80);
+      }
+
+      .cls-194 {
+        fill: url(#Nepojmenovaný_přechod_140);
+      }
+
+      .cls-195 {
+        fill: url(#Nepojmenovaný_přechod_46);
+      }
+
+      .cls-196 {
+        fill: url(#Nepojmenovaný_přechod_145);
+      }
+
+      .cls-197 {
+        fill: url(#Nepojmenovaný_přechod_158);
+      }
+
+      .cls-198 {
+        fill: url(#Nepojmenovaný_přechod_89);
+      }
+
+      .cls-199 {
+        fill: url(#Nepojmenovaný_přechod_178);
+      }
+
+      .cls-200 {
+        fill: url(#Nepojmenovaný_přechod_137);
+      }
+
+      .cls-201 {
+        fill: url(#Nepojmenovaný_přechod_223);
+      }
+
+      .cls-202 {
+        fill: url(#Nepojmenovaný_přechod_2);
+      }
+
+      .cls-203 {
+        fill: url(#Nepojmenovaný_přechod_154);
+      }
+
+      .cls-204 {
+        fill: url(#Nepojmenovaný_přechod_169);
+      }
+
+      .cls-205 {
+        fill: url(#Nepojmenovaný_přechod_143);
+      }
+
+      .cls-206 {
+        fill: url(#Nepojmenovaný_přechod_33);
+      }
+
+      .cls-208 {
+        fill: url(#Nepojmenovaný_přechod_53);
+      }
+
+      .cls-209 {
+        fill: url(#Nepojmenovaný_přechod_78);
+      }
+
+      .cls-210 {
+        fill: url(#Nepojmenovaný_přechod_115);
+      }
+
+      .cls-211 {
+        fill: url(#Nepojmenovaný_přechod_35);
+      }
+
+      .cls-212 {
+        fill: url(#Nepojmenovaný_přechod_108);
+      }
+
+      .cls-213 {
+        fill: url(#Nepojmenovaný_přechod_196);
+      }
+
+      .cls-214 {
+        fill: url(#Nepojmenovaný_přechod_20);
+      }
+
+      .cls-215 {
+        fill: url(#Nepojmenovaný_přechod_23);
+      }
+
+      .cls-216 {
+        fill: #203d60;
+      }
+
+      .cls-217 {
+        fill: url(#Nepojmenovaný_přechod_52);
+      }
+
+      .cls-218 {
+        fill: url(#Nepojmenovaný_přechod_5);
+      }
+
+      .cls-219 {
+        fill: url(#Nepojmenovaný_přechod_190);
+      }
+
+      .cls-220 {
+        fill: url(#Nepojmenovaný_přechod_130);
+      }
+
+      .cls-221 {
+        fill: url(#Nepojmenovaný_přechod_189);
+      }
+
+      .cls-222 {
+        fill: url(#Nepojmenovaný_přechod_47);
+      }
+
+      .cls-223 {
+        fill: url(#Nepojmenovaný_přechod_61);
+      }
+
+      .cls-224 {
+        fill: url(#Nepojmenovaný_přechod_92);
+      }
+
+      .cls-225 {
+        fill: url(#Nepojmenovaný_přechod_12);
+      }
+
+      .cls-226 {
+        fill: url(#Nepojmenovaný_přechod_87);
+      }
+
+      .cls-227 {
+        fill: url(#Nepojmenovaný_přechod_117);
+      }
+
+      .cls-228 {
+        fill: url(#Nepojmenovaný_přechod_165);
+      }
+
+      .cls-243 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-229 {
+        fill: url(#Nepojmenovaný_přechod_194);
+      }
+
+      .cls-230 {
+        fill: url(#Nepojmenovaný_přechod_6);
+      }
+
+      .cls-231 {
+        fill: url(#Nepojmenovaný_přechod_90);
+      }
+
+      .cls-232 {
+        fill: url(#Nepojmenovaný_přechod_39);
+      }
+
+      .cls-233 {
+        fill: #333;
+      }
+
+      .cls-234 {
+        fill: url(#Nepojmenovaný_přechod_107);
+      }
+
+      .cls-235 {
+        fill: url(#Nepojmenovaný_přechod_91);
+      }
+
+      .cls-236 {
+        fill: url(#Nepojmenovaný_přechod_200);
+      }
+
+      .cls-237 {
+        fill: url(#Nepojmenovaný_přechod_195);
+      }
+
+      .cls-238 {
+        fill: url(#Nepojmenovaný_přechod_198);
+      }
+
+      .cls-239 {
+        fill: url(#Nepojmenovaný_přechod_133);
+      }
+
+      .cls-240 {
+        fill: url(#Nepojmenovaný_přechod_42);
+      }
+    </style>
+    <linearGradient
+       id="Nepojmenovaný_přechod"
+       data-name="Nepojmenovaný přechod"
+       x1="390.89999"
+       y1="-486.10001"
+       x2="390.89999"
+       y2="-440"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#101524"
+         id="stop826" />
+      <stop
+         offset="1"
+         stop-color="#1a2540"
+         id="stop828" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_2"
+       data-name="Nepojmenovaný přechod 2"
+       x1="390.89999"
+       y1="-433.89999"
+       x2="390.89999"
+       y2="-432.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop831" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop833" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_3"
+       data-name="Nepojmenovaný přechod 3"
+       x1="390.89999"
+       y1="-435.5"
+       x2="390.89999"
+       y2="-433.89999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop836" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop838" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_4"
+       data-name="Nepojmenovaný přechod 4"
+       x1="280.29999"
+       y1="-437"
+       x2="282.10001"
+       y2="-437"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop841" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop843" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_5"
+       data-name="Nepojmenovaný přechod 5"
+       x1="282.10001"
+       y1="-438.10001"
+       x2="283.89999"
+       y2="-438.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop846" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop848" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_6"
+       data-name="Nepojmenovaný přechod 6"
+       x1="390.89999"
+       y1="-493.79999"
+       x2="390.89999"
+       y2="-492.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop851" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop853" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_7"
+       data-name="Nepojmenovaný přechod 7"
+       x1="390.89999"
+       y1="-492.20001"
+       x2="390.89999"
+       y2="-490.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop856" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop858" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_8"
+       data-name="Nepojmenovaný přechod 8"
+       x1="270.10001"
+       y1="-472.60001"
+       x2="267.70001"
+       y2="-475"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop861" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop863" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_9"
+       data-name="Nepojmenovaný přechod 9"
+       x1="272.20001"
+       y1="-472.29999"
+       x2="269.89999"
+       y2="-474.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop866" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop868" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_10"
+       data-name="Nepojmenovaný přechod 10"
+       x1="498"
+       y1="-488.10001"
+       x2="499.70001"
+       y2="-488.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop871" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop873" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_11"
+       data-name="Nepojmenovaný přechod 11"
+       x1="499.70001"
+       y1="-489.20001"
+       x2="501.5"
+       y2="-489.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop876" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop878" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_12"
+       data-name="Nepojmenovaný přechod 12"
+       x1="390.89999"
+       y1="-437.70001"
+       x2="390.89999"
+       y2="-436.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop881" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop883" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_13"
+       data-name="Nepojmenovaný přechod 13"
+       x1="390.89999"
+       y1="-438.70001"
+       x2="390.89999"
+       y2="-437.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop886" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop888" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_14"
+       data-name="Nepojmenovaný přechod 14"
+       x1="272.5"
+       y1="-447.10001"
+       x2="273.60001"
+       y2="-447.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop891" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop893" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_15"
+       data-name="Nepojmenovaný přechod 15"
+       x1="273.60001"
+       y1="-447.60001"
+       x2="274.60001"
+       y2="-447.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop896" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop898" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_16"
+       data-name="Nepojmenovaný přechod 16"
+       x1="390.89999"
+       y1="-489.29999"
+       x2="390.89999"
+       y2="-488.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop901" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop903" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_17"
+       data-name="Nepojmenovaný přechod 17"
+       x1="390.89999"
+       y1="-488.39999"
+       x2="390.89999"
+       y2="-487.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop906" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop908" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_18"
+       data-name="Nepojmenovaný přechod 18"
+       x1="505.20001"
+       y1="-460.39999"
+       x2="504.20001"
+       y2="-459.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop911" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop913" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_19"
+       data-name="Nepojmenovaný přechod 19"
+       x1="505.89999"
+       y1="-461.10001"
+       x2="504.89999"
+       y2="-460.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop916" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop918" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_20"
+       data-name="Nepojmenovaný přechod 20"
+       x1="511.39999"
+       y1="-460.10001"
+       x2="510.60001"
+       y2="-461.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop921" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop923" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_21"
+       data-name="Nepojmenovaný přechod 21"
+       x1="512.29999"
+       y1="-459.39999"
+       x2="511.20001"
+       y2="-460.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop926" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop928" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_22"
+       data-name="Nepojmenovaný přechod 22"
+       x1="511.39999"
+       y1="-466"
+       x2="510.60001"
+       y2="-465.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop931" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop933" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_23"
+       data-name="Nepojmenovaný přechod 23"
+       x1="512.29999"
+       y1="-466.70001"
+       x2="511.20001"
+       y2="-465.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop936" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop938" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_24"
+       data-name="Nepojmenovaný přechod 24"
+       x1="505.89999"
+       y1="-465"
+       x2="504.89999"
+       y2="-466"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop941" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop943" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_25"
+       data-name="Nepojmenovaný přechod 25"
+       x1="505.20001"
+       y1="-465.70001"
+       x2="504.20001"
+       y2="-466.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop946" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop948" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_26"
+       data-name="Nepojmenovaný přechod 26"
+       cx="477.29999"
+       cy="-461.39999"
+       fx="477.29999"
+       fy="-461.39999"
+       r="11"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop951" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop953" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_27"
+       data-name="Nepojmenovaný přechod 27"
+       x1="272.5"
+       y1="-479"
+       x2="273.60001"
+       y2="-479"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop956" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop958" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_28"
+       data-name="Nepojmenovaný přechod 28"
+       x1="273.60001"
+       y1="-478.5"
+       x2="274.60001"
+       y2="-478.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop961" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop963" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_29"
+       data-name="Nepojmenovaný přechod 29"
+       x1="508.20001"
+       y1="-479"
+       x2="509.29999"
+       y2="-479"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop966" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop968" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_30"
+       data-name="Nepojmenovaný přechod 30"
+       x1="507.20001"
+       y1="-478.5"
+       x2="508.20001"
+       y2="-478.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop971" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop973" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_31"
+       data-name="Nepojmenovaný přechod 31"
+       x1="270.10001"
+       y1="-453.5"
+       x2="267.70001"
+       y2="-451.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop976" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop978" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_32"
+       data-name="Nepojmenovaný přechod 32"
+       x1="272.20001"
+       y1="-453.79999"
+       x2="269.79999"
+       y2="-451.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop981" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop983" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_33"
+       data-name="Nepojmenovaný přechod 33"
+       x1="280.29999"
+       y1="-489.20001"
+       x2="282.10001"
+       y2="-489.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop986" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop988" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_34"
+       data-name="Nepojmenovaný přechod 34"
+       x1="282.10001"
+       y1="-488.10001"
+       x2="283.89999"
+       y2="-488.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop991" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop993" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_35"
+       data-name="Nepojmenovaný přechod 35"
+       x1="498"
+       y1="-438.10001"
+       x2="499.70001"
+       y2="-438.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop996" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop998" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_36"
+       data-name="Nepojmenovaný přechod 36"
+       x1="499.70001"
+       y1="-436.89999"
+       x2="501.5"
+       y2="-436.89999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1001" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1003" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_37"
+       data-name="Nepojmenovaný přechod 37"
+       x1="511.89999"
+       y1="-474.60001"
+       x2="509.60001"
+       y2="-472.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1006" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1008" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_38"
+       data-name="Nepojmenovaný přechod 38"
+       x1="514.09998"
+       y1="-475"
+       x2="511.70001"
+       y2="-472.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1011" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1013" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_39"
+       data-name="Nepojmenovaný přechod 39"
+       x1="512"
+       y1="-451.39999"
+       x2="509.60001"
+       y2="-453.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1016" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1018" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_40"
+       data-name="Nepojmenovaný přechod 40"
+       x1="514.09998"
+       y1="-451.10001"
+       x2="511.70001"
+       y2="-453.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1021" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1023" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_41"
+       data-name="Nepojmenovaný přechod 41"
+       cx="274.39999"
+       cy="-433"
+       fx="274.39999"
+       fy="-433"
+       r="62.900002"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1026" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1028" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_42"
+       data-name="Nepojmenovaný přechod 42"
+       cx="258.5"
+       cy="-455.39999"
+       fx="258.5"
+       fy="-455.39999"
+       r="46"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1031" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1033" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_43"
+       data-name="Nepojmenovaný přechod 43"
+       cx="280.39999"
+       cy="-484.20001"
+       fx="280.39999"
+       fy="-484.20001"
+       r="25.4"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1036" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1038" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_44"
+       data-name="Nepojmenovaný přechod 44"
+       cx="280.29999"
+       cy="-428.79999"
+       fx="280.29999"
+       fy="-428.79999"
+       r="88.900002"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1041" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1043" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_45"
+       data-name="Nepojmenovaný přechod 45"
+       cx="475.89999"
+       cy="-484.29999"
+       fx="475.89999"
+       fy="-484.29999"
+       r="36"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1046" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1048" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_46"
+       data-name="Nepojmenovaný přechod 46"
+       x1="508.29999"
+       y1="-447.10001"
+       x2="509.29999"
+       y2="-447.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1051" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1053" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_47"
+       data-name="Nepojmenovaný přechod 47"
+       x1="507.20001"
+       y1="-447.60001"
+       x2="508.29999"
+       y2="-447.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1056" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1058" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_48"
+       data-name="Nepojmenovaný přechod 48"
+       cx="465.89999"
+       cy="-415.89999"
+       fx="465.89999"
+       fy="-415.89999"
+       r="93.800003"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1061" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1063" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_49"
+       data-name="Nepojmenovaný přechod 49"
+       x1="270.60001"
+       y1="-460.39999"
+       x2="269.5"
+       y2="-459.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1066" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1068" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_50"
+       data-name="Nepojmenovaný přechod 50"
+       x1="271.29999"
+       y1="-461.10001"
+       x2="270.39999"
+       y2="-460.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1071" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1073" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_51"
+       data-name="Nepojmenovaný přechod 51"
+       x1="276.89999"
+       y1="-460.10001"
+       x2="275.89999"
+       y2="-461.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1076" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1078" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_52"
+       data-name="Nepojmenovaný přechod 52"
+       x1="277.60001"
+       y1="-459.39999"
+       x2="276.60001"
+       y2="-460.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1081" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1083" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_53"
+       data-name="Nepojmenovaný přechod 53"
+       x1="276.89999"
+       y1="-466"
+       x2="275.89999"
+       y2="-465"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1086" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1088" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_54"
+       data-name="Nepojmenovaný přechod 54"
+       x1="277.60001"
+       y1="-466.70001"
+       x2="276.60001"
+       y2="-465.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1091" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1093" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_55"
+       data-name="Nepojmenovaný přechod 55"
+       x1="271.29999"
+       y1="-465.10001"
+       x2="270.39999"
+       y2="-466"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1096" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1098" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_56"
+       data-name="Nepojmenovaný přechod 56"
+       x1="270.60001"
+       y1="-465.70001"
+       x2="269.5"
+       y2="-466.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1101" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1103" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_57"
+       data-name="Nepojmenovaný přechod 57"
+       cx="266"
+       cy="-461.39999"
+       fx="266"
+       fy="-461.39999"
+       r="11"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1106" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1108" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_58"
+       data-name="Nepojmenovaný přechod 58"
+       x1="508.20001"
+       y1="-465.89999"
+       x2="508.20001"
+       y2="-460.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1a2540"
+         id="stop1111" />
+      <stop
+         offset="1"
+         stop-color="#101524"
+         id="stop1113" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_59"
+       data-name="Nepojmenovaný přechod 59"
+       x1="273.60001"
+       y1="-465.89999"
+       x2="273.60001"
+       y2="-460.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1a2540"
+         id="stop1116" />
+      <stop
+         offset="1"
+         stop-color="#101524"
+         id="stop1118" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_60"
+       data-name="Nepojmenovaný přechod 60"
+       cx="315.70001"
+       cy="-420.79999"
+       fx="315.70001"
+       fy="-420.79999"
+       r="114.3"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1121" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1123" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_61"
+       data-name="Nepojmenovaný přechod 61"
+       cx="458.39999"
+       cy="-471"
+       fx="458.39999"
+       fy="-471"
+       r="159"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1126" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1128" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_62"
+       data-name="Nepojmenovaný přechod 62"
+       x1="390.89999"
+       y1="-417.70001"
+       x2="390.89999"
+       y2="-371.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#101524"
+         id="stop1131" />
+      <stop
+         offset="1"
+         stop-color="#1a2540"
+         id="stop1133" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_63"
+       data-name="Nepojmenovaný přechod 63"
+       x1="390.89999"
+       y1="-365.5"
+       x2="390.89999"
+       y2="-363.89999"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1136" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1138" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_64"
+       data-name="Nepojmenovaný přechod 64"
+       x1="390.89999"
+       y1="-367"
+       x2="390.89999"
+       y2="-365.5"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1141" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1143" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_65"
+       data-name="Nepojmenovaný přechod 65"
+       x1="280.29999"
+       y1="-368.5"
+       x2="282.10001"
+       y2="-368.5"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1146" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1148" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_66"
+       data-name="Nepojmenovaný přechod 66"
+       x1="282.10001"
+       y1="-369.60001"
+       x2="283.89999"
+       y2="-369.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1151" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1153" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_67"
+       data-name="Nepojmenovaný přechod 67"
+       x1="390.89999"
+       y1="-425.29999"
+       x2="390.89999"
+       y2="-423.79999"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1156" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1158" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_68"
+       data-name="Nepojmenovaný přechod 68"
+       x1="390.89999"
+       y1="-423.79999"
+       x2="390.89999"
+       y2="-422.20001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1161" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1163" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_69"
+       data-name="Nepojmenovaný přechod 69"
+       x1="270.10001"
+       y1="-404.10001"
+       x2="267.70001"
+       y2="-406.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1166" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1168" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_70"
+       data-name="Nepojmenovaný přechod 70"
+       x1="272.20001"
+       y1="-403.79999"
+       x2="269.79999"
+       y2="-406.20001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1171" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1173" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_71"
+       data-name="Nepojmenovaný přechod 71"
+       x1="498"
+       y1="-419.60001"
+       x2="499.70001"
+       y2="-419.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1176" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1178" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_72"
+       data-name="Nepojmenovaný přechod 72"
+       x1="499.70001"
+       y1="-420.70001"
+       x2="501.5"
+       y2="-420.70001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1181" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1183" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_73"
+       data-name="Nepojmenovaný přechod 73"
+       x1="390.89999"
+       y1="-369.29999"
+       x2="390.89999"
+       y2="-368.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1186" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1188" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_74"
+       data-name="Nepojmenovaný přechod 74"
+       x1="390.89999"
+       y1="-370.20001"
+       x2="390.89999"
+       y2="-369.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1191" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1193" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_75"
+       data-name="Nepojmenovaný přechod 75"
+       x1="272.5"
+       y1="-378.70001"
+       x2="273.60001"
+       y2="-378.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1196" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1198" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_76"
+       data-name="Nepojmenovaný přechod 76"
+       x1="273.60001"
+       y1="-379.10001"
+       x2="274.60001"
+       y2="-379.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1201" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1203" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_77"
+       data-name="Nepojmenovaný přechod 77"
+       x1="390.89999"
+       y1="-420.89999"
+       x2="390.89999"
+       y2="-419.89999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1206" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1208" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_78"
+       data-name="Nepojmenovaný přechod 78"
+       x1="390.89999"
+       y1="-419.89999"
+       x2="390.89999"
+       y2="-419"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1211" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1213" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_79"
+       data-name="Nepojmenovaný přechod 79"
+       x1="505.20001"
+       y1="-392"
+       x2="504.20001"
+       y2="-391"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1216" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1218" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_80"
+       data-name="Nepojmenovaný přechod 80"
+       x1="505.89999"
+       y1="-392.60001"
+       x2="504.89999"
+       y2="-391.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1221" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1223" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_81"
+       data-name="Nepojmenovaný přechod 81"
+       x1="511.39999"
+       y1="-391.70001"
+       x2="510.60001"
+       y2="-392.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1226" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1228" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_82"
+       data-name="Nepojmenovaný přechod 82"
+       x1="512.29999"
+       y1="-390.89999"
+       x2="511.20001"
+       y2="-392"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1231" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1233" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_83"
+       data-name="Nepojmenovaný přechod 83"
+       x1="511.39999"
+       y1="-397.5"
+       x2="510.60001"
+       y2="-396.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1236" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1238" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_84"
+       data-name="Nepojmenovaný přechod 84"
+       x1="512.29999"
+       y1="-398.29999"
+       x2="511.20001"
+       y2="-397.20001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1241" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1243" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_85"
+       data-name="Nepojmenovaný přechod 85"
+       x1="505.89999"
+       y1="-396.60001"
+       x2="504.89999"
+       y2="-397.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1246" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1248" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_86"
+       data-name="Nepojmenovaný přechod 86"
+       x1="505.20001"
+       y1="-397.20001"
+       x2="504.20001"
+       y2="-398.29999"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1251" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1253" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_87"
+       data-name="Nepojmenovaný přechod 87"
+       cx="477.29999"
+       cy="-393"
+       fx="477.29999"
+       fy="-393"
+       r="11"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1256" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1258" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_88"
+       data-name="Nepojmenovaný přechod 88"
+       x1="272.5"
+       y1="-410.60001"
+       x2="273.60001"
+       y2="-410.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1261" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1263" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_89"
+       data-name="Nepojmenovaný přechod 89"
+       x1="273.60001"
+       y1="-410.10001"
+       x2="274.60001"
+       y2="-410.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1266" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1268" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_90"
+       data-name="Nepojmenovaný přechod 90"
+       x1="508.20001"
+       y1="-410.60001"
+       x2="509.29999"
+       y2="-410.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1271" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1273" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_91"
+       data-name="Nepojmenovaný přechod 91"
+       x1="507.20001"
+       y1="-410.10001"
+       x2="508.20001"
+       y2="-410.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1276" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1278" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_92"
+       data-name="Nepojmenovaný přechod 92"
+       x1="270.10001"
+       y1="-385"
+       x2="267.70001"
+       y2="-382.70001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1281" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1283" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_93"
+       data-name="Nepojmenovaný přechod 93"
+       x1="272.20001"
+       y1="-385.29999"
+       x2="269.89999"
+       y2="-383"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1286" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1288" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_94"
+       data-name="Nepojmenovaný přechod 94"
+       x1="280.29999"
+       y1="-420.70001"
+       x2="282.10001"
+       y2="-420.70001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1291" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1293" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_95"
+       data-name="Nepojmenovaný přechod 95"
+       x1="282.10001"
+       y1="-419.60001"
+       x2="283.89999"
+       y2="-419.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1296" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1298" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_96"
+       data-name="Nepojmenovaný přechod 96"
+       x1="498"
+       y1="-369.60001"
+       x2="499.70001"
+       y2="-369.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1301" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1303" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_97"
+       data-name="Nepojmenovaný přechod 97"
+       x1="499.70001"
+       y1="-368.5"
+       x2="501.5"
+       y2="-368.5"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1306" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1308" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_98"
+       data-name="Nepojmenovaný přechod 98"
+       x1="512"
+       y1="-406.20001"
+       x2="509.60001"
+       y2="-403.79999"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1311" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1313" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_99"
+       data-name="Nepojmenovaný přechod 99"
+       x1="514.09998"
+       y1="-406.60001"
+       x2="511.70001"
+       y2="-404.10001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1316" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1318" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_100"
+       data-name="Nepojmenovaný přechod 100"
+       x1="511.89999"
+       y1="-383"
+       x2="509.60001"
+       y2="-385.29999"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1321" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1323" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_101"
+       data-name="Nepojmenovaný přechod 101"
+       x1="514.09998"
+       y1="-382.70001"
+       x2="511.70001"
+       y2="-385"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1326" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1328" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_102"
+       data-name="Nepojmenovaný přechod 102"
+       cx="274.39999"
+       cy="-364.5"
+       fx="274.39999"
+       fy="-364.5"
+       r="62.900002"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1331" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1333" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_103"
+       data-name="Nepojmenovaný přechod 103"
+       cx="258.5"
+       cy="-387"
+       fx="258.5"
+       fy="-387"
+       r="46"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1336" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1338" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_104"
+       data-name="Nepojmenovaný přechod 104"
+       cx="280.39999"
+       cy="-415.70001"
+       fx="280.39999"
+       fy="-415.70001"
+       r="25.4"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1341" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1343" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_105"
+       data-name="Nepojmenovaný přechod 105"
+       cx="280.29999"
+       cy="-360.39999"
+       fx="280.29999"
+       fy="-360.39999"
+       r="88.900002"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1346" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1348" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_106"
+       data-name="Nepojmenovaný přechod 106"
+       cx="475.89999"
+       cy="-415.79999"
+       fx="475.89999"
+       fy="-415.79999"
+       r="36"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1351" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1353" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_107"
+       data-name="Nepojmenovaný přechod 107"
+       x1="508.29999"
+       y1="-378.70001"
+       x2="509.29999"
+       y2="-378.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1356" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1358" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_108"
+       data-name="Nepojmenovaný přechod 108"
+       x1="507.20001"
+       y1="-379.10001"
+       x2="508.29999"
+       y2="-379.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1361" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1363" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_109"
+       data-name="Nepojmenovaný přechod 109"
+       cx="466"
+       cy="-347.39999"
+       fx="466"
+       fy="-347.39999"
+       r="93.800003"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1366" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1368" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_110"
+       data-name="Nepojmenovaný přechod 110"
+       x1="270.60001"
+       y1="-392"
+       x2="269.5"
+       y2="-391"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1371" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1373" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_111"
+       data-name="Nepojmenovaný přechod 111"
+       x1="271.29999"
+       y1="-392.60001"
+       x2="270.39999"
+       y2="-391.70001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1376" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1378" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_112"
+       data-name="Nepojmenovaný přechod 112"
+       x1="276.89999"
+       y1="-391.60001"
+       x2="275.89999"
+       y2="-392.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1381" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1383" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_113"
+       data-name="Nepojmenovaný přechod 113"
+       x1="277.60001"
+       y1="-390.89999"
+       x2="276.60001"
+       y2="-392"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1386" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1388" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_114"
+       data-name="Nepojmenovaný přechod 114"
+       x1="276.89999"
+       y1="-397.60001"
+       x2="275.89999"
+       y2="-396.60001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1391" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1393" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_115"
+       data-name="Nepojmenovaný přechod 115"
+       x1="277.60001"
+       y1="-398.29999"
+       x2="276.60001"
+       y2="-397.20001"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1396" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1398" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_116"
+       data-name="Nepojmenovaný přechod 116"
+       x1="271.29999"
+       y1="-396.60001"
+       x2="270.39999"
+       y2="-397.5"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1401" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1403" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_117"
+       data-name="Nepojmenovaný přechod 117"
+       x1="270.60001"
+       y1="-397.20001"
+       x2="269.5"
+       y2="-398.29999"
+       gradientTransform="matrix(1,0,0,-1,-255.7,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1406" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1408" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_118"
+       data-name="Nepojmenovaný přechod 118"
+       cx="266"
+       cy="-393"
+       fx="266"
+       fy="-393"
+       r="11"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1411" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1413" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_119"
+       data-name="Nepojmenovaný přechod 119"
+       x1="508.20001"
+       y1="-397.5"
+       x2="508.20001"
+       y2="-391.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1a2540"
+         id="stop1416" />
+      <stop
+         offset="1"
+         stop-color="#101524"
+         id="stop1418" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_120"
+       data-name="Nepojmenovaný přechod 120"
+       x1="273.60001"
+       y1="-397.5"
+       x2="273.60001"
+       y2="-391.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1a2540"
+         id="stop1421" />
+      <stop
+         offset="1"
+         stop-color="#101524"
+         id="stop1423" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_121"
+       data-name="Nepojmenovaný přechod 121"
+       cx="315.70001"
+       cy="-352.39999"
+       fx="315.70001"
+       fy="-352.39999"
+       r="114.3"
+       gradientTransform="matrix(1.1,0,0,-1,-284,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1426" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1428" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_122"
+       data-name="Nepojmenovaný přechod 122"
+       cx="458.39999"
+       cy="-402.60001"
+       fx="458.39999"
+       fy="-402.60001"
+       r="159"
+       gradientTransform="matrix(1.1,0,0,-1,-284,-363.8)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1431" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1433" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_123"
+       data-name="Nepojmenovaný přechod 123"
+       x1="390.89999"
+       y1="-349.20001"
+       x2="390.89999"
+       y2="-303.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#101524"
+         id="stop1436" />
+      <stop
+         offset="1"
+         stop-color="#1a2540"
+         id="stop1438" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_124"
+       data-name="Nepojmenovaný přechod 124"
+       x1="390.89999"
+       y1="-297"
+       x2="390.89999"
+       y2="-295.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1441" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1443" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_125"
+       data-name="Nepojmenovaný přechod 125"
+       x1="390.89999"
+       y1="-298.60001"
+       x2="390.89999"
+       y2="-297"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1446" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1448" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_126"
+       data-name="Nepojmenovaný přechod 126"
+       x1="280.29999"
+       y1="-300"
+       x2="282.10001"
+       y2="-300"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1451" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1453" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_127"
+       data-name="Nepojmenovaný přechod 127"
+       x1="282.10001"
+       y1="-301.20001"
+       x2="283.89999"
+       y2="-301.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1456" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1458" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_128"
+       data-name="Nepojmenovaný přechod 128"
+       x1="390.89999"
+       y1="-356.89999"
+       x2="390.89999"
+       y2="-355.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1461" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1463" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_129"
+       data-name="Nepojmenovaný přechod 129"
+       x1="390.89999"
+       y1="-355.29999"
+       x2="390.89999"
+       y2="-353.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1466" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1468" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_130"
+       data-name="Nepojmenovaný přechod 130"
+       x1="270.10001"
+       y1="-335.70001"
+       x2="267.70001"
+       y2="-338.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1471" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1473" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_131"
+       data-name="Nepojmenovaný přechod 131"
+       x1="272.20001"
+       y1="-335.39999"
+       x2="269.79999"
+       y2="-337.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1476" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1478" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_132"
+       data-name="Nepojmenovaný přechod 132"
+       x1="498"
+       y1="-351.10001"
+       x2="499.70001"
+       y2="-351.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1481" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1483" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_133"
+       data-name="Nepojmenovaný přechod 133"
+       x1="499.70001"
+       y1="-352.29999"
+       x2="501.5"
+       y2="-352.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1486" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1488" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_134"
+       data-name="Nepojmenovaný přechod 134"
+       x1="390.89999"
+       y1="-300.79999"
+       x2="390.89999"
+       y2="-299.89999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1491" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1493" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_135"
+       data-name="Nepojmenovaný přechod 135"
+       x1="390.89999"
+       y1="-301.79999"
+       x2="390.89999"
+       y2="-300.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1496" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1498" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_136"
+       data-name="Nepojmenovaný přechod 136"
+       x1="272.5"
+       y1="-310.20001"
+       x2="273.60001"
+       y2="-310.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1501" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1503" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_137"
+       data-name="Nepojmenovaný přechod 137"
+       x1="273.60001"
+       y1="-310.70001"
+       x2="274.60001"
+       y2="-310.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1506" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1508" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_138"
+       data-name="Nepojmenovaný přechod 138"
+       x1="390.89999"
+       y1="-352.39999"
+       x2="390.89999"
+       y2="-351.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1511" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1513" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_139"
+       data-name="Nepojmenovaný přechod 139"
+       x1="390.89999"
+       y1="-351.5"
+       x2="390.89999"
+       y2="-350.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1516" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1518" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_140"
+       data-name="Nepojmenovaný přechod 140"
+       x1="505.20001"
+       y1="-323.5"
+       x2="504.10001"
+       y2="-322.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1521" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1523" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_141"
+       data-name="Nepojmenovaný přechod 141"
+       x1="505.89999"
+       y1="-324.20001"
+       x2="505"
+       y2="-323.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1526" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1528" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_142"
+       data-name="Nepojmenovaný přechod 142"
+       x1="511.39999"
+       y1="-323.20001"
+       x2="510.60001"
+       y2="-324.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1531" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1533" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_143"
+       data-name="Nepojmenovaný přechod 143"
+       x1="512.29999"
+       y1="-322.5"
+       x2="511.20001"
+       y2="-323.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1536" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1538" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_144"
+       data-name="Nepojmenovaný přechod 144"
+       x1="511.5"
+       y1="-329.10001"
+       x2="510.5"
+       y2="-328.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1541" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1543" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_145"
+       data-name="Nepojmenovaný přechod 145"
+       x1="512.29999"
+       y1="-329.79999"
+       x2="511.20001"
+       y2="-328.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1546" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1548" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_146"
+       data-name="Nepojmenovaný přechod 146"
+       x1="505.89999"
+       y1="-328.10001"
+       x2="505"
+       y2="-329.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1551" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1553" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_147"
+       data-name="Nepojmenovaný přechod 147"
+       x1="505.20001"
+       y1="-328.79999"
+       x2="504.20001"
+       y2="-329.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1556" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1558" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_148"
+       data-name="Nepojmenovaný přechod 148"
+       cx="477.29999"
+       cy="-324.5"
+       fx="477.29999"
+       fy="-324.5"
+       r="11"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1561" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1563" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_149"
+       data-name="Nepojmenovaný přechod 149"
+       x1="272.5"
+       y1="-342.10001"
+       x2="273.60001"
+       y2="-342.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1566" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1568" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_150"
+       data-name="Nepojmenovaný přechod 150"
+       x1="273.60001"
+       y1="-341.60001"
+       x2="274.60001"
+       y2="-341.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1571" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1573" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_151"
+       data-name="Nepojmenovaný přechod 151"
+       x1="508.20001"
+       y1="-342.10001"
+       x2="509.29999"
+       y2="-342.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1576" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1578" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_152"
+       data-name="Nepojmenovaný přechod 152"
+       x1="507.20001"
+       y1="-341.60001"
+       x2="508.20001"
+       y2="-341.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1581" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1583" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_153"
+       data-name="Nepojmenovaný přechod 153"
+       x1="270.10001"
+       y1="-316.60001"
+       x2="267.70001"
+       y2="-314.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1586" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1588" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_154"
+       data-name="Nepojmenovaný přechod 154"
+       x1="272.20001"
+       y1="-316.89999"
+       x2="269.89999"
+       y2="-314.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1591" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1593" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_155"
+       data-name="Nepojmenovaný přechod 155"
+       x1="280.29999"
+       y1="-352.29999"
+       x2="282.10001"
+       y2="-352.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1596" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1598" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_156"
+       data-name="Nepojmenovaný přechod 156"
+       x1="282.10001"
+       y1="-351.20001"
+       x2="283.89999"
+       y2="-351.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1601" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1603" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_157"
+       data-name="Nepojmenovaný přechod 157"
+       x1="498"
+       y1="-301.20001"
+       x2="499.70001"
+       y2="-301.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1606" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1608" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_158"
+       data-name="Nepojmenovaný přechod 158"
+       x1="499.70001"
+       y1="-300"
+       x2="501.5"
+       y2="-300"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1611" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1613" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_159"
+       data-name="Nepojmenovaný přechod 159"
+       x1="512"
+       y1="-337.79999"
+       x2="509.60001"
+       y2="-335.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1616" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1618" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_160"
+       data-name="Nepojmenovaný přechod 160"
+       x1="514.09998"
+       y1="-338.10001"
+       x2="511.70001"
+       y2="-335.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1621" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1623" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_161"
+       data-name="Nepojmenovaný přechod 161"
+       x1="511.89999"
+       y1="-314.60001"
+       x2="509.60001"
+       y2="-316.89999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1626" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1628" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_162"
+       data-name="Nepojmenovaný přechod 162"
+       x1="514.09998"
+       y1="-314.20001"
+       x2="511.70001"
+       y2="-316.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1631" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1633" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_163"
+       data-name="Nepojmenovaný přechod 163"
+       cx="274.39999"
+       cy="-296.10001"
+       fx="274.39999"
+       fy="-296.10001"
+       r="62.900002"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1636" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1638" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_164"
+       data-name="Nepojmenovaný přechod 164"
+       cx="258.5"
+       cy="-318.5"
+       fx="258.5"
+       fy="-318.5"
+       r="46"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1641" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1643" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_165"
+       data-name="Nepojmenovaný přechod 165"
+       cx="280.39999"
+       cy="-347.29999"
+       fx="280.39999"
+       fy="-347.29999"
+       r="25.4"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1646" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1648" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_166"
+       data-name="Nepojmenovaný přechod 166"
+       cx="280.29999"
+       cy="-291.89999"
+       fx="280.29999"
+       fy="-291.89999"
+       r="88.900002"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1651" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1653" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_167"
+       data-name="Nepojmenovaný přechod 167"
+       cx="475.89999"
+       cy="-347.39999"
+       fx="475.89999"
+       fy="-347.39999"
+       r="36"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1656" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1658" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_168"
+       data-name="Nepojmenovaný přechod 168"
+       x1="508.29999"
+       y1="-310.20001"
+       x2="509.29999"
+       y2="-310.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1661" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1663" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_169"
+       data-name="Nepojmenovaný přechod 169"
+       x1="507.20001"
+       y1="-310.70001"
+       x2="508.29999"
+       y2="-310.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1666" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1668" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_170"
+       data-name="Nepojmenovaný přechod 170"
+       cx="466"
+       cy="-279"
+       fx="466"
+       fy="-279"
+       r="93.800003"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1671" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1673" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_171"
+       data-name="Nepojmenovaný přechod 171"
+       x1="270.60001"
+       y1="-323.5"
+       x2="269.5"
+       y2="-322.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1676" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1678" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_172"
+       data-name="Nepojmenovaný přechod 172"
+       x1="271.29999"
+       y1="-324.10001"
+       x2="270.39999"
+       y2="-323.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1681" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1683" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_173"
+       data-name="Nepojmenovaný přechod 173"
+       x1="276.89999"
+       y1="-323.20001"
+       x2="275.89999"
+       y2="-324.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1686" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1688" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_174"
+       data-name="Nepojmenovaný přechod 174"
+       x1="277.60001"
+       y1="-322.5"
+       x2="276.60001"
+       y2="-323.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1691" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1693" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_175"
+       data-name="Nepojmenovaný přechod 175"
+       x1="276.79999"
+       y1="-329.10001"
+       x2="275.89999"
+       y2="-328.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1696" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1698" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_176"
+       data-name="Nepojmenovaný přechod 176"
+       x1="277.70001"
+       y1="-329.79999"
+       x2="276.60001"
+       y2="-328.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1701" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1703" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_177"
+       data-name="Nepojmenovaný přechod 177"
+       x1="271.29999"
+       y1="-328.10001"
+       x2="270.29999"
+       y2="-329.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1706" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1708" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_178"
+       data-name="Nepojmenovaný přechod 178"
+       x1="270.60001"
+       y1="-328.79999"
+       x2="269.5"
+       y2="-329.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1711" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1713" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_179"
+       data-name="Nepojmenovaný přechod 179"
+       cx="266"
+       cy="-324.5"
+       fx="266"
+       fy="-324.5"
+       r="11"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1716" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1718" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_180"
+       data-name="Nepojmenovaný přechod 180"
+       x1="508.20001"
+       y1="-329"
+       x2="508.20001"
+       y2="-323.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1a2540"
+         id="stop1721" />
+      <stop
+         offset="1"
+         stop-color="#101524"
+         id="stop1723" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_181"
+       data-name="Nepojmenovaný přechod 181"
+       x1="273.60001"
+       y1="-329"
+       x2="273.60001"
+       y2="-323.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1a2540"
+         id="stop1726" />
+      <stop
+         offset="1"
+         stop-color="#101524"
+         id="stop1728" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_182"
+       data-name="Nepojmenovaný přechod 182"
+       cx="315.70001"
+       cy="-283.89999"
+       fx="315.70001"
+       fy="-283.89999"
+       r="114.3"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1731" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1733" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_183"
+       data-name="Nepojmenovaný přechod 183"
+       cx="458.39999"
+       cy="-334.10001"
+       fx="458.39999"
+       fy="-334.10001"
+       r="159"
+       gradientTransform="matrix(1.1,0,0,-1,-28.3,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1736" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1738" />
+    </radialGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_184"
+       data-name="Nepojmenovaný přechod 184"
+       x1="120.8"
+       y1="-470"
+       x2="120.8"
+       y2="-318"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#101524"
+         id="stop1741" />
+      <stop
+         offset="1"
+         stop-color="#1a2540"
+         id="stop1743" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_185"
+       data-name="Nepojmenovaný přechod 185"
+       x1="32.200001"
+       y1="-365.70001"
+       x2="30.200001"
+       y2="-363.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1746" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1748" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_186"
+       data-name="Nepojmenovaný přechod 186"
+       x1="35.099998"
+       y1="-366.70001"
+       x2="33.200001"
+       y2="-364.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1751" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1753" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_187"
+       data-name="Nepojmenovaný přechod 187"
+       x1="35.400002"
+       y1="-351.29999"
+       x2="38.200001"
+       y2="-351.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1756" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1758" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_188"
+       data-name="Nepojmenovaný přechod 188"
+       x1="38.200001"
+       y1="-352.70001"
+       x2="41"
+       y2="-352.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1761" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1763" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_189"
+       data-name="Nepojmenovaný přechod 189"
+       x1="150.89999"
+       y1="-303.39999"
+       x2="149"
+       y2="-305.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1766" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1768" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_190"
+       data-name="Nepojmenovaný přechod 190"
+       x1="150"
+       y1="-306.39999"
+       x2="148"
+       y2="-308.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1771" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1773" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_191"
+       data-name="Nepojmenovaný přechod 191"
+       x1="211.3"
+       y1="-424.10001"
+       x2="209.3"
+       y2="-422.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1776" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1778" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_192"
+       data-name="Nepojmenovaný přechod 192"
+       x1="208.39999"
+       y1="-423.20001"
+       x2="206.39999"
+       y2="-421.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1781" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1783" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_193"
+       data-name="Nepojmenovaný přechod 193"
+       x1="203.39999"
+       y1="-436.70001"
+       x2="206.10001"
+       y2="-436.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1786" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1788" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_194"
+       data-name="Nepojmenovaný přechod 194"
+       x1="200.60001"
+       y1="-435.29999"
+       x2="203.39999"
+       y2="-435.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1791" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1793" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_195"
+       data-name="Nepojmenovaný přechod 195"
+       x1="68.599998"
+       y1="-394"
+       x2="68.599998"
+       y2="-289.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b28251"
+         id="stop1796" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1798" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_196"
+       data-name="Nepojmenovaný přechod 196"
+       x1="70.900002"
+       y1="-394"
+       x2="70.900002"
+       y2="-294.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b28251"
+         id="stop1801" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1803" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_197"
+       data-name="Nepojmenovaný přechod 197"
+       x1="163.39999"
+       y1="-311.39999"
+       x2="163.39999"
+       y2="-308.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1806" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1808" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_198"
+       data-name="Nepojmenovaný přechod 198"
+       x1="162.10001"
+       y1="-314.20001"
+       x2="162.10001"
+       y2="-311.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1811" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1813" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_199"
+       data-name="Nepojmenovaný přechod 199"
+       x1="92.5"
+       y1="-482.5"
+       x2="90.599998"
+       y2="-484.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1816" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1818" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_200"
+       data-name="Nepojmenovaný přechod 200"
+       x1="93.5"
+       y1="-479.60001"
+       x2="91.5"
+       y2="-481.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1821" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1823" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_201"
+       data-name="Nepojmenovaný přechod 201"
+       x1="78.099998"
+       y1="-479.29999"
+       x2="78.099998"
+       y2="-476.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1826" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1828" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_202"
+       data-name="Nepojmenovaný přechod 202"
+       x1="79.5"
+       y1="-476.60001"
+       x2="79.5"
+       y2="-473.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1831" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1833" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_203"
+       data-name="Nepojmenovaný přechod 203"
+       x1="170.60001"
+       y1="-394"
+       x2="170.60001"
+       y2="-294.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b28251"
+         id="stop1836" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1838" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_204"
+       data-name="Nepojmenovaný přechod 204"
+       x1="172.89999"
+       y1="-394"
+       x2="172.89999"
+       y2="-289.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b28251"
+         id="stop1841" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1843" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_205"
+       data-name="Nepojmenovaný přechod 205"
+       x1="70.900002"
+       y1="-493.70001"
+       x2="70.900002"
+       y2="-394"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fcd4a4"
+         id="stop1846" />
+      <stop
+         offset="1"
+         stop-color="#b28251"
+         id="stop1848" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_206"
+       data-name="Nepojmenovaný přechod 206"
+       x1="68.599998"
+       y1="-498.29999"
+       x2="68.599998"
+       y2="-394"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1851" />
+      <stop
+         offset="1"
+         stop-color="#b28251"
+         id="stop1853" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_207"
+       data-name="Nepojmenovaný přechod 207"
+       x1="203.39999"
+       y1="-351.29999"
+       x2="206.10001"
+       y2="-351.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1856" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1858" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_208"
+       data-name="Nepojmenovaný přechod 208"
+       x1="200.60001"
+       y1="-352.70001"
+       x2="203.39999"
+       y2="-352.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1861" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1863" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_209"
+       data-name="Nepojmenovaný přechod 209"
+       x1="170.60001"
+       y1="-493.70001"
+       x2="170.60001"
+       y2="-394"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fcd4a4"
+         id="stop1866" />
+      <stop
+         offset="1"
+         stop-color="#b28251"
+         id="stop1868" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_210"
+       data-name="Nepojmenovaný přechod 210"
+       x1="172.89999"
+       y1="-498.29999"
+       x2="172.89999"
+       y2="-394"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1871" />
+      <stop
+         offset="1"
+         stop-color="#b28251"
+         id="stop1873" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_211"
+       data-name="Nepojmenovaný přechod 211"
+       x1="163.39999"
+       y1="-479.29999"
+       x2="163.39999"
+       y2="-476.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1876" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1878" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_212"
+       data-name="Nepojmenovaný přechod 212"
+       x1="162.10001"
+       y1="-476.60001"
+       x2="162.10001"
+       y2="-473.79999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1881" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1883" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_213"
+       data-name="Nepojmenovaný přechod 213"
+       x1="150.89999"
+       y1="-484.5"
+       x2="149"
+       y2="-482.5"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1886" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1888" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_214"
+       data-name="Nepojmenovaný přechod 214"
+       x1="149.89999"
+       y1="-481.60001"
+       x2="148"
+       y2="-479.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1891" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1893" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_215"
+       data-name="Nepojmenovaný přechod 215"
+       x1="35.400002"
+       y1="-436.70001"
+       x2="38.200001"
+       y2="-436.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a5734a"
+         id="stop1896" />
+      <stop
+         offset="1"
+         stop-color="#e0b177"
+         id="stop1898" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_216"
+       data-name="Nepojmenovaný přechod 216"
+       x1="38.200001"
+       y1="-435.29999"
+       x2="41"
+       y2="-435.29999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1901" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1903" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_217"
+       data-name="Nepojmenovaný přechod 217"
+       x1="211.3"
+       y1="-363.79999"
+       x2="209.3"
+       y2="-365.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#8c6c51"
+         id="stop1906" />
+      <stop
+         offset="1"
+         stop-color="#dec2a0"
+         id="stop1908" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_218"
+       data-name="Nepojmenovaný přechod 218"
+       x1="208.39999"
+       y1="-364.79999"
+       x2="206.39999"
+       y2="-366.70001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1911" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1913" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_219"
+       data-name="Nepojmenovaný přechod 219"
+       x1="32.200001"
+       y1="-422.20001"
+       x2="30.200001"
+       y2="-424.10001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a27048"
+         id="stop1916" />
+      <stop
+         offset="1"
+         stop-color="#523329"
+         id="stop1918" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_220"
+       data-name="Nepojmenovaný přechod 220"
+       x1="35.099998"
+       y1="-421.20001"
+       x2="33.200001"
+       y2="-423.20001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e2bb7e"
+         id="stop1921" />
+      <stop
+         offset="1"
+         stop-color="#ece2a9"
+         id="stop1923" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_221"
+       data-name="Nepojmenovaný přechod 221"
+       x1="78.099998"
+       y1="-311.39999"
+       x2="78.099998"
+       y2="-308.60001"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1926" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1928" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_222"
+       data-name="Nepojmenovaný přechod 222"
+       x1="79.5"
+       y1="-314.20001"
+       x2="79.5"
+       y2="-311.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#694426"
+         id="stop1931" />
+      <stop
+         offset="1"
+         stop-color="#92652d"
+         id="stop1933" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_223"
+       data-name="Nepojmenovaný přechod 223"
+       x1="92.5"
+       y1="-305.39999"
+       x2="90.599998"
+       y2="-303.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe1bb"
+         id="stop1936" />
+      <stop
+         offset="1"
+         stop-color="#edd4ae"
+         id="stop1938" />
+    </linearGradient>
+    <linearGradient
+       id="Nepojmenovaný_přechod_224"
+       data-name="Nepojmenovaný přechod 224"
+       x1="93.5"
+       y1="-308.29999"
+       x2="91.5"
+       y2="-306.39999"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#523329"
+         id="stop1941" />
+      <stop
+         offset="1"
+         stop-color="#a27048"
+         id="stop1943" />
+    </linearGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_225"
+       data-name="Nepojmenovaný přechod 225"
+       cx="88.199997"
+       cy="-315.10001"
+       fx="88.199997"
+       fy="-315.10001"
+       r="125.9"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#435eb0"
+         id="stop1946" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1948" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_226"
+       data-name="Nepojmenovaný přechod 226"
+       cx="37.599998"
+       cy="-306.10001"
+       fx="37.599998"
+       fy="-306.10001"
+       r="72.699997"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1951" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1953" />
+    </radialGradient>
+    <radialGradient
+       id="Nepojmenovaný_přechod_227"
+       data-name="Nepojmenovaný přechod 227"
+       cx="117.2"
+       cy="-271.5"
+       fx="117.2"
+       fy="-271.5"
+       r="124.2"
+       gradientTransform="matrix(1,0,0,-1,0,-273.2)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#efe5b8"
+         id="stop1956" />
+      <stop
+         offset="1"
+         stop-color="#000"
+         id="stop1958" />
+    </radialGradient>
+  </defs>
+  <g
+     id="g3639">
+    <polygon
+       class="cls-154"
+       points="273.6,96.1 273.6,146.7 508.2,146.7 508.2,96.1 "
+       id="polygon2160"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-128"
+       points="273.6,146.7 276.1,144.5 276.1,98.3 273.6,96.1 "
+       id="polygon2162"
+       transform="translate(-255.7,-90.6)" />
+    <path
+       class="cls-216"
+       d="M 20.4,7.7 H 250 l 2.5,-2.2 H 17.9 c 0,0 2.5,2.2 2.5,2.2 z"
+       id="path2164" />
+    <path
+       class="cls-188"
+       d="M 250,53.9 H 20.4 l -2.5,2.3 h 234.6 z"
+       id="path2166" />
+    <polygon
+       class="cls-128"
+       points="505.7,98.3 505.7,144.5 508.2,146.7 508.2,96.1 "
+       id="polygon2168"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-2"
+       points="276.1,98.3 276.1,144.5 505.7,144.5 505.7,98.3 "
+       id="polygon2170"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_62)"
+       transform="translate(-255.7,-90.6)" />
+    <path
+       class="cls-141"
+       d="m 10.9,30.1 5.9,-5.3 V 20.2 L 5,30.8 16.8,41.4 v -4.6 l -6.7,-6 z M 16.8,15.7 V 4.6 h 7.8 V 0.1 h 221.2 v 4.5 h 7.8 V 15.8 L 270.4,30.9 253.6,46 v 11.1 h -7.8 v 4.5 H 24.6 V 57.1 H 16.8 V 46 L 0,30.9 16.8,15.8 v 0 z M 28.2,4.5 H 242.3 V 3.2 H 28.2 Z m 225.4,15.7 v 4.6 l 6.6,6 -6.7,6 v 4.6 L 265.3,30.8 253.5,20.2 v 0 z M 242.3,57.1 H 28.2 v 1.3 h 214.1 z m 3.5,-48.5 5.7,5.1 V 6.4 h -5.7 z m 5.7,39.2 -5.7,5.1 v 2.2 h 5.7 z M 24.6,55.2 V 53 l -5.7,-5.1 v 7.3 z M 18.9,13.7 24.6,8.6 V 6.4 H 18.9 Z M 251.5,18.3 242.2,10 V 6.5 H 28.1 V 10 l -9.2,8.3 v 6.5 l 6.7,6 -6.7,6 v 6.5 l 9.2,8.3 v 3.5 h 214.1 v -3.5 l 9.2,-8.3 v -6.5 l -6.7,-6 6.7,-6 v -6.5 0 z m 5.8,12.5 -4.7,-4.3 -4.7,4.3 4.7,4.3 z m -239.4,-4.3 -4.7,4.3 4.7,4.3 4.7,-4.3 z"
+       id="path2172" />
+    <path
+       class="cls-152"
+       d="M 26.4,1.6 H 244 L 245.8,0 H 24.6 Z"
+       id="path2174"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_63)" />
+    <path
+       class="cls-60"
+       d="M 244,1.6 H 26.4 l 1.8,1.6 h 214.1 l 1.8,-1.6 v 0 z"
+       id="path2176"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_64)" />
+    <path
+       class="cls-39"
+       d="M 26.4,9.3 V 1.6 L 24.6,0 v 8.6 z"
+       id="path2178"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_65)" />
+    <path
+       class="cls-108"
+       d="M 26.4,1.6 V 9.3 L 28.2,10 V 3.3 L 26.4,1.7 v 0 z"
+       id="path2180"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_66)" />
+    <path
+       class="cls-176"
+       d="M 26.4,60 H 244 l 1.8,1.6 H 24.6 Z"
+       id="path2182"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_67)" />
+    <path
+       class="cls-135"
+       d="M 244,60 H 26.4 l 1.8,-1.6 h 214.1 l 1.8,1.6 v 0 z"
+       id="path2184"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_68)" />
+    <path
+       class="cls-189"
+       d="M 24.6,53 0,30.8 h 2.5 c 8,7.2 15.9,14.3 23.9,21.5 z"
+       id="path2186"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_69)" />
+    <path
+       class="cls-25"
+       d="M 26.4,52.3 C 18.4,45.1 10.5,38 2.5,30.8 H 5 l 23.1,20.8 -1.8,0.7 v 0 z"
+       id="path2188"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_70)" />
+    <path
+       class="cls-160"
+       d="m 242.3,58.4 v -6.7 l 1.8,0.7 V 60 Z"
+       id="path2194"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_71)" />
+    <path
+       class="cls-134"
+       d="m 244,60 v -7.6 l 1.8,0.7 v 8.6 L 244,60.1 v 0 z"
+       id="path2196"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_72)" />
+    <polygon
+       class="cls-66"
+       points="273.6,96.1 508.3,96.1 509.3,95.1 272.5,95.1 "
+       id="polygon2198"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_73)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-54"
+       points="508.3,96.1 273.6,96.1 274.6,97 507.2,97 "
+       id="polygon2200"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_74)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-180"
+       points="272.5,95.1 272.5,115.4 273.6,115.8 273.6,96.1 "
+       id="polygon2202"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_75)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-106"
+       points="273.6,96.1 273.6,115.8 274.6,115.4 274.6,97 "
+       id="polygon2204"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_76)"
+       transform="translate(-255.7,-90.6)" />
+    <path
+       class="cls-207"
+       d="m 252.5,25.2 c -2.1,1.9 -4.2,3.7 -6.2,5.6 h 1.5 l 4.7,-4.3 z"
+       id="path2206" />
+    <polygon
+       class="cls-140"
+       points="273.6,146.7 508.2,146.7 509.3,147.7 272.5,147.7 "
+       id="polygon2212"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_77)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-209"
+       points="508.2,146.7 273.6,146.7 274.6,145.8 507.2,145.8 "
+       id="polygon2214"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_78)"
+       transform="translate(-255.7,-90.6)" />
+    <path
+       class="cls-120"
+       d="m 246.3,30.8 c 2.1,-1.9 4.2,-3.7 6.2,-5.6 v -1.3 l -1.1,1 -6.7,6 h 1.5 z"
+       id="path2216"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_79)" />
+    <path
+       class="cls-193"
+       d="m 252.5,25.2 c -2.1,1.9 -4.2,3.7 -6.2,5.6 h 1.5 l 4.7,-4.3 z"
+       id="path2218"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_80)" />
+    <path
+       class="cls-61"
+       d="m 252.5,26.5 4.7,4.3 h 1.5 c -2.1,-1.9 -4.2,-3.7 -6.2,-5.6 z"
+       id="path2220"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_81)" />
+    <path
+       class="cls-88"
+       d="m 252.5,25.2 c 2.1,1.9 4.2,3.7 6.2,5.6 h 1.5 l -6.7,-6 -1.1,-1 v 1.3 0 z"
+       id="path2222"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_82)" />
+    <path
+       class="cls-68"
+       d="m 257.3,30.8 -4.7,4.3 v 1.3 c 2.1,-1.9 4.2,-3.7 6.2,-5.6 z"
+       id="path2224"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_83)" />
+    <path
+       class="cls-136"
+       d="m 258.8,30.8 c -2.1,1.9 -4.2,3.7 -6.2,5.6 v 1.3 l 7.7,-7 h -1.5 z"
+       id="path2226"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_84)" />
+    <path
+       class="cls-77"
+       d="m 252.5,35.1 -4.7,-4.3 h -1.5 c 2.1,1.9 4.2,3.7 6.2,5.6 z"
+       id="path2228"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_85)" />
+    <path
+       class="cls-186"
+       d="m 252.5,36.4 c -2.1,-1.9 -4.2,-3.7 -6.2,-5.6 h -1.5 l 7.7,7 v -1.3 0 z"
+       id="path2230"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_86)" />
+    <g
+       class="cls-242"
+       id="g2234"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-226"
+         points="507.1,116.8 502.2,121.4 505.6,124.7 501.8,121.5 500.7,121.4 501.8,121.3 "
+         id="polygon2232"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_87)" />
+    </g>
+    <polygon
+       class="cls-143"
+       points="272.5,147.7 272.5,127.4 273.6,127 273.6,146.7 "
+       id="polygon2236"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_88)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-198"
+       points="273.6,146.7 273.6,127 274.6,127.4 274.6,145.8 "
+       id="polygon2238"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_89)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-231"
+       points="509.3,147.7 509.3,127.4 508.2,127 508.2,146.7 "
+       id="polygon2240"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_90)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-235"
+       points="508.2,146.7 508.2,127 507.2,127.4 507.2,145.8 "
+       id="polygon2246"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_91)"
+       transform="translate(-255.7,-90.6)" />
+    <path
+       class="cls-224"
+       d="M 24.6,8.6 0,30.8 h 2.5 c 8,-7.2 15.9,-14.3 23.9,-21.5 z"
+       id="path2252"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_92)" />
+    <path
+       class="cls-20"
+       d="M 26.4,9.3 C 18.4,16.5 10.5,23.6 2.5,30.8 H 5 L 28.1,10 26.3,9.3 v 0 z"
+       id="path2258"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_93)" />
+    <path
+       class="cls-113"
+       d="m 26.4,52.3 v 7.6 l -1.8,1.6 v -8.6 l 1.8,-0.7 v 0 z"
+       id="path2260"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_94)" />
+    <path
+       class="cls-156"
+       d="m 26.4,60 v -7.6 l 1.8,-0.7 v 6.7 z"
+       id="path2262"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_95)" />
+    <path
+       class="cls-6"
+       d="m 242.3,3.2 v 6.7 l 1.8,-0.7 V 1.5 l -1.8,1.6 v 0 z"
+       id="path2268"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_96)" />
+    <path
+       class="cls-163"
+       d="m 244,1.6 v 7.7 l 1.8,-0.7 V 0 Z"
+       id="path2270"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_97)" />
+    <path
+       class="cls-158"
+       d="M 267.9,30.8 C 259.9,38 252,45.1 244,52.3 l -1.8,-0.7 23.1,-20.8 c 0,0 2.5,0 2.5,0 z"
+       id="path2272"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_98)" />
+    <path
+       class="cls-117"
+       d="m 244,52.3 c 8,-7.2 15.9,-14.3 23.9,-21.5 h 2.5 L 245.8,53 Z"
+       id="path2274"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_99)" />
+    <path
+       class="cls-127"
+       d="M 267.9,30.8 C 259.9,23.6 252,16.5 244,9.3 l -1.8,0.7 23.1,20.8 c 0,0 2.5,0 2.5,0 z"
+       id="path2276"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_100)" />
+    <path
+       class="cls-69"
+       d="m 244,9.3 c 8,7.2 15.9,14.3 23.9,21.5 h 2.5 L 245.8,8.6 Z"
+       id="path2278"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_101)" />
+    <g
+       class="cls-242"
+       id="g2282"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-99"
+         points="345.7,96.1 273.8,96.3 273.6,103.5 273.4,96.1 272.7,95.3 273.7,95.9 "
+         id="polygon2280"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_102)" />
+    </g>
+    <g
+       class="cls-242"
+       id="g2286"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-157"
+         points="278.8,102.8 258.7,121.4 267.6,129.8 257.9,121.6 256.2,121.4 257.9,121.2 "
+         id="polygon2284"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_103)" />
+    </g>
+    <g
+       class="cls-242"
+       id="g2290"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-37"
+         points="283.6,142.3 282.1,142.6 275.3,136.8 281.8,143 282.1,148.3 282.3,143 "
+         id="polygon2288"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_104)" />
+    </g>
+    <g
+       class="cls-242"
+       id="g2294"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-184"
+         points="388.6,92.2 282.2,92.4 282.1,94.8 281.9,92.3 280.6,90.9 282.1,92 "
+         id="polygon2292"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_105)" />
+    </g>
+    <g
+       class="cls-242"
+       id="g2298"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-118"
+         points="521.8,123 500,143 499.7,145.6 499.5,143 498.1,142.3 499.7,142.6 "
+         id="polygon2296"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_106)" />
+    </g>
+    <polygon
+       class="cls-234"
+       points="509.3,95.1 509.3,115.4 508.3,115.8 508.3,96.1 "
+       id="polygon2300"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_107)"
+       transform="translate(-255.7,-90.6)" />
+    <polygon
+       class="cls-212"
+       points="508.3,96.1 508.3,115.8 507.2,115.4 507.2,97 "
+       id="polygon2302"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_108)"
+       transform="translate(-255.7,-90.6)" />
+    <g
+       class="cls-242"
+       id="g2306"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-86"
+         points="501.2,90.9 500,92.5 499.7,99.2 499.3,92.6 351.5,92.3 499.5,92 "
+         id="polygon2304"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_109)" />
+    </g>
+    <polygon
+       class="cls-154"
+       points="268.9,121.4 273.6,125.7 278.3,121.4 273.6,117.1 "
+       id="polygon2308"
+       transform="translate(-255.7,-90.6)" />
+    <path
+       class="cls-12"
+       d="m 11.7,30.8 c 2.1,-1.9 4.2,-3.7 6.2,-5.6 v -1.3 l -1.1,1 -6.7,6 h 1.5 z"
+       id="path2310"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_110)" />
+    <path
+       class="cls-71"
+       d="m 17.9,25.2 c -2.1,1.9 -4.2,3.7 -6.2,5.6 h 1.5 l 4.7,-4.3 z"
+       id="path2312"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_111)" />
+    <path
+       class="cls-41"
+       d="m 17.9,26.5 4.7,4.3 h 1.5 C 22,28.9 19.9,27.1 17.9,25.2 Z"
+       id="path2314"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_112)" />
+    <path
+       class="cls-53"
+       d="m 17.9,25.2 c 2.1,1.9 4.2,3.7 6.2,5.6 h 1.5 l -6.7,-6 -1.1,-1 v 1.3 0 z"
+       id="path2316"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_113)" />
+    <path
+       class="cls-73"
+       d="m 22.6,30.8 -4.7,4.3 v 1.3 c 2.1,-1.9 4.2,-3.7 6.2,-5.6 z"
+       id="path2318"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_114)" />
+    <path
+       class="cls-210"
+       d="m 24.1,30.8 c -2.1,1.9 -4.2,3.7 -6.2,5.6 v 1.3 l 7.7,-7 h -1.5 z"
+       id="path2320"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_115)" />
+    <path
+       class="cls-187"
+       d="m 17.9,35.1 -4.7,-4.3 h -1.5 c 2.1,1.9 4.2,3.7 6.2,5.6 z"
+       id="path2322"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_116)" />
+    <path
+       class="cls-227"
+       d="m 17.9,36.4 c -2.1,-1.9 -4.2,-3.7 -6.2,-5.6 h -1.5 l 7.7,7 v -1.3 0 z"
+       id="path2324"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_117)" />
+    <g
+       class="cls-242"
+       id="g2328"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-147"
+         points="272.4,116.8 267.6,121.4 271,124.7 267.2,121.5 266.1,121.4 267.2,121.3 "
+         id="polygon2326"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_118)" />
+    </g>
+    <g
+       id="g2350"
+       transform="translate(-255.7,-90.6)">
+      <polygon
+         class="cls-62"
+         points="505,121.4 508.2,124.3 511.4,121.4 508.2,118.5 "
+         id="polygon2330"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_119)" />
+      <polygon
+         class="cls-22"
+         points="505,121.4 508.2,118.5 508.2,117.1 503.5,121.4 "
+         id="polygon2332" />
+      <polygon
+         class="cls-188"
+         points="511.4,121.4 508.2,124.3 508.2,125.7 513,121.4 "
+         id="polygon2334" />
+      <polygon
+         class="cls-128"
+         points="508.2,118.5 511.4,121.4 513,121.4 508.2,117.1 "
+         id="polygon2336" />
+      <polygon
+         class="cls-128"
+         points="508.2,124.3 505,121.4 503.5,121.4 508.2,125.7 "
+         id="polygon2338" />
+      <polygon
+         class="cls-40"
+         points="270.4,121.4 273.6,124.3 276.8,121.4 273.6,118.5 "
+         id="polygon2340"
+         style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_120)" />
+      <polygon
+         class="cls-22"
+         points="270.4,121.4 273.6,118.5 273.6,117.1 268.9,121.4 "
+         id="polygon2342" />
+      <polygon
+         class="cls-188"
+         points="276.8,121.4 273.6,124.3 273.6,125.7 278.3,121.4 "
+         id="polygon2344" />
+      <polygon
+         class="cls-128"
+         points="273.6,118.5 276.8,121.4 278.3,121.4 273.6,117.1 "
+         id="polygon2346" />
+      <polygon
+         class="cls-128"
+         points="273.6,124.3 270.4,121.4 268.9,121.4 273.6,125.7 "
+         id="polygon2348" />
+    </g>
+    <path
+       class="cls-92"
+       d="M 29,7.7 H 193.4 C 43.8,8.6 31.1,8.5 29,7.7 Z"
+       id="path2352"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_121)" />
+    <path
+       class="cls-64"
+       d="m 240.8,53.9 h -113 c 102.8,-0.9 111.6,-0.9 113,0 z"
+       id="path2354"
+       style="fill:url(#Nepojmenovan%C3%BD_p%C5%99echod_122)" />
+  </g>
+</svg>
