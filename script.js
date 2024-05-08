@@ -371,7 +371,7 @@ const zones = {
     gate: {
         text: {
             text1: 'Už z dálky ji zahlédneš. Jak se tyčí mezi útesy. Je ještě větší než sis ji představoval.',
-            text2: 'Je s ní vázaných několik příběhu a teoriích o jejím vzniku. Jedna říká, že byla vystavěna velmi vyspělou civilizací. Nyní už zapomenutou v čase.',
+            text2: 'Je s ní vázaných několik příběhů a teoriích o jejím vzniku. Jedna říká, že byla vystavěna velmi vyspělou civilizací. Nyní už zapomenutou v čase.',
             text3: 'Jiná říká, že ji stvořili bohové. A že našim úkolem je ji prozkoumávat. Abychom získali sílu a mohli zachránit náš svět. Kdyby přišla kalamita.',
             text4: 'Všechno jsou to ovšem jen spekulace, o kterých se mluví už po staletí. Možná se ale dozvíš pravdu na konci své cesty.'
         },
@@ -397,7 +397,7 @@ const zones = {
     iceLands: {
         text: {
             text1: 'Z jednoho extrému do druhého extrému. Už ti není teplo, teď začínáš pro změnu mrznout.',
-            text2: 'Všude jen bílo a ledovce. nacházíš se v ledové pustině.'
+            text2: 'Všude jen bílo a ledovce. Nacházíš se v ledové pustině.'
         },
         background: "url('./Image-Library/icelands.jpg')",
         music: "./Music-Library/zonesTheme.mp3"
@@ -444,15 +444,15 @@ const zones = {
     },
     vampireForest: {
         text: {
-            text1: 'Z hezky světlého místa do temného. Cítíš že je tady něco špatně. Všude jde cítít krev.',
-            text2: 'Nacházíš se v temném lese. Jediný zdroj světla je daleký měsíc na obloze. Co lehce prosvýtá skrz stromy. Jsi v předposlední zóně. Už jen kousek.'
+            text1: 'Z hezky světlého místa do temného. Cítíš že je tady něco špatně. Všude jde cítit krev.',
+            text2: 'Nacházíš se v temném lese. Jediný zdroj světla je daleký měsíc na obloze. Co lehce prosvítá skrz stromy. Jsi v předposlední zóně. Už jen kousek.'
         },
         background: "url('./Image-Library/vampireforest.jpg')",
         music: "./Music-Library/zonesTheme.mp3"
     },
     corruptionZone: {
         text: {
-            text1: 'Došel jsi do poslední zóny. Možná si čekal trochu příjemnější místo. v okolí je nepříjemná energie. Pravý opak, co si cítil z fontány.',
+            text1: 'Došel jsi do poslední zóny. Možná si čekal trochu příjemnější místo. V okolí je nepříjemná energie. Pravý opak, co si cítil z fontány.',
             text2: 'Nacházíš se v zóně korupce. Asi by si tu neměl strávit moc času. Zdejší energie není moc přátelská.'
         },
         background: "url('./Image-Library/corruption.jpg')",
