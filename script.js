@@ -209,24 +209,44 @@ const hlRight = document.getElementById('hlRight');
 const hlLeft = document.getElementById('hlLeft');
 
 let index = 0;
+let wasZoneSwitched = false;
 
-function resetAniText() {
+let timeoutId = null;
+function stopAniText() {
+    if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+    };
+
     index = 0;
-}
+    currentTextArray = null;
+    currentKeys = null;
+
+    textDiv.style.cursor = 'default';
+    removeClickListener();
+};
+
 
 function removeClickListener() {
+    console.log('Removing click listener');
     textDiv.removeEventListener('click', handleClick);
 }
 
 let currentTextArray = {};
 let currentKeys = [];
+let lastZone = 'spawn';
 
 function aniText(textArray) {
+    if (lastZone !== background.id) {
+        lastZone = background.id;
+        return;
+    }
+
     const keys = Object.keys(textArray);
     console.log(index)
 
-    if (keys.length > 0) {
-        setTimeout(() => {
+    if(keys.length > 0) {
+        timeoutId = setTimeout(() => {
             console.log('F TO PAY RESPECT BITCH')
             aniText2(textArray[keys[index]]);
             index++
@@ -237,7 +257,6 @@ function aniText(textArray) {
     currentKeys = keys;
 
     textDiv.removeEventListener('click', handleClick);
-    textDiv.addEventListener('click', handleClick);
 }
 
 function opacityRemover() {
@@ -301,6 +320,7 @@ function aniText2(text, i = 0) {
         hlLeft.setAttribute('glow', "");
         setTimeout(() => {
             textDiv.style.cursor = 'pointer';
+            textDiv.addEventListener('click', handleClick);
         }, 50);
     };
 };
@@ -479,7 +499,7 @@ function zoneChange(direction) {
             audio.src = zones[loc].music;
         }
 
-        resetAniText();
+        stopAniText();
         aniText(zones[loc].text);
 
         switch(loc) {
