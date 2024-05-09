@@ -469,6 +469,18 @@ const zones = {
     },
 }
 
+let visitedGate = false;
+let visitedPlains = false;
+let visitedDesert = false;
+let visitediceLands = false;
+let visitedSkeletonCastle = false;
+let visitedMagmaLands = false;
+let visitedSwamp = false;
+let visitedOrcCastle = false;
+let visitedClouds = false;
+let visitedVampireForest = false;
+let visitedCorruptionZone = false;
+
 const spawnEventBtn = document.getElementById('spawnEventBtn');
 const shopEventBtn = document.getElementById('shopEventBtn');
 const fountainEventBtn = document.getElementById('fountainEventBtn');
@@ -546,6 +558,7 @@ function zoneChange(direction) {
                 }, {once: true});
                 break
             case 'gate':
+                visitedGate = true;
                 currentEventBtn.removeAttribute('appear');
                 currentEventBtn.setAttribute('disappear', "");
                 currentEventBtn.addEventListener('animationend', () => {
@@ -558,6 +571,36 @@ function zoneChange(direction) {
                     gateEventBtn.setAttribute('appear', "");
                     currentEventBtn = gateEventBtn;
                 }, {once: true});
+                break
+            case 'plains':
+                visitedPlains = true;
+                break
+            case 'desert':
+                visitedDesert = true;
+                break
+            case 'iceLands':
+                visitediceLands = true;
+                break
+            case 'skeletonCastle':
+                visitedSkeletonCastle = true;
+                break
+            case 'magmaLands':
+                visitedMagmaLands = true;
+                break
+            case 'swamp':
+                visitedSwamp = true;
+                break
+            case 'orcCastle':
+                visitedOrcCastle = true;
+                break
+            case 'clouds':
+                visitedClouds = true;
+                break
+            case 'vampireForest':
+                visitedVampireForest = true;
+                break
+            case 'corruptionZone':
+                visitedCorruptionZone = true;
                 break
         };
 
@@ -656,6 +699,11 @@ scrollHorizontal2.addEventListener('wheel', function(e) {
     this.scrollLeft += e.deltaY*5;
     e.preventDefault();
 }, { passive: false });
+let scrollHorizontal3 = document.querySelector('.zoneScroller');
+scrollHorizontal3.addEventListener('wheel', function(e) {
+    this.scrollLeft += e.deltaY*5;
+    e.preventDefault();
+}, { passive: false });
 
 function itemGlow(element, wepOrArmor) {
     if (wepOrArmor === 1) {
@@ -711,7 +759,7 @@ let isWeaponScrollerOpen = false;
 let isArmorScrollerOpen = false;
 
 let isBuyingMenuOpen = false;
-let isItemUnlocking = false;
+let deutschChecker = false;
 
 const shopBtn = document.getElementById('shopEventBtn');
 shopBtn.addEventListener('click', () => {
@@ -793,7 +841,7 @@ shopBtn.addEventListener('click', () => {
     });
 
     let windowClickHandler = () => {    // CLOSING DOWN
-        if (!isBuyingMenuOpen && shopMenu.classList.contains('closableMenu') && !isItemUnlocking) {
+        if (!isBuyingMenuOpen && shopMenu.classList.contains('closableMenu') && !deutschChecker) {
             isMenuOpening = false;
             shopMenu.removeAttribute('open');
             backgroundBlur.removeAttribute('open');
@@ -1130,7 +1178,7 @@ shopArmorBtns.forEach(button => {
 });
 
 function unlockingItem (element) {
-    isItemUnlocking = true;
+    deutschChecker = true;
     element.classList.add('unlocked');
     lockId = document.getElementById(element.id + 'Lock');
     lockId.addEventListener('animationend', () => {
@@ -1139,11 +1187,52 @@ function unlockingItem (element) {
             lockId.addEventListener('animationend', () => {
                 lockId.removeAttribute('disappear')
                 lockId.setAttribute('unlocked', "");
-                isItemUnlocking = false;
+                deutschChecker = false;
             }, {once: true});
         }, 100);
     }, {once: true});
 };
+
+
+let animationQueue = [];
+
+function unlockingZone(element) {
+    animationQueue.push(element);
+
+    if (animationQueue.length === 1) {
+        startAnimation(element);
+    }
+};
+
+function startAnimation(element) {
+    if (element.classList.contains('unlocked')) {
+        animationQueue.shift();
+        if (animationQueue.length > 0) {
+            startAnimation(animationQueue[0]);
+        }
+        return;
+    }
+
+    deutschChecker = true;
+    element.classList.add('unlocked');
+    lockId = document.getElementById(element.id + 'Lock');
+    lockId.addEventListener('animationend', () => {
+        setTimeout(() => {
+            lockId.setAttribute('disappear', "");
+            lockId.addEventListener('animationend', () => {
+                lockId.removeAttribute('disappear')
+                lockId.setAttribute('unlocked', "");
+                deutschChecker = false;
+
+                animationQueue.shift();
+
+                if (animationQueue.length > 0) {
+                    startAnimation(animationQueue[0]);
+                }
+            }, {once: true});
+        }, 100);
+    }, {once: true});
+}
 
 const statusGold = document.getElementById('statusGold');
 const statusHealth = document.getElementById('statusHp');
@@ -1245,4 +1334,77 @@ spawnEventBtn.addEventListener('click', () => {
         }
     }
     window.addEventListener('click', windowClickHandler)
+});
+
+
+const teleportMenuBase = document.getElementById('teleportMenuBase');
+const zoneScroller = document.querySelector('.zoneScroller');
+
+gateEventBtn.addEventListener('click', () => {
+    event.stopPropagation();
+
+    isMenuOpening = true;
+    teleportMenuBase.setAttribute('open', "");
+    backgroundBlur.style.display = 'block';
+    backgroundBlur.setAttribute('open', "");
+    teleportMenuBase.style.display = 'block';
+    teleportMenuBase.classList.add('closableMenu');
+    body.style.overflow = 'hidden';
+
+    teleportMenuBase.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                zoneScroller.style.display = 'grid';
+                zoneScroller.setAttribute('appear', "");
+
+                function zoneVisitCheck(zone, zoneVisitVar) {
+                    if (!zone.classList.contains('unlocked') && zoneVisitVar) {
+                        setTimeout(() => {
+                            unlockingZone(zone);
+                        }, 400);
+                    };
+                };
+
+                zoneVisitCheck(document.getElementById('gate'), visitedGate);
+                zoneVisitCheck(document.getElementById('plains'), visitedPlains);
+                zoneVisitCheck(document.getElementById('desert'), visitedDesert);
+                zoneVisitCheck(document.getElementById('iceLands'), visitediceLands, );
+                zoneVisitCheck(document.getElementById('skeletonCastle'), visitedSkeletonCastle);
+                zoneVisitCheck(document.getElementById('magmaLands'), visitedMagmaLands);
+                zoneVisitCheck(document.getElementById('swamp'), visitedSwamp);
+                zoneVisitCheck(document.getElementById('orcCastle'), visitedOrcCastle);
+                zoneVisitCheck(document.getElementById('clouds'), visitedClouds);
+                zoneVisitCheck(document.getElementById('vampireForest'), visitedVampireForest);
+                zoneVisitCheck(document.getElementById('corruptionZone'), visitedCorruptionZone);
+            }, 250);
+        };
+    });
+    
+    let windowClickHandler = () => {
+        if (teleportMenuBase.classList.contains('closableMenu') && !deutschChecker) {
+            isMenuOpening = false;
+            teleportMenuBase.removeAttribute('open');
+            backgroundBlur.removeAttribute('open');
+            zoneScroller.removeAttribute('appear');
+            teleportMenuBase.setAttribute('close', "");
+            backgroundBlur.setAttribute('close', "");
+            zoneScroller.setAttribute('disappear', "");
+    
+            let animationEndHandler = () => {
+                teleportMenuBase.removeAttribute('close');
+                backgroundBlur.removeAttribute('close');
+                zoneScroller.style.display = 'none';
+                zoneScroller.removeAttribute('disappear');
+                backgroundBlur.style.display = 'none';
+                teleportMenuBase.style.display = 'none';
+                teleportMenuBase.classList.remove('closableMenu');
+                teleportMenuBase.removeEventListener('animationend', animationEndHandler);
+                body.style.overflow = '';
+            };
+    
+            teleportMenuBase.addEventListener('animationend', animationEndHandler);
+            window.removeEventListener('click', windowClickHandler);
+        };
+    };
+    window.addEventListener('click', windowClickHandler);
 });
