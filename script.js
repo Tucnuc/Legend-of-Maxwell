@@ -468,6 +468,7 @@ const zones = {
         music: "./Music-Library/zonesTheme.mp3"
     },
 }
+const zoneKeys =  Object.keys(zones);
 
 let visitedGate = false;
 let visitedPlains = false;
@@ -1379,8 +1380,22 @@ gateEventBtn.addEventListener('click', () => {
             }, 250);
         };
     });
+
+    const zoneElements = document.querySelectorAll('.zoneElement');
+    zoneElements.forEach(zone => {
+        zone.addEventListener('click', () => {
+            event.stopPropagation();
+            let zoneId = zone.id;
+            let indexOfLoc = zoneKeys.indexOf(loc);
+            let indexOfZoneId = zoneKeys.indexOf(zoneId);
+            zoneChange(indexOfZoneId - indexOfLoc);
+            setTimeout(() => {
+                windowClickHandlerZones();
+            }, 100);
+        });
+    });
     
-    let windowClickHandler = () => {
+    function windowClickHandlerZones() {
         if (teleportMenuBase.classList.contains('closableMenu') && !deutschChecker) {
             isMenuOpening = false;
             teleportMenuBase.removeAttribute('open');
@@ -1403,8 +1418,8 @@ gateEventBtn.addEventListener('click', () => {
             };
     
             teleportMenuBase.addEventListener('animationend', animationEndHandler);
-            window.removeEventListener('click', windowClickHandler);
+            window.removeEventListener('click', windowClickHandlerZones);
         };
     };
-    window.addEventListener('click', windowClickHandler);
+    window.addEventListener('click', windowClickHandlerZones);
 });

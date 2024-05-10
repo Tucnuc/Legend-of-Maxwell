@@ -889,3 +889,9 @@ p {
 .zoneTeleportBtn:hover ~ .zoneText { 
     background-image: linear-gradient(ivory, ivory);
 }
+
+#zoneIcon {
+    position: absolute;
+    width: 200px;
+    top: 60px;
+}
