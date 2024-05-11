@@ -896,134 +896,154 @@ const weapons = {
         minDmg: 3,
         maxDmg: 10,
         tier: 1,
-        price: 100
+        price: 100,
+        img: './Image-Library/bronze.png'
     },
     goldSword: {
         name: 'Zlatý Meč',
         minDmg: 5,
         maxDmg: 15,
         tier: 2,
-        price: 250
+        price: 250,
+        img: './Image-Library/golden.png'
     },
     ironSword: {
         name: 'Železný Meč',
         minDmg: 6,
         maxDmg: 20,
         tier: 3,
-        price: 750
+        price: 750,
+        img: './Image-Library/ironed.png'
     },
     steelSword: {
         name: 'Ocelový Meč',
         minDmg: 9,
         maxDmg: 25,
         tier: 4,
-        price: 2000
+        price: 2000,
+        img: './Image-Library/steelsword.png'
     },
     diamondSword: {
         name: 'Diamantový Meč',
         minDmg: 10,
         maxDmg: 30,
         tier: 5,
-        price: 5000
+        price: 5000,
+        img: './Image-Library/diamoned.png'
     },
     stormyxSword: {
         name: 'Stormyxový Meč',
         minDmg: 15,
         maxDmg: 40,
         tier: 6,
-        price: 10000
+        price: 10000,
+        img: './Image-Library/stormyxSword.png'
     },
     mythrilSword: {
         name: 'Mythrilový Meč',
         minDmg: 20,
         maxDmg: 50,
         tier: 7,
-        price: 25000
+        price: 25000,
+        img: './Image-Library/mythrilSword.png'
     },
     adamantiteSword: {
         name: 'Adamantiový Meč',
         minDmg: 25,
         maxDmg: 75,
         tier: 8,
-        price: 50000
+        price: 50000,
+        img: './Image-Library/adamantiteSword.png'
     },
     orichalcumSword: {
         name: 'Orichalcový Meč',
         minDmg: 45,
         maxDmg: 90,
         tier: 9,
-        price: 80000
+        price: 80000,
+        img: './Image-Library/orichalcumSword.png'
     },
     celestialSword: {
         name: 'Nebeský Meč',
         minDmg: 60,
         maxDmg: 100,
         tier: 10,
-        price: 125000
+        price: 125000,
+        img: './Image-Library/celestialSword.png'
     }
-  }
+}
   
 const armors = {
-leatherArmor: {
-    name: 'Kožené Brnění',
-    health: 50,
-    tier: 1,
-    price: 50
-},
-chainArmor: {
-    name: 'Řetězové Brnění',
-    health: 100,
-    tier: 2,
-    price: 100
-},
-ironArmor: {
-    name: 'Železné Brnění',
-    health: 175,
-    tier: 3,
-    price: 250
-},
-steelArmor: {
-    name: 'Ocelové Brnění',
-    health: 250,
-    tier: 4,
-    price: 1500
-},
-diamondArmor: {
-    name: 'Diamantové Brnění',
-    health: 325,
-    tier: 5,
-    price: 5000
-},
-stormyxArmor: {
-    name: 'Stormyxové Brnění',
-    health: 450,
-    tier: 6,
-    price: 15000
-},
-mythrilArmor: {
-    name: 'Mythrilové Brnění',
-    health: 600,
-    tier: 7,
-    price: 40000
-},
-adamantiteArmor: {
-    name: 'Adamantiové Brnění',
-    health: 700,
-    tier: 8,
-    price: 100000
-},
-orichalcumArmor: {
-    name: 'Orichalcové Brnění',
-    health: 800,
-    tier: 9,
-    price: 150000
-},
-celestialArmor: {
-    name: 'Nebeské Brnění',
-    health: 1000,
-    tier: 10,
-    price: 200000
-}
+    leatherArmor: {
+        name: 'Kožené Brnění',
+        health: 50,
+        tier: 1,
+        price: 50,
+        img: './Image-Library/leather.png'
+    },
+    chainArmor: {
+        name: 'Řetězové Brnění',
+        health: 100,
+        tier: 2,
+        price: 100,
+        img: './Image-Library/chainmail.png'
+    },
+    ironArmor: {
+        name: 'Železné Brnění',
+        health: 175,
+        tier: 3,
+        price: 250,
+        img: './Image-Library/ironArmor.png'
+    },
+    steelArmor: {
+        name: 'Ocelové Brnění',
+        health: 250,
+        tier: 4,
+        price: 1500,
+        img: './Image-Library/steelArmor.png'
+    },
+    diamondArmor: {
+        name: 'Diamantové Brnění',
+        health: 325,
+        tier: 5,
+        price: 5000,
+        img: './Image-Library/diamond.png'
+    },
+    stormyxArmor: {
+        name: 'Stormyxové Brnění',
+        health: 450,
+        tier: 6,
+        price: 15000,
+        img: './Image-Library/stormyxarmor.png'
+    },
+    mythrilArmor: {
+        name: 'Mythrilové Brnění',
+        health: 600,
+        tier: 7,
+        price: 40000,
+        img: './Image-Library/mythrilArmor.png'
+    },
+    adamantiteArmor: {
+        name: 'Adamantiové Brnění',
+        health: 700,
+        tier: 8,
+        price: 100000,
+        img: './Image-Library/adamantiteArmor.png'
+    },
+    orichalcumArmor: {
+        name: 'Orichalcové Brnění',
+        health: 800,
+        tier: 9,
+        price: 150000,
+        img: './Image-Library/orichalcumArmor.png'
+    },
+    celestialArmor: {
+        name: 'Nebeské Brnění',
+        health: 1000,
+        tier: 10,
+        price: 200000,
+        img: './Image-Library/celestialArmor.png'
+    }
 }
 
 let keysWeapon = Object.keys(weapons);
@@ -1237,6 +1257,9 @@ function startAnimation(element) {
 
 const statusGold = document.getElementById('statusGold');
 const statusHealth = document.getElementById('statusHp');
+const swordGear = document.getElementById('swordGear');
+const armorGear = document.getElementById('armorGear');
+
 function buyingItem() {
     userGold = userGold - currentPrice;
     statusGold.innerHTML = `ZLATO: ${userGold}`;
@@ -1269,6 +1292,7 @@ function buyingItem() {
                 userArmorBonus = armors[keysArmor[indexOfID]].health;
                 userArmorTier = armors[keysArmor[indexOfID]].tier;
 
+                armorGear.src = armors[keysArmor[indexOfID]].img;
                 statusHealth.innerHTML = `HP: ${userMaxHP}`;
             } else {
                 let nextIndex = indexOfID + 1;
@@ -1278,6 +1302,8 @@ function buyingItem() {
                 userMinDmg = weapons[keysWeapon[indexOfID]].minDmg;
                 userMaxDmg = weapons[keysWeapon[indexOfID]].maxDmg;
                 userWeaponTier = weapons[keysWeapon[indexOfID]].tier;
+
+                swordGear.src = weapons[keysWeapon[indexOfID]].img;
             };
             unlockingItem(currentLock);
         }, 250);
