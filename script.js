@@ -41,6 +41,16 @@ const weaponText = {
 //  OTHER STUFF
 // -------------
 
+
+// RANDOM RANDINT
+function randint(min,max) {
+    let fromZero = min
+    min = 0
+    max -= fromZero
+    return Math.floor(Math.random()*(max+1)) + fromZero
+}
+
+
 // BUTTONS SOUND EFFECTS
 let buttonSound = new Audio('./Music-Library/button.wav');
 const buttons = document.querySelectorAll('.button')
@@ -49,7 +59,7 @@ buttons.forEach(button => {
         if (event.target === button) {
             let buttonHover = new Audio('./Music-Library/buttonHover.wav');
             buttonHover.volume = 0.4;
-            buttonHover.play()
+            buttonHover.play();
         }
     });
     button.addEventListener('click', () => {
@@ -57,6 +67,41 @@ buttons.forEach(button => {
         buttonSound.play();
     });
 });
+
+
+// MAXWELL SFX
+const maxwellNoseBtn = document.querySelector('.maxwellSfx');
+let chosenSfx = '';
+let maxwellSfx = new Audio(chosenSfx);
+
+maxwellNoseBtn.addEventListener('click', () => {
+    if (maxwellSfx.paused) {
+        chooseMaxwellSfx();
+        maxwellSfx.src = chosenSfx;
+        maxwellSfx.play();
+    };
+});
+
+function chooseMaxwellSfx() {
+    let maxwellSfxNumber = randint(1, 5);
+    switch (maxwellSfxNumber) {
+        case 1:
+            chosenSfx = './Music-Library/meow1.mp3'
+            break
+        case 2:
+            chosenSfx = './Music-Library/meow2.mp3'
+            break
+        case 3:
+            chosenSfx = './Music-Library/meow3.mp3'
+            break
+        case 4:
+            chosenSfx = './Music-Library/meow4.mp3'
+            break
+        case 5:
+            chosenSfx = './Music-Library/meow5.mp3'
+            break
+    };
+};
 
 
 // NAME MENU

@@ -896,6 +896,8 @@ p {
     top: 60px;
 }
 
+
+/* MAXWELL */
 .maxwellCon {
     height: 100%;
     position: absolute;
@@ -934,6 +936,16 @@ p {
     right: 15px;
 }
 
+.maxwellSfx {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 1;
+    right: 45px;
+    top: 145px;
+}
+
 
 /* RESPOSIVITA :)  */
 .ggText {
@@ -951,6 +963,7 @@ p {
 .ggText p {
     font-size: x-large;
     text-align: center;
+    margin: 0 20px 0 20px;
 }
 
 @media screen and (height < 850px) {
