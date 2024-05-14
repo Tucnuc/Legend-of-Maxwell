@@ -269,6 +269,7 @@ function stopAniText() {
 
     textDiv.style.cursor = 'default';
     removeClickListener();
+    testIdkBro = false;
 };
 
 
@@ -280,6 +281,7 @@ function removeClickListener() {
 let currentTextArray = {};
 let currentKeys = [];
 let lastZone = 'spawn';
+let testIdkBro = true;
 
 function aniText(textArray) {
     if (lastZone !== background.id) {
@@ -293,9 +295,10 @@ function aniText(textArray) {
     if(keys.length > 0) {
         timeoutId = setTimeout(() => {
             console.log('F TO PAY RESPECT BITCH')
+            testIdkBro = true
             aniText2(textArray[keys[index]]);
             index++
-        }, 1000);
+        }, 200);
     }
 
     currentTextArray = textArray;
@@ -355,8 +358,10 @@ function aniText2(text, i = 0) {
         textDiv.textContent = '';
     }
     textDiv.textContent += text[i];
-    if (i < text.length - 1) {
+    if (i < text.length - 1 && testIdkBro) {
         setTimeout(() => aniText2(text, i + 1), 15);
+    } else if (!testIdkBro) {
+        return
     } else {
         isWriting = false;
         hlUp.setAttribute('glow', "");
@@ -514,6 +519,149 @@ const zones = {
     },
 }
 const zoneKeys =  Object.keys(zones);
+const monsters = {
+    goblin: {
+        name: 'Goblin',
+        health: 20,
+        minDmg: 2,
+        maxDmg: 4,
+        gold: 10
+    },
+    goblinLeader: {
+        name: 'Vůdce Goblinů',
+        health: 35,
+        minDmg: 3,
+        maxDmg: 10,
+        gold: 25
+    },
+    mummy: {
+        name: 'Mumie',
+        health: 40,
+        minDmg: 3,
+        maxDmg: 15,
+        gold: 25
+    },
+    sandman: {
+        name: 'Písečný Muž',
+        health: 60,
+        minDmg: 5,
+        maxDmg: 17,
+        gold: 50
+    },
+    iceGuardian: {
+        name: 'Ledový Ochránce',
+        health: 65,
+        minDmg: 4,
+        maxDmg: 17,
+        gold: 50
+    },
+    iceKnight: {
+        name: 'Ledový Rytíř',
+        health: 80,
+        minDmg: 6,
+        maxDmg: 20,
+        gold: 100
+    },
+    skeleton: {
+        name: 'Kostlivec',
+        health: 85,
+        minDmg: 6,
+        maxDmg: 23,
+        gold: 125
+    },
+    skeletonKing: {
+        name: 'Král Kostlivců',
+        health: 95,
+        minDmg: 9,
+        maxDmg: 25,
+        gold: 250
+    },
+    magmaMinion: {
+        name: 'Magma Minion',
+        health: 100,
+        minDmg: 8,
+        maxDmg: 25,
+        gold: 250
+    },
+    magmaTrasher: {
+        name: 'Magma Trasher',
+        health: 130,
+        minDmg: 10,
+        maxDmg: 30,
+        gold: 500
+    },
+    swampMonster: {
+        name: 'Bažinové Monstrum',
+        health: 140,
+        minDmg: 10,
+        maxDmg: 30,
+        gold: 500
+    },
+    swampGuardian: {
+        name: 'Ochránce Bažin',
+        health: 170,
+        minDmg: 15,
+        maxDmg: 40,
+        gold: 1000
+    },
+    orc: {
+        name: 'Orc',
+        health: 175,
+        minDmg: 15,
+        maxDmg: 45,
+        gold: 1000
+    },
+    orcLeader: {
+        name: 'Orc Vojevůdce',
+        health: 240,
+        minDmg: 20,
+        maxDmg: 55,
+        gold: 2000
+    },
+    cloudLurker: {
+        name: 'Cloud Lurker',
+        health: 250,
+        minDmg: 25,
+        maxDmg: 70,
+        gold: 2000
+    },
+    cloudLord: {
+        name: 'Cloud Lord',
+        health: 320,
+        minDmg: 30,
+        maxDmg: 80,
+        gold: 4000
+    },
+    vampire: {
+        name: 'Upír',
+        health: 340,
+        minDmg: 30,
+        maxDmg: 80,
+        gold: 3000
+    },
+    vampireKing: {
+        name: 'Upíří Král',
+        health: 400,
+        minDmg: 45,
+        maxDmg: 90,
+        gold: 6000
+    },
+    corrupted: {
+        name: 'Corrupted',
+        health: 450,
+        minDmg: 50,
+        maxDmg: 95,
+        gold: 5000
+    },
+    corruptionLord: {
+        name: 'Lord Korupce',
+        health: 800,
+        minDmg: 100,
+        maxDmg: 150,
+        gold: 10000
+    }
+};
+const monsterKeys = Object.keys(monsters);
 
 let visitedGate = false;
 let visitedPlains = false;
@@ -534,6 +682,9 @@ const gateEventBtn = document.getElementById('gateEventBtn');
 
 let currentEventBtn = spawnEventBtn;
 
+let currentMonster = '';
+let currentBossMonster = '';
+
 function zoneChange(direction) {
     const keys = Object.keys(zones);
     let index = keys.indexOf(loc);
@@ -545,7 +696,7 @@ function zoneChange(direction) {
         loc = keys[nextIndex];
         console.log(loc);
 
-        opacityRemover()
+        opacityRemover();
 
         hlUp.removeAttribute('glow');
         hlDown.removeAttribute('glow');
@@ -620,33 +771,53 @@ function zoneChange(direction) {
                 break
             case 'plains':
                 visitedPlains = true;
+                currentMonster = 'goblin';
+                currentBossMonster = 'goblinLeader';
                 break
             case 'desert':
                 visitedDesert = true;
+                currentMonster = 'mummy';
+                currentBossMonster = 'sandman';
                 break
             case 'iceLands':
                 visitediceLands = true;
+                currentMonster = 'iceGuardian';
+                currentBossMonster = 'iceKnight';
                 break
             case 'skeletonCastle':
                 visitedSkeletonCastle = true;
+                currentMonster = 'skeleton';
+                currentBossMonster = 'skeletonKing';
                 break
             case 'magmaLands':
                 visitedMagmaLands = true;
+                currentMonster = 'magmaMinion';
+                currentBossMonster = 'magmaTrasher';
                 break
             case 'swamp':
                 visitedSwamp = true;
+                currentMonster = 'swampMonster';
+                currentBossMonster = 'swampGuardian';
                 break
             case 'orcCastle':
                 visitedOrcCastle = true;
+                currentMonster = 'orc';
+                currentBossMonster = 'orcLeader';
                 break
             case 'clouds':
                 visitedClouds = true;
+                currentMonster = 'cloudLurker';
+                currentBossMonster = 'cloudLord';
                 break
             case 'vampireForest':
                 visitedVampireForest = true;
+                currentMonster = 'vampire';
+                currentBossMonster = 'vampireKing';
                 break
             case 'corruptionZone':
                 visitedCorruptionZone = true;
+                currentMonster = 'corrupted';
+                currentBossMonster = 'corruptionLord';
                 break
         };
 
@@ -670,7 +841,7 @@ gateEventBtn.addEventListener('click', () => {
 
 
 nameMenu.addEventListener('animationend', () => {
-    aniText(zones[loc].text);
+    setTimeout(() => {aniText(zones[loc].text)}, 800);
 });
 document.addEventListener('DOMContentLoaded', () => {
     audio.src = zones[loc].music;
@@ -1494,3 +1665,40 @@ gateEventBtn.addEventListener('click', () => {
     };
     window.addEventListener('click', windowClickHandlerZones);
 });
+
+
+
+// ----------
+//  FIGHTING
+// ----------
+
+let isUserFighting = false;
+function fight(monster, bossMonster) {
+    isUserFighting = true;
+
+    let monsterIndex = monsterKeys.indexOf(monster);
+    let bossMonsterIndex = monsterKeys.indexOf(bossMonster);
+    let didBossSpawn = false;
+
+    let normalOrBoss = randint(1, 4);
+    if (normalOrBoss === 1) {
+        didBossSpawn = true;
+        let text = {
+            text1: 'Pozor! Objevilo se Boss monstrum.',
+            text2: `${monsters[monsterKeys[bossMonsterIndex]].name} se rychle blíží!`
+        };
+        console.log('bossMonster')
+        stopAniText();
+        aniText(text);
+    } else {
+        let text = {
+            text1: `Připravuješ se k boji. Spatříš ${monsters[monsterKeys[monsterIndex]].name}.`
+        };
+        console.log('monster')
+        stopAniText();
+        aniText(text);
+    };
+};
+
+const fightBtn = document.getElementById('fightBtn');
+fightBtn.addEventListener('click', () => {fight(currentMonster, currentBossMonster)});

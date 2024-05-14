@@ -980,4 +980,17 @@ p {
     .ggText {
         display: flex;
     }
+    body {
+        overflow: hidden;
+    }
+}
+
+
+/* BOJOVÁNÍ */
+#fightBtn {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    font-size: xx-large;
+    z-index: 1;
 }
