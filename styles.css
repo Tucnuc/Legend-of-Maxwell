@@ -971,7 +971,26 @@ p {
         height: 80%;
     }
 }
-@media screen and (width < 1475px), screen and (height < 650px) {
+@media screen and (width < 1475px) {
+    #textUiSvg, #textUI {
+        height: 207.712px;
+        margin-bottom: 18.5px;
+    }
+    #textUI {
+        width: 844.031px;
+    }
+}
+@media screen and (width < 1440px) {
+    #textUiSvg, #textUI {
+        height: 197.712px;
+        margin-bottom: 23.5px;
+    }
+    #textUI {
+        width: 798.578px;
+    }
+}
+
+@media screen and (width < 1380px), screen and (height < 650px) {
     #backgroundBlur2 {
         opacity: 1;
         display: block;
