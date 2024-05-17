@@ -14,16 +14,21 @@ let name = "";
 let userRank = "Začátečník";
 let userHP = 100;
 let userMaxHP = 100;
-let userGold = 999999999999999;
+let userGold = 0;
 
 let userWeapon = "Dřevěný Meč";
 let userWeaponTier = 0;
 let userMinDmg = 2;
 let userMaxDmg = 5;
+let userDmg = 0;
 
 let userArmor = "Žádné";
 let userArmorBonus = 0;
 let userArmorTier = 0;
+
+// MONSTER VARIABLES
+let monsterDmg = 0;
+let monsterHP = 0;
 
 // SHOP VARIABLES
 let shopBan = false;
@@ -266,6 +271,8 @@ function stopAniText() {
     index = 0;
     currentTextArray = null;
     currentKeys = null;
+    moneyGlitchCheck = true;
+    monsterDead = false;
 
     textDiv.style.cursor = 'default';
     removeClickListener();
@@ -310,14 +317,10 @@ function aniText(textArray) {
 function opacityRemover() {
     const opaCheck = window.getComputedStyle(hlUp);
     if (opaCheck.opacity != 0) {
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes unglow {
-                0% { opacity: ${opaCheck.opacity}; }
-                100% { opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
+        hlUp.style.setProperty('--dynamicOpacity', opaCheck.opacity);
+        hlDown.style.setProperty('--dynamicOpacity', opaCheck.opacity);
+        hlRight.style.setProperty('--dynamicOpacity', opaCheck.opacity);
+        hlLeft.style.setProperty('--dynamicOpacity', opaCheck.opacity);
 
         hlUp.style.animation = 'unglow 500ms';
         hlDown.style.animation = 'unglow 500ms';
@@ -329,7 +332,6 @@ function opacityRemover() {
             hlDown.style.animation = '';
             hlRight.style.animation = '';
             hlLeft.style.animation = '';
-            document.head.removeChild(style);
         });
     };
 };
@@ -341,7 +343,7 @@ function handleClick() {
         isWriting = true;
         textDiv.style.cursor = 'default';
 
-        opacityRemover()
+        opacityRemover();
 
         hlUp.removeAttribute('glow');
         hlDown.removeAttribute('glow');
@@ -826,17 +828,11 @@ function zoneChange(direction) {
     }
 };
 
-spawnEventBtn.addEventListener('click', () => {
-    console.log('SPAWN CHUJ');
-});
-shopEventBtn.addEventListener('click', () => {
-    console.log('SHOP CHUJ');
-});
+
 fountainEventBtn.addEventListener('click', () => {
     console.log('FONTAN CHUJ');
-});
-gateEventBtn.addEventListener('click', () => {
-    console.log('GATE CHUJ');
+    userHP = userMaxHP;
+    statusHealth.innerHTML = `HP: ${userHP}`;
 });
 
 
@@ -1431,6 +1427,11 @@ function unlockingItem (element) {
 };
 
 
+
+// --------------------
+//  GATE TELEPORTATION
+// --------------------
+
 let animationQueue = [];
 
 function unlockingZone(element) {
@@ -1673,32 +1674,236 @@ gateEventBtn.addEventListener('click', () => {
 // ----------
 
 let isUserFighting = false;
+let isUserStillAlive = true;
+let repeatIndex = 0;
+let decrease = false;
+let monsterIndex = 0;
+let bossMonsterIndex = 0;
+let didBossSpawn = false;
+
 function fight(monster, bossMonster) {
     isUserFighting = true;
 
-    let monsterIndex = monsterKeys.indexOf(monster);
-    let bossMonsterIndex = monsterKeys.indexOf(bossMonster);
-    let didBossSpawn = false;
+    monsterIndex = monsterKeys.indexOf(monster);
+    bossMonsterIndex = monsterKeys.indexOf(bossMonster);
+
+    normalMonster = monsters[monsterKeys[monsterIndex]];
+    bossMonster = monsters[monsterKeys[bossMonsterIndex]];
 
     let normalOrBoss = randint(1, 4);
     if (normalOrBoss === 1) {
         didBossSpawn = true;
         let text = {
             text1: 'Pozor! Objevilo se Boss monstrum.',
-            text2: `${monsters[monsterKeys[bossMonsterIndex]].name} se rychle blíží!`
+            text2: `${bossMonster.name} se rychle blíží!`,
+            text3: `Útočís na ${bossMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
+            text4: `${bossMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
+            text5: `Po drsném boji jsi porazil ${bossMonster.name}! Získáváš ${bossMonster.gold} zlata.`,
+            // text6: `Podařilo se ti získat novou zbraň! ${}, s útočnou silou o ${}-${}.`
         };
         console.log('bossMonster')
+        repeatIndex = 3;
         stopAniText();
-        aniText(text);
+        aniTextLoop(text, repeatIndex);
     } else {
         let text = {
-            text1: `Připravuješ se k boji. Spatříš ${monsters[monsterKeys[monsterIndex]].name}.`
+            text1: `Připravuješ se k boji. Spatříš ${normalMonster.name}.`,
+            text2: `Útočís na ${normalMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
+            text3: `${normalMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
+            text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`
         };
         console.log('monster')
+        repeatIndex = 2;
         stopAniText();
-        aniText(text);
+        aniTextLoop(text, repeatIndex);
     };
 };
+
+let firstEncounter = true;
+function aniTextLoop(textArray, repeatIndex) {
+
+    if (lastZone !== background.id) {
+        lastZone = background.id;
+        return;
+    }
+
+    const keys = Object.keys(textArray);
+    firstEncounter = true;
+
+    if(keys.length > 0) {
+        timeoutId = setTimeout(() => {
+            console.log('F TO PAY RESPECT BITCH')
+            testIdkBro = true
+            aniText2Fight(textArray[keys[index]]);
+            index++
+        }, 200);
+    }
+
+    currentTextArray = textArray;
+    currentKeys = keys;
+
+    textDiv.removeEventListener('click', handleClickFighting);
+}
+
+let specialZwei = false;
+let specialDrei = false;
+let monsterDead = false;
+let moneyGlitchCheck = true;
+function handleClickFighting() {
+    if (isWriting === false) {
+        isWriting = true;
+        textDiv.style.cursor = 'default';
+
+        opacityRemover();
+
+        console.log('BOJUJEŠ NA ŽIVOT A NA SMRT CHUJ');
+
+        normalMonster = monsters[monsterKeys[monsterIndex]];
+        bossMonster = monsters[monsterKeys[bossMonsterIndex]];
+
+        // SETTING MONSTER HEALTH
+        if (firstEncounter) {
+            if (didBossSpawn) {
+                monsterHP = bossMonster.health;
+            } else {
+                monsterHP = normalMonster.health;
+            }
+            firstEncounter = !firstEncounter
+        }
+
+        // GENERATING DMG
+        function generateDmg(minDmg, maxDmg) {
+            return randint(minDmg, maxDmg);
+        }
+        userDmg = generateDmg(userMinDmg, userMaxDmg);
+        if (didBossSpawn) {
+            monsterDmg = generateDmg(bossMonster.minDmg, bossMonster.maxDmg);
+        } else {
+            monsterDmg = generateDmg(normalMonster.minDmg, normalMonster.maxDmg);
+        }
+
+        let special = false;
+        let specialInt = 0;
+
+        if (monsterDead) {
+            if (moneyGlitchCheck) {
+                if (didBossSpawn) {
+                    userGold = userGold + bossMonster.gold;
+                } else {
+                    userGold = userGold + normalMonster.gold;
+                }
+                statusGold.innerHTML = `ZLATO: ${userGold}`;
+            }
+            moneyGlitchCheck = false;
+        }
+
+        // PLAYER ATTACKING
+        if (index != repeatIndex) {
+            monsterHP = monsterHP - userDmg;
+            monsterHP = monsterHP < 0 ? 0 : monsterHP
+            if (monsterHP <= 0) {
+                console.log('Monster Chciplo')
+                monsterDead = true;
+                special = true;
+                if (didBossSpawn) {
+                    specialInt = 4;
+                } else {
+                    specialInt = 3;
+                }
+            }
+
+        // MONSTER ATTACKING
+        } else {
+            userHP = userHP - monsterDmg
+            userHP = userHP < 0 ? 0 : userHP
+            statusHealth.innerHTML = `HP: ${userHP}`;
+            if (userHP <= 0) {
+                console.log('Chcipl si noob L ez')
+                isUserStillAlive = false;
+            }
+        }
+
+        // UPDATING TEXT ARRAY
+        if (didBossSpawn) {
+            currentTextArray = text = {
+                text1: 'Pozor! Objevilo se Boss monstrum.',
+                text2: `${bossMonster.name} se rychle blíží!`,
+                text3: `Útočís na ${bossMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
+                text4: `${bossMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
+                text5: `Po drsném boji jsi porazil ${bossMonster.name}! Získáváš ${bossMonster.gold} zlata.`,
+            };
+        } else {
+            currentTextArray = text = {
+                text1: `Připravuješ se k boji. Spatříš ${normalMonster.name}.`,
+                text2: `Útočís na ${normalMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
+                text3: `${normalMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
+                text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`
+            };    
+        }
+
+        hlUp.removeAttribute('glow');
+        hlDown.removeAttribute('glow');
+        hlRight.removeAttribute('glow');
+        hlLeft.removeAttribute('glow');
+
+        aniText2Fight(currentTextArray[currentKeys[index]]);
+
+        // INDEX SHENANIGENS
+        if (specialZwei) {
+            specialZwei = false;
+            console.log('konečná šuhaj');
+            index++;
+        } else if (special) {
+            index = specialInt;
+            specialZwei = true;
+        } else {
+            if (index === repeatIndex) {
+                decrease = !decrease;
+            }
+            if (decrease) {
+                index--;
+                decrease = !decrease;
+            } else {
+                index++;
+            }
+        }
+    }
+}
+
+function aniText2Fight(text, i = 0) {
+    if (i === 0) {
+        textDiv.textContent = '';
+    }
+    textDiv.textContent += text[i];
+    if (i < text.length - 1 && testIdkBro) {
+        setTimeout(() => aniText2Fight(text, i + 1), 7.5);
+    } else if (!testIdkBro) {
+        return
+    } else {
+        isWriting = false;
+        hlUp.setAttribute('glow', "");
+        hlDown.setAttribute('glow', "");
+        hlRight.setAttribute('glow', "");
+        hlLeft.setAttribute('glow', "");
+        setTimeout(() => {
+            textDiv.style.cursor = 'pointer';
+            // if (specialDrei) {
+            //     textDiv.removeEventListener('click', handleClickFighting);
+            //     textDiv.addEventListener('click', () => {
+            //         specialDrei = false;
+            //         index = 0;
+            //         currentTextArray = null;
+            //         currentKeys = null;
+            //         textDiv.style.cursor = 'default';
+            //         removeClickListener();
+            //         isWriting = true;
+            //         opacityRemover();
+            //     }, {once: true});
+            textDiv.addEventListener('click', handleClickFighting);
+        }, 50);
+    };
+};
+
 
 const fightBtn = document.getElementById('fightBtn');
 fightBtn.addEventListener('click', () => {fight(currentMonster, currentBossMonster)});
