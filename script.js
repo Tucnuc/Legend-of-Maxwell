@@ -273,9 +273,11 @@ function stopAniText() {
     currentKeys = null;
     moneyGlitchCheck = true;
     monsterDead = false;
+    userDead = false;
 
     textDiv.style.cursor = 'default';
     removeClickListener();
+    textDiv.removeEventListener('click', handleClickFighting);
     testIdkBro = false;
 };
 
@@ -534,7 +536,8 @@ const monsters = {
         health: 35,
         minDmg: 3,
         maxDmg: 10,
-        gold: 25
+        gold: 25,
+        tier: 0
     },
     mummy: {
         name: 'Mumie',
@@ -548,7 +551,8 @@ const monsters = {
         health: 60,
         minDmg: 5,
         maxDmg: 17,
-        gold: 50
+        gold: 50,
+        tier: 1
     },
     iceGuardian: {
         name: 'Ledový Ochránce',
@@ -562,7 +566,8 @@ const monsters = {
         health: 80,
         minDmg: 6,
         maxDmg: 20,
-        gold: 100
+        gold: 100,
+        tier: 2
     },
     skeleton: {
         name: 'Kostlivec',
@@ -576,7 +581,8 @@ const monsters = {
         health: 95,
         minDmg: 9,
         maxDmg: 25,
-        gold: 250
+        gold: 250,
+        tier: 3
     },
     magmaMinion: {
         name: 'Magma Minion',
@@ -590,7 +596,8 @@ const monsters = {
         health: 130,
         minDmg: 10,
         maxDmg: 30,
-        gold: 500
+        gold: 500,
+        tier: 4
     },
     swampMonster: {
         name: 'Bažinové Monstrum',
@@ -604,7 +611,8 @@ const monsters = {
         health: 170,
         minDmg: 15,
         maxDmg: 40,
-        gold: 1000
+        gold: 1000,
+        tier: 5
     },
     orc: {
         name: 'Orc',
@@ -618,7 +626,8 @@ const monsters = {
         health: 240,
         minDmg: 20,
         maxDmg: 55,
-        gold: 2000
+        gold: 2000,
+        tier: 6
     },
     cloudLurker: {
         name: 'Cloud Lurker',
@@ -632,7 +641,8 @@ const monsters = {
         health: 320,
         minDmg: 30,
         maxDmg: 80,
-        gold: 4000
+        gold: 4000,
+        tier: 7
     },
     vampire: {
         name: 'Upír',
@@ -646,7 +656,8 @@ const monsters = {
         health: 400,
         minDmg: 45,
         maxDmg: 90,
-        gold: 6000
+        gold: 6000,
+        tier: 8
     },
     corrupted: {
         name: 'Corrupted',
@@ -660,7 +671,8 @@ const monsters = {
         health: 800,
         minDmg: 100,
         maxDmg: 150,
-        gold: 10000
+        gold: 10000,
+        tier: 9
     }
 };
 const monsterKeys = Object.keys(monsters);
@@ -1690,6 +1702,8 @@ function fight(monster, bossMonster) {
     normalMonster = monsters[monsterKeys[monsterIndex]];
     bossMonster = monsters[monsterKeys[bossMonsterIndex]];
 
+    droppedWeapon = weapons[keysWeapon[bossMonster.tier]];
+
     let normalOrBoss = randint(1, 4);
     if (normalOrBoss === 1) {
         didBossSpawn = true;
@@ -1699,18 +1713,21 @@ function fight(monster, bossMonster) {
             text3: `Útočís na ${bossMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
             text4: `${bossMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
             text5: `Po drsném boji jsi porazil ${bossMonster.name}! Získáváš ${bossMonster.gold} zlata.`,
-            // text6: `Podařilo se ti získat novou zbraň! ${}, s útočnou silou o ${}-${}.`
+            text6: `Všechna tvá síla tě opouští. Umíráš...`,
+            text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`
         };
         console.log('bossMonster')
         repeatIndex = 3;
         stopAniText();
         aniTextLoop(text, repeatIndex);
     } else {
+        didBossSpawn = false;
         let text = {
             text1: `Připravuješ se k boji. Spatříš ${normalMonster.name}.`,
             text2: `Útočís na ${normalMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
             text3: `${normalMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
-            text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`
+            text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`,
+            text5: `Všechna tvá síla tě opouští. Umíráš...`
         };
         console.log('monster')
         repeatIndex = 2;
@@ -1748,6 +1765,7 @@ function aniTextLoop(textArray, repeatIndex) {
 let specialZwei = false;
 let specialDrei = false;
 let monsterDead = false;
+let userDead = false;
 let moneyGlitchCheck = true;
 function handleClickFighting() {
     if (isWriting === false) {
@@ -1760,6 +1778,8 @@ function handleClickFighting() {
 
         normalMonster = monsters[monsterKeys[monsterIndex]];
         bossMonster = monsters[monsterKeys[bossMonsterIndex]];
+
+        droppedWeapon = weapons[keysWeapon[bossMonster.tier]];
 
         // SETTING MONSTER HEALTH
         if (firstEncounter) {
@@ -1785,10 +1805,30 @@ function handleClickFighting() {
         let special = false;
         let specialInt = 0;
 
+        // GIVING LOOT
         if (monsterDead) {
             if (moneyGlitchCheck) {
                 if (didBossSpawn) {
                     userGold = userGold + bossMonster.gold;
+                    let dostanesZbran = randint(1,2);
+                    switch (dostanesZbran) {
+                        case 1:
+                            if (userWeaponTier < bossMonster.tier+1) {
+                                index = 6;
+                                console.log('Zbraň pro tebe:)')
+                                userWeapon = droppedWeapon.name;
+                                userMinDmg = droppedWeapon.minDmg;
+                                userMaxDmg = droppedWeapon.maxDmg;
+                                userWeaponTier = droppedWeapon.tier;
+                
+                                swordGear.src = droppedWeapon.img;
+                            }
+                            break
+                        case 2:
+                            console.log('Nedostaneš nic, protože jsi zlobil!')
+                            break
+                    }
+
                 } else {
                     userGold = userGold + normalMonster.gold;
                 }
@@ -1819,7 +1859,13 @@ function handleClickFighting() {
             statusHealth.innerHTML = `HP: ${userHP}`;
             if (userHP <= 0) {
                 console.log('Chcipl si noob L ez')
-                isUserStillAlive = false;
+                userDead = true;
+                special = true;
+                if (didBossSpawn) {
+                    specialInt = 5;
+                } else {
+                    specialInt = 4;
+                }
             }
         }
 
@@ -1831,13 +1877,16 @@ function handleClickFighting() {
                 text3: `Útočís na ${bossMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
                 text4: `${bossMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
                 text5: `Po drsném boji jsi porazil ${bossMonster.name}! Získáváš ${bossMonster.gold} zlata.`,
+                text6: `Všechna tvá síla tě opouští. Umíráš...`,
+                text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`
             };
         } else {
             currentTextArray = text = {
                 text1: `Připravuješ se k boji. Spatříš ${normalMonster.name}.`,
                 text2: `Útočís na ${normalMonster.name} za ${userDmg} dmg. Zbývá mu ${monsterHP} životů.`,
                 text3: `${normalMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
-                text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`
+                text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`,
+                text5: `Všechna tvá síla tě opouští. Umíráš...`
             };    
         }
 
@@ -1852,7 +1901,7 @@ function handleClickFighting() {
         if (specialZwei) {
             specialZwei = false;
             console.log('konečná šuhaj');
-            index++;
+            index = -1;
         } else if (special) {
             index = specialInt;
             specialZwei = true;
@@ -1887,18 +1936,6 @@ function aniText2Fight(text, i = 0) {
         hlLeft.setAttribute('glow', "");
         setTimeout(() => {
             textDiv.style.cursor = 'pointer';
-            // if (specialDrei) {
-            //     textDiv.removeEventListener('click', handleClickFighting);
-            //     textDiv.addEventListener('click', () => {
-            //         specialDrei = false;
-            //         index = 0;
-            //         currentTextArray = null;
-            //         currentKeys = null;
-            //         textDiv.style.cursor = 'default';
-            //         removeClickListener();
-            //         isWriting = true;
-            //         opacityRemover();
-            //     }, {once: true});
             textDiv.addEventListener('click', handleClickFighting);
         }, 50);
     };
