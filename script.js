@@ -1045,7 +1045,7 @@ shopBtn.addEventListener('click', (event) => {
                 firstWeaponsOpen = false;
                 setTimeout(() => {
                     unlockStuff()
-                }, 3000);
+                }, 2100);
             } else {
                 unlockStuff()
             }
@@ -1175,7 +1175,7 @@ shopBtn.addEventListener('click', (event) => {
                 firstArmorsOpen = false;
                 setTimeout(() => {
                     unlockStuff()
-                }, 3000);
+                }, 2100);
             } else {
                 unlockStuff()
             }
