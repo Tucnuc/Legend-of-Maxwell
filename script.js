@@ -885,6 +885,7 @@ function shopOpaSwordRemover(item) {
         });
     };
 };
+
 function shopOpaArmorRemover(item) {
     const shopOpaCheck = window.getComputedStyle(item).opacity;
     if (shopOpaCheck != 0) {
@@ -905,6 +906,7 @@ swordBtn.addEventListener('mouseenter', () => {
         swordGlow.classList.remove('glowing');
     });
 });
+
 armorBtn.addEventListener('mouseenter', () => {
     console.log('BRNKO')
     armorGlow.classList.add('glowing');
@@ -916,17 +918,19 @@ armorBtn.addEventListener('mouseenter', () => {
 
 let scrollHorizontal = document.querySelector('.shopScrollerWeapons');
 scrollHorizontal.addEventListener('wheel', function(e) {
-    this.scrollLeft += e.deltaY*5;
+    this.scrollLeft += e.deltaY * 5;
     e.preventDefault();
 }, { passive: false });
+
 let scrollHorizontal2 = document.querySelector('.shopScrollerArmors');
 scrollHorizontal2.addEventListener('wheel', function(e) {
-    this.scrollLeft += e.deltaY*5;
+    this.scrollLeft += e.deltaY * 5;
     e.preventDefault();
 }, { passive: false });
+
 let scrollHorizontal3 = document.querySelector('.zoneScroller');
 scrollHorizontal3.addEventListener('wheel', function(e) {
-    this.scrollLeft += e.deltaY*5;
+    this.scrollLeft += e.deltaY * 5;
     e.preventDefault();
 }, { passive: false });
 
@@ -986,8 +990,11 @@ let isArmorScrollerOpen = false;
 let isBuyingMenuOpen = false;
 let deutschChecker = false;
 
+let firstWeaponsOpen = true;
+let firstArmorsOpen = true;
+
 const shopBtn = document.getElementById('shopEventBtn');
-shopBtn.addEventListener('click', () => {
+shopBtn.addEventListener('click', (event) => {
     event.stopPropagation();
 
     // BEGIN OPENING SEQUENCE
@@ -1008,9 +1015,21 @@ shopBtn.addEventListener('click', () => {
         }
     })
 
+
+    choiceElement1.addEventListener('click', (event) => { // WEAPONS
+        event.stopPropagation();
+
+        if (isWeaponScrollerOpen === false) {
+            isWeaponScrollerOpen = true;
+            categoryChoice.setAttribute('disappear', "");
+            categoryChoice.addEventListener('animationend', handleAnimationEndWeapons, { once: true });
+        };
+    });
+
     function handleAnimationEndWeapons() {
         categoryChoice.removeAttribute('disappear');
         categoryChoice.style.display = 'none';
+
         setTimeout(() => {
             shopWeaponsList.style.display = 'grid';
             shopWeaponsList.setAttribute('appear', "");
@@ -1021,8 +1040,123 @@ shopBtn.addEventListener('click', () => {
                     unlockingItem(bronzeSword);
                 }, 400);
             };
+
+            if (firstWeaponsOpen) {
+                firstWeaponsOpen = false;
+                setTimeout(() => {
+                    unlockStuff()
+                }, 3000);
+            } else {
+                unlockStuff()
+            }
+            
+            function unlockStuff() {
+                let currentWeapon = document.getElementById(keysWeapon[userWeaponTier-1]);
+                let nextWeapon = document.getElementById(keysWeapon[userWeaponTier]);
+
+                let weapons = Array.from(document.querySelectorAll('.itemSwordElement'));
+                let userWeaponIndex = weapons.findIndex(weapon => weapon.id === currentWeapon.id);
+
+                if (!currentWeapon.classList.contains('unlocked')) {
+                    for (let i = 0; i <= userWeaponIndex; i++) {
+                        let weapon = weapons[i];
+                        let weaponCheckmark = document.getElementById(weapon.id + 'Check');
+                        if (!weapon.classList.contains('unlocked')) {
+                            unlockingWeapon(weapon);
+                        }
+                        if (!weapon.classList.contains('purchased')) {
+                            setTimeout(() => {
+                                checkmarkIdkJa2(weaponCheckmark, weapon);
+                            }, 400);
+                        }
+                    }
+                    unlockingWeapon(nextWeapon);
+
+                    function checkmarkIdkJa2(element, weapon) {
+                        element.style.display = 'block';
+                        element.setAttribute('appear', "");
+                        element.addEventListener('animationend', () => {
+                            element.removeAttribute('appear');
+                            weapon.classList.add('purchased');
+                        }, {once: true});
+                    }
+                } else {
+                    if (!nextWeapon.classList.contains('unlocked')) {
+                        setTimeout(() => {
+                            unlockingItem(nextWeapon);
+                        }, 400);
+                    }
+                    if (!currentWeapon.classList.contains('purchased')) {
+                        function checkmarkIdkJa() {
+                            let checkmark = document.getElementById(currentWeapon.id + 'Check');
+                            checkmark.style.display = 'block';
+                            checkmark.setAttribute('appear', "");
+                            checkmark.addEventListener('animationend', () => {
+                                checkmark.removeAttribute('appear');
+                                currentWeapon.classList.add('purchased');
+                            }, {once: true});
+                        }
+                        setTimeout(() => {
+                            checkmarkIdkJa();
+                        }, 400);
+                    }
+                }
+            }
+
         }, 250);
     };
+
+    let animationQueue = [];
+
+    function unlockingWeapon(element) {
+        animationQueue.push(element);
+    
+        if (animationQueue.length === 1) {
+            startAnimation(element);
+        }
+    };
+    
+    function startAnimation(element) {
+        if (element.classList.contains('unlocked')) {
+            animationQueue.shift();
+            if (animationQueue.length > 0) {
+                startAnimation(animationQueue[0]);
+            }
+            return;
+        }
+    
+        deutschChecker = true;
+        element.classList.add('unlocked');
+        lockId = document.getElementById(element.id + 'Lock');
+        lockId.addEventListener('animationend', () => {
+            setTimeout(() => {
+                lockId.setAttribute('disappear', "");
+                lockId.addEventListener('animationend', () => {
+                    lockId.removeAttribute('disappear')
+                    lockId.setAttribute('unlocked', "");
+                    deutschChecker = false;
+    
+                    animationQueue.shift();
+    
+                    if (animationQueue.length > 0) {
+                        startAnimation(animationQueue[0]);
+                    }
+                }, {once: true});
+            }, 100);
+        }, {once: true});
+    }
+
+
+    choiceElement2.addEventListener('click', (event) => { // ARMORS
+        event.stopPropagation();
+
+        if (isArmorScrollerOpen === false) {
+            isArmorScrollerOpen = true;
+            categoryChoice.setAttribute('disappear', "");
+            categoryChoice.addEventListener('animationend', handleAnimationEndArmors, { once: true });
+        }
+    });
+
     function handleAnimationEndArmors() {
         categoryChoice.removeAttribute('disappear');
         categoryChoice.style.display = 'none';
@@ -1036,36 +1170,81 @@ shopBtn.addEventListener('click', () => {
                     unlockingItem(leatherArmor);
                 }, 400);
             };
+
+            if (firstArmorsOpen) {
+                firstArmorsOpen = false;
+                setTimeout(() => {
+                    unlockStuff()
+                }, 3000);
+            } else {
+                unlockStuff()
+            }
+            
+            function unlockStuff() {
+                let currentArmor = document.getElementById(keysArmor[userArmorTier-1]);
+                let nextArmor = document.getElementById(keysArmor[userArmorTier]);
+
+                let armors = Array.from(document.querySelectorAll('.itemArmorElement'));
+                let userArmorIndex = armors.findIndex(armor => armor.id === currentArmor.id);
+
+                if (!currentArmor.classList.contains('unlocked')) {
+                    for (let i = 0; i <= userArmorIndex; i++) {
+                        let armor = armors[i];
+                        let armorCheckmark = document.getElementById(armor.id + 'Check');
+                        if (!armor.classList.contains('unlocked')) {
+                            unlockingWeapon(armor);
+                        }
+                        if (!armor.classList.contains('purchased')) {
+                            setTimeout(() => {
+                                checkmarkIdkJa2(armorCheckmark, armor);
+                            }, 400);
+                        }
+                    }
+                    unlockingWeapon(nextArmor);
+
+                    function checkmarkIdkJa2(element, armor) {
+                        element.style.display = 'block';
+                        element.setAttribute('appear', "");
+                        element.addEventListener('animationend', () => {
+                            element.removeAttribute('appear');
+                            armor.classList.add('purchased');
+                        }, {once: true});
+                    }
+                } else {
+                    if (!nextArmor.classList.contains('unlocked')) {
+                        setTimeout(() => {
+                            unlockingItem(nextArmor);
+                        }, 400);
+                    }
+                    if (!currentArmor.classList.contains('purchased')) {
+                        function checkmarkIdkJa() {
+                            let checkmark = document.getElementById(currentArmor.id + 'Check');
+                            checkmark.style.display = 'block';
+                            checkmark.setAttribute('appear', "");
+                            checkmark.addEventListener('animationend', () => {
+                                checkmark.removeAttribute('appear');
+                                currentArmor.classList.add('purchased');
+                            }, {once: true});
+                        }
+                        setTimeout(() => {
+                            checkmarkIdkJa();
+                        }, 400);
+                    }
+                }
+            }
         }, 250);
     };
 
-    choiceElement1.addEventListener('click', event => {     // WEAPONS
-        event.stopPropagation();
-    
-        if (isWeaponScrollerOpen === false) {
-            isWeaponScrollerOpen = true;
-            categoryChoice.setAttribute('disappear', "");
-            categoryChoice.addEventListener('animationend', handleAnimationEndWeapons, { once: true });
-        };
-    });
-    choiceElement2.addEventListener('click', event => {     // ARMORS
-        event.stopPropagation();
 
-        if (isArmorScrollerOpen === false) {
-            isArmorScrollerOpen = true;
-            categoryChoice.setAttribute('disappear', "");
-            categoryChoice.addEventListener('animationend', handleAnimationEndArmors, { once: true });
-        }
-    });
-
-    shopWeaponsList.addEventListener('click', () => {
-        event.stopPropagation();
-    });
-    shopArmorsList.addEventListener('click', () => {
+    shopWeaponsList.addEventListener('click', (event) => {
         event.stopPropagation();
     });
 
-    let windowClickHandler = () => {    // CLOSING DOWN
+    shopArmorsList.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    let windowClickHandler = () => { // CLOSING DOWN
         if (!isBuyingMenuOpen && shopMenu.classList.contains('closableMenu') && !deutschChecker) {
             isMenuOpening = false;
             shopMenu.removeAttribute('open');
@@ -1111,6 +1290,7 @@ shopBtn.addEventListener('click', () => {
             window.removeEventListener('click', windowClickHandler);
         };
     };
+
     window.addEventListener('click', windowClickHandler);
 });
 
@@ -1483,6 +1663,26 @@ function startAnimation(element) {
         }, 100);
     }, {once: true});
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const statusGold = document.getElementById('statusGold');
 const statusHealth = document.getElementById('statusHp');
