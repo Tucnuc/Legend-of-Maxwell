@@ -274,6 +274,10 @@ function stopAniText() {
     moneyGlitchCheck = true;
     monsterDead = false;
     userDead = false;
+    specialDrei = false;
+    specialVier = false;
+    specialFunf = false;
+    userDead = false;
 
     textDiv.style.cursor = 'default';
     removeClickListener();
@@ -1664,26 +1668,6 @@ function startAnimation(element) {
     }, {once: true});
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const statusGold = document.getElementById('statusGold');
 const statusHealth = document.getElementById('statusHp');
 const swordGear = document.getElementById('swordGear');
@@ -1964,6 +1948,8 @@ function aniTextLoop(textArray, repeatIndex) {
 
 let specialZwei = false;
 let specialDrei = false;
+let specialVier = false;
+let specialFunf = false
 let monsterDead = false;
 let userDead = false;
 let moneyGlitchCheck = true;
@@ -1980,6 +1966,18 @@ function handleClickFighting() {
         bossMonster = monsters[monsterKeys[bossMonsterIndex]];
 
         droppedWeapon = weapons[keysWeapon[bossMonster.tier]];
+
+        if (specialDrei) {
+            specialVier = true;
+        }
+        if (specialFunf) {
+            if (didBossSpawn) {
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbývalo mu ${monsterHP} životů.`
+            } else {
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbývalo mu ${monsterHP} životů.`
+            }
+            gameOverMenuScreen();
+        }
 
         // SETTING MONSTER HEALTH
         if (firstEncounter) {
@@ -2102,6 +2100,8 @@ function handleClickFighting() {
             specialZwei = false;
             console.log('konečná šuhaj');
             index = -1;
+            textDiv.addEventListener('click', gameOverNoob());
+
         } else if (special) {
             index = specialInt;
             specialZwei = true;
@@ -2118,6 +2118,17 @@ function handleClickFighting() {
         }
     }
 }
+
+// function gameOverNoob() {
+//     console.log('kokot');
+//     isWriting = true;
+//     textDiv.style.cursor = 'default';
+//     opacityRemover();
+//     gameOverMenuScreen();
+//     textDiv.removeEventListener('click', gameOverNoob());
+//     aniText2Fight(currentTextArray[currentKeys[-1]]);
+// }
+
 
 function aniText2Fight(text, i = 0) {
     if (i === 0) {
@@ -2137,6 +2148,12 @@ function aniText2Fight(text, i = 0) {
         setTimeout(() => {
             textDiv.style.cursor = 'pointer';
             textDiv.addEventListener('click', handleClickFighting);
+            if (userDead) {
+                specialDrei = true;
+            }
+            if (specialVier) {
+                specialFunf = true;
+            }
         }, 50);
     };
 };
@@ -2144,3 +2161,93 @@ function aniText2Fight(text, i = 0) {
 
 const fightBtn = document.getElementById('fightBtn');
 fightBtn.addEventListener('click', () => {fight(currentMonster, currentBossMonster)});
+// fightBtn.addEventListener('click', () => {gameOverMenuScreen()});
+
+
+const gameOverMenuBase = document.getElementById('noobMenuBase');
+const gameOverMenuContent = document.querySelector('.jaFaktNevimBoze');
+
+function getGamemode() {
+    return localStorage.getItem('gamemode');
+}
+const mode = getGamemode();
+
+function gameOverMenuScreen() {
+    event.stopPropagation();
+
+    deutschChecker = true;
+    isMenuOpening = true;
+    gameOverMenuBase.setAttribute('open', "");
+    backgroundBlur.style.display = 'block';
+    backgroundBlur.setAttribute('open', "");
+    gameOverMenuBase.style.display = 'block';
+    gameOverMenuBase.classList.add('closableMenu');
+    body.style.overflow = 'hidden';
+
+    gameOverMenuBase.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                gameOverMenuContent.style.display = 'flex';
+                gameOverMenuContent.setAttribute('appear', "");
+                switch (mode) {
+                    case 'normal':
+                        console.log('normal');
+                        hardModeDeathBtn.style.display = 'none';
+                        document.getElementById('gameOverMenuText2').style.display = 'none';
+                        break
+                    case 'hard':
+                        console.log('hard');
+                        normalModeDeathBtn.style.display = 'none';
+                        break
+                };
+            }, 250);
+        };
+    });
+
+    const normalModeDeathBtn = document.getElementById('normalModeBtn');
+    const hardModeDeathBtn = document.getElementById('hardModeBtn');
+
+    normalModeDeathBtn.addEventListener('click', () => {
+        event.stopPropagation();
+        deutschChecker = false;
+        let indexOfLoc = zoneKeys.indexOf(loc);
+        zoneChange(1 - indexOfLoc);
+        userHP = userMaxHP;
+        statusHealth.innerHTML = `HP: ${userHP}`;
+        setTimeout(() => {
+            windowClickHandlerZones();
+        }, 100);
+    });
+    hardModeDeathBtn.addEventListener('click', () => {
+        event.stopPropagation();
+        location.reload();
+    });
+    
+    function windowClickHandlerZones() {
+        if (gameOverMenuBase.classList.contains('closableMenu') && !deutschChecker) {
+            isMenuOpening = false;
+            gameOverMenuBase.removeAttribute('open');
+            backgroundBlur.removeAttribute('open');
+            gameOverMenuContent.removeAttribute('appear');
+            gameOverMenuBase.setAttribute('close', "");
+            backgroundBlur.setAttribute('close', "");
+            gameOverMenuContent.setAttribute('disappear', "");
+    
+            let animationEndHandler = () => {
+                gameOverMenuBase.removeAttribute('close');
+                backgroundBlur.removeAttribute('close');
+                gameOverMenuContent.style.display = 'none';
+                gameOverMenuContent.removeAttribute('disappear');
+                backgroundBlur.style.display = 'none';
+                gameOverMenuBase.style.display = 'none';
+                gameOverMenuBase.classList.remove('closableMenu');
+                gameOverMenuBase.removeEventListener('animationend', animationEndHandler);
+                body.style.overflow = '';
+            };
+    
+            gameOverMenuBase.addEventListener('animationend', animationEndHandler);
+            window.removeEventListener('click', windowClickHandlerZones);
+        };
+    };
+    window.addEventListener('click', windowClickHandlerZones);
+};

@@ -80,6 +80,14 @@ function openMenu() {
     }
     window.addEventListener('click', windowClickHandler)
 }
+
+function setMode(mode) {
+    localStorage.setItem('gamemode', mode);
+}
+window.onload = function() {
+    localStorage.setItem('gamemode', 'normal');
+};
+
 function openMenu2() {
     const offBtn = document.getElementById('OFF');
     const onBtn = document.getElementById('ON');
@@ -119,6 +127,7 @@ function openMenu2() {
         buttonSound.volume = 0.3;
         buttonSound.play();
         onBtn.setAttribute('turningON', "");
+        setMode('hard')
     })
 
     onBtn.addEventListener('click', () => {
@@ -133,6 +142,7 @@ function openMenu2() {
             offBtn2.style.display = 'none';
             offBtn2.removeAttribute('turningOFF');
         })
+        setMode('normal')
     })
 
     special1.addEventListener('click', event => event.stopPropagation());
