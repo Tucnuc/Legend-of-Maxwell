@@ -698,6 +698,9 @@ const shopEventBtn = document.getElementById('shopEventBtn');
 const fountainEventBtn = document.getElementById('fountainEventBtn');
 const gateEventBtn = document.getElementById('gateEventBtn');
 
+const swordIconCon = document.getElementById('swordIconCon');
+const fightBtnBase = document.getElementById('fightBtnBase');
+
 let currentEventBtn = spawnEventBtn;
 
 let currentMonster = '';
@@ -786,11 +789,33 @@ function zoneChange(direction) {
                     gateEventBtn.setAttribute('appear', "");
                     currentEventBtn = gateEventBtn;
                 }, {once: true});
+
+                // FIGHT BTN
+                if (fightBtn.style.display === 'block') {
+                    swordIconCon.setAttribute('disappear', "");
+                    fightBtnBase.setAttribute('disappear', "");
+                    swordIconCon.removeAttribute('appear');
+                    fightBtnBase.removeAttribute('appear');  
+                    fightBtnBase.addEventListener('animationend', () => {
+                        fightBtn.style.display = 'none';
+                        swordIconCon.style.display = 'none';
+                        fightBtnBase.style.display = 'none';
+                        swordIconCon.removeAttribute('disappear');
+                        fightBtnBase.removeAttribute('disappear');  
+                    }, {once: true});
+                }
                 break
             case 'plains':
                 visitedPlains = true;
                 currentMonster = 'goblin';
                 currentBossMonster = 'goblinLeader';
+
+                // FIGHT BTN
+                fightBtn.style.display = 'block';
+                swordIconCon.style.display = 'block';
+                fightBtnBase.style.display = 'block';
+                swordIconCon.setAttribute('appear', "");
+                fightBtnBase.setAttribute('appear', "");  
                 break
             case 'desert':
                 visitedDesert = true;
@@ -1869,7 +1894,6 @@ gateEventBtn.addEventListener('click', () => {
 //  FIGHTING
 // ----------
 
-let isUserFighting = false;
 let isUserStillAlive = true;
 let repeatIndex = 0;
 let decrease = false;
@@ -1878,7 +1902,7 @@ let bossMonsterIndex = 0;
 let didBossSpawn = false;
 
 function fight(monster, bossMonster) {
-    isUserFighting = true;
+    blockBtns();
 
     monsterIndex = monsterKeys.indexOf(monster);
     bossMonsterIndex = monsterKeys.indexOf(bossMonster);
@@ -1953,6 +1977,43 @@ let specialFunf = false
 let monsterDead = false;
 let userDead = false;
 let moneyGlitchCheck = true;
+
+const eventBtnShadow1 = document.getElementById('eventBtnShadow1');
+const eventBtnShadow2 = document.getElementById('eventBtnShadow2');
+const arrowBtnShadow1 = document.getElementById('arrowBtnShadow1');
+const arrowBtnShadow2 = document.getElementById('arrowBtnShadow2');
+
+function blockBtns() {
+    eventBtnShadow1.style.display = 'block';
+    eventBtnShadow2.style.display = 'block';
+    arrowBtnShadow1.style.display = 'block';
+    arrowBtnShadow2.style.display = 'block';
+    eventBtnShadow1.setAttribute('blocking', "");
+    eventBtnShadow2.setAttribute('blocking', "");
+    arrowBtnShadow1.setAttribute('blocking', "");
+    arrowBtnShadow2.setAttribute('blocking', "");
+}
+function unblockBtns() {
+    eventBtnShadow1.setAttribute('unblocking', "");
+    eventBtnShadow2.setAttribute('unblocking', "");
+    arrowBtnShadow1.setAttribute('unblocking', "");
+    arrowBtnShadow2.setAttribute('unblocking', "");
+    eventBtnShadow1.removeAttribute('blocking');
+    eventBtnShadow2.removeAttribute('blocking');
+    arrowBtnShadow1.removeAttribute('blocking');
+    arrowBtnShadow2.removeAttribute('blocking');
+    eventBtnShadow1.addEventListener('animationend', () => {
+        arrowBtnShadow1.style.display = 'none';
+        arrowBtnShadow2.style.display = 'none';
+        eventBtnShadow1.style.display = 'none';
+        eventBtnShadow2.style.display = 'none';
+        eventBtnShadow1.removeAttribute('unblocking');
+        eventBtnShadow2.removeAttribute('unblocking');
+        arrowBtnShadow1.removeAttribute('unblocking');
+        arrowBtnShadow2.removeAttribute('unblocking');
+    }, {once: true});
+}
+
 function handleClickFighting() {
     if (isWriting === false) {
         isWriting = true;
@@ -1977,6 +2038,7 @@ function handleClickFighting() {
                 document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbývalo mu ${monsterHP} životů.`
             }
             gameOverMenuScreen();
+            unblockBtns();
         }
 
         // SETTING MONSTER HEALTH
@@ -2006,6 +2068,8 @@ function handleClickFighting() {
         // GIVING LOOT
         if (monsterDead) {
             if (moneyGlitchCheck) {
+                unblockBtns();
+                isUserFighting = false;
                 if (didBossSpawn) {
                     userGold = userGold + bossMonster.gold;
                     let dostanesZbran = randint(1,2);
@@ -2118,16 +2182,6 @@ function handleClickFighting() {
         }
     }
 }
-
-// function gameOverNoob() {
-//     console.log('kokot');
-//     isWriting = true;
-//     textDiv.style.cursor = 'default';
-//     opacityRemover();
-//     gameOverMenuScreen();
-//     textDiv.removeEventListener('click', gameOverNoob());
-//     aniText2Fight(currentTextArray[currentKeys[-1]]);
-// }
 
 
 function aniText2Fight(text, i = 0) {

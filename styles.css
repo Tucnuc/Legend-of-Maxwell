@@ -209,10 +209,10 @@ p {
 #backgroundBlur2 {
     z-index: 12;
 }
-.blur[open] {
+.blur[open], #eventBtnShadow1[blocking], #eventBtnShadow2[blocking], #arrowBtnShadow1[blocking], #arrowBtnShadow2[blocking] {
     animation: fade-in2 300ms forwards;
 }
-.blur[close] {
+.blur[close], #eventBtnShadow1[unblocking], #eventBtnShadow2[unblocking], #arrowBtnShadow1[unblocking], #arrowBtnShadow2[unblocking] {
     animation: fade-out2 300ms forwards;
 }
 
@@ -761,7 +761,8 @@ p {
 #part8,
 #part9,
 #part10,
-#part11 {
+#part11,
+#swordIcon {
     fill: url(#myGradientUltraMega);
 }
 
@@ -780,14 +781,15 @@ p {
 #gateEventBtn:hover #part8,
 #gateEventBtn:hover #part9,
 #gateEventBtn:hover #part10,
-#gateEventBtn:hover #part11 {
+#gateEventBtn:hover #part11,
+#fightBtn:hover ~ #swordIconCon #swordIcon {
     fill: ivory;
 }
 
-.eventBtnDiv[appear] {
+.eventBtnDiv[appear], #fightEventBtn[appear], #swordIconCon[appear], #fightBtnBase[appear] {
     animation: fade-in 500ms forwards ease;
 }
-.eventBtnDiv[disappear] {
+.eventBtnDiv[disappear], #fightEventBtn[disappear], #swordIconCon[disappear], #fightBtnBase[disappear] {
     animation: fade-out 500ms forwards ease;
 }
 
@@ -1009,11 +1011,84 @@ p {
 
 /* BOJOVÁNÍ */
 #fightBtn {
-    position: absolute;
-    top: 0;
-    right: 200px;
-    font-size: xx-large;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#fightBtnBase {
     z-index: 1;
+}
+
+#swordIconCon {
+    z-index: 2;
+}
+
+#fightBtnBase, #fightBtn, #swordIconCon {
+    margin: 10px 10px 0 0;
+    right: 160px;
+    top: 0;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+#fightEventBtn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btnShadow {
+    opacity: 0;
+    display: none;
+}
+
+#eventBtnShadow1, #eventBtnShadow2 {
+    width: 150px;
+    position: absolute;
+    margin: 10px 10px 0 0;
+    z-index: 4;
+}
+#eventBtnShadow2 {
+    right: 160px;
+}
+
+#arrowBtnShadow1, #arrowBtnShadow2 {
+    width: 60px;
+    z-index: 3;
+}
+#arrowBtnShadow1 {
+    margin-left: 10px;
+}
+#arrowBtnShadow2 {
+    margin-right: 10px;
+}
+
+.arrowBtnShadows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eventBtnShadows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#swordIconCon, #fightBtnBase {
+    display: none;
+    opacity: 0;
+}
+#fightBtn {
+    display: none;
 }
 
 
