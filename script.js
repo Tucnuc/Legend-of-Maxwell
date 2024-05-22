@@ -15,6 +15,7 @@ let userRank = "Začátečník";
 let userHP = 100;
 let userMaxHP = 100;
 let userGold = 0;
+let userDeaths = 0;
 
 let userWeapon = "Dřevěný Meč";
 let userWeaponTier = 0;
@@ -533,7 +534,8 @@ const monsters = {
         health: 20,
         minDmg: 2,
         maxDmg: 4,
-        gold: 10
+        gold: 10,
+        image: './Image-Library/goblin.png'
     },
     goblinLeader: {
         name: 'Vůdce Goblinů',
@@ -541,14 +543,16 @@ const monsters = {
         minDmg: 3,
         maxDmg: 10,
         gold: 25,
-        tier: 0
+        tier: 0,
+        image: './Image-Library/goblinLeader.png'
     },
     mummy: {
         name: 'Mumie',
         health: 40,
         minDmg: 3,
         maxDmg: 15,
-        gold: 25
+        gold: 25,
+        image: './Image-Library/mummy.png'
     },
     sandman: {
         name: 'Písečný Muž',
@@ -556,14 +560,16 @@ const monsters = {
         minDmg: 5,
         maxDmg: 17,
         gold: 50,
-        tier: 1
+        tier: 1,
+        image: './Image-Library/sandman.png'
     },
     iceGuardian: {
         name: 'Ledový Ochránce',
         health: 65,
         minDmg: 4,
         maxDmg: 17,
-        gold: 50
+        gold: 50,
+        image: './Image-Library/iceGuardian.png'
     },
     iceKnight: {
         name: 'Ledový Rytíř',
@@ -571,14 +577,16 @@ const monsters = {
         minDmg: 6,
         maxDmg: 20,
         gold: 100,
-        tier: 2
+        tier: 2,
+        image: './Image-Library/iceKnight.png'
     },
     skeleton: {
         name: 'Kostlivec',
         health: 85,
         minDmg: 6,
         maxDmg: 23,
-        gold: 125
+        gold: 125,
+        image: './Image-Library/skeleton.png'
     },
     skeletonKing: {
         name: 'Král Kostlivců',
@@ -586,14 +594,16 @@ const monsters = {
         minDmg: 9,
         maxDmg: 25,
         gold: 250,
-        tier: 3
+        tier: 3,
+        image: './Image-Library/skeletonKing.png'
     },
     magmaMinion: {
         name: 'Magma Minion',
         health: 100,
         minDmg: 8,
         maxDmg: 25,
-        gold: 250
+        gold: 250,
+        image: './Image-Library/magmaMinion.png'
     },
     magmaTrasher: {
         name: 'Magma Trasher',
@@ -601,14 +611,16 @@ const monsters = {
         minDmg: 10,
         maxDmg: 30,
         gold: 500,
-        tier: 4
+        tier: 4,
+        image: './Image-Library/magmaTrasher.png'
     },
     swampMonster: {
         name: 'Bažinové Monstrum',
         health: 140,
         minDmg: 10,
         maxDmg: 30,
-        gold: 500
+        gold: 500,
+        image: './Image-Library/swampMonster.png'
     },
     swampGuardian: {
         name: 'Ochránce Bažin',
@@ -616,14 +628,16 @@ const monsters = {
         minDmg: 15,
         maxDmg: 40,
         gold: 1000,
-        tier: 5
+        tier: 5,
+        image: './Image-Library/swampGuardian.png'
     },
     orc: {
         name: 'Orc',
         health: 175,
         minDmg: 15,
         maxDmg: 45,
-        gold: 1000
+        gold: 1000,
+        image: './Image-Library/orc.png'
     },
     orcLeader: {
         name: 'Orc Vojevůdce',
@@ -631,14 +645,16 @@ const monsters = {
         minDmg: 20,
         maxDmg: 55,
         gold: 2000,
-        tier: 6
+        tier: 6,
+        image: './Image-Library/orcLeader.png'
     },
     cloudLurker: {
         name: 'Cloud Lurker',
         health: 250,
         minDmg: 25,
         maxDmg: 70,
-        gold: 2000
+        gold: 2000,
+        image: './Image-Library/cloudLurker.png'
     },
     cloudLord: {
         name: 'Cloud Lord',
@@ -646,14 +662,16 @@ const monsters = {
         minDmg: 30,
         maxDmg: 80,
         gold: 4000,
-        tier: 7
+        tier: 7,
+        image: './Image-Library/cloudLord.png'
     },
     vampire: {
         name: 'Upír',
         health: 340,
         minDmg: 30,
         maxDmg: 80,
-        gold: 3000
+        gold: 3000,
+        image: './Image-Library/vampire.png'
     },
     vampireKing: {
         name: 'Upíří Král',
@@ -661,14 +679,16 @@ const monsters = {
         minDmg: 45,
         maxDmg: 90,
         gold: 6000,
-        tier: 8
+        tier: 8,
+        image: './Image-Library/vampireKing.png'
     },
     corrupted: {
         name: 'Corrupted',
         health: 450,
         minDmg: 50,
         maxDmg: 95,
-        gold: 5000
+        gold: 5000,
+        image: './Image-Library/corrupted.png'
     },
     corruptionLord: {
         name: 'Lord Korupce',
@@ -676,7 +696,8 @@ const monsters = {
         minDmg: 100,
         maxDmg: 150,
         gold: 10000,
-        tier: 9
+        tier: 9,
+        image: './Image-Library/corruptionLord.png'
     }
 };
 const monsterKeys = Object.keys(monsters);
@@ -746,6 +767,19 @@ function zoneChange(direction) {
                     spawnEventBtn.setAttribute('appear', "");
                     currentEventBtn = spawnEventBtn;
                 }, {once: true});
+                if (fightBtn.style.display === 'block') {
+                    swordIconCon.setAttribute('disappear', "");
+                    fightBtnBase.setAttribute('disappear', "");
+                    swordIconCon.removeAttribute('appear');
+                    fightBtnBase.removeAttribute('appear');  
+                    fightBtnBase.addEventListener('animationend', () => {
+                        fightBtn.style.display = 'none';
+                        swordIconCon.style.display = 'none';
+                        fightBtnBase.style.display = 'none';
+                        swordIconCon.removeAttribute('disappear');
+                        fightBtnBase.removeAttribute('disappear');  
+                    }, {once: true});
+                }
                 break
             case 'shop':
                 currentEventBtn.removeAttribute('appear');
@@ -811,56 +845,70 @@ function zoneChange(direction) {
                 currentBossMonster = 'goblinLeader';
 
                 // FIGHT BTN
-                fightBtn.style.display = 'block';
-                swordIconCon.style.display = 'block';
-                fightBtnBase.style.display = 'block';
-                swordIconCon.setAttribute('appear', "");
-                fightBtnBase.setAttribute('appear', "");  
+                function fightBtnAppear() {
+                    if (fightBtn.style.display = 'none') {
+                        fightBtn.style.display = 'block';
+                        swordIconCon.style.display = 'block';
+                        fightBtnBase.style.display = 'block';
+                        swordIconCon.setAttribute('appear', "");
+                        fightBtnBase.setAttribute('appear', "");  
+                    }
+                }
+                fightBtnAppear();
                 break
             case 'desert':
                 visitedDesert = true;
                 currentMonster = 'mummy';
                 currentBossMonster = 'sandman';
+                fightBtnAppear();
                 break
             case 'iceLands':
                 visitediceLands = true;
                 currentMonster = 'iceGuardian';
                 currentBossMonster = 'iceKnight';
+                fightBtnAppear();
                 break
             case 'skeletonCastle':
                 visitedSkeletonCastle = true;
                 currentMonster = 'skeleton';
                 currentBossMonster = 'skeletonKing';
+                fightBtnAppear();
                 break
             case 'magmaLands':
                 visitedMagmaLands = true;
                 currentMonster = 'magmaMinion';
                 currentBossMonster = 'magmaTrasher';
+                fightBtnAppear();
                 break
             case 'swamp':
                 visitedSwamp = true;
                 currentMonster = 'swampMonster';
                 currentBossMonster = 'swampGuardian';
+                fightBtnAppear();
                 break
             case 'orcCastle':
                 visitedOrcCastle = true;
                 currentMonster = 'orc';
                 currentBossMonster = 'orcLeader';
+                fightBtnAppear();
                 break
             case 'clouds':
                 visitedClouds = true;
                 currentMonster = 'cloudLurker';
                 currentBossMonster = 'cloudLord';
+                fightBtnAppear();
                 break
             case 'vampireForest':
                 visitedVampireForest = true;
                 currentMonster = 'vampire';
                 currentBossMonster = 'vampireKing';
+                fightBtnAppear();
                 break
             case 'corruptionZone':
                 visitedCorruptionZone = true;
                 currentMonster = 'corrupted';
                 currentBossMonster = 'corruptionLord';
+                fightBtnAppear();
                 break
         };
 
@@ -1901,6 +1949,9 @@ let monsterIndex = 0;
 let bossMonsterIndex = 0;
 let didBossSpawn = false;
 
+const monsterImg = document.getElementById('monsterImg');
+const maxwellCon = document.querySelector('.maxwellCon');
+
 function fight(monster, bossMonster) {
     blockBtns();
 
@@ -1911,6 +1962,9 @@ function fight(monster, bossMonster) {
     bossMonster = monsters[monsterKeys[bossMonsterIndex]];
 
     droppedWeapon = weapons[keysWeapon[bossMonster.tier]];
+
+    maxwellCon.classList.add('fighting');
+    monsterImg.style.display = 'block';
 
     let normalOrBoss = randint(1, 4);
     if (normalOrBoss === 1) {
@@ -1924,6 +1978,11 @@ function fight(monster, bossMonster) {
             text6: `Všechna tvá síla tě opouští. Umíráš...`,
             text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`
         };
+
+        monsterImg.src = bossMonster.image;
+        monsterImg.setAttribute(monsterKeys[bossMonsterIndex], "");
+        monsterImg.classList.add('appears');
+
         console.log('bossMonster')
         repeatIndex = 3;
         stopAniText();
@@ -1937,6 +1996,11 @@ function fight(monster, bossMonster) {
             text4: `Porazil jsi ${normalMonster.name}. Získáváš ${normalMonster.gold} zlata.`,
             text5: `Všechna tvá síla tě opouští. Umíráš...`
         };
+
+        monsterImg.src = normalMonster.image;
+        monsterImg.setAttribute(monsterKeys[monsterIndex], "");
+        monsterImg.classList.add('appears');
+
         console.log('monster')
         repeatIndex = 2;
         stopAniText();
@@ -2033,9 +2097,9 @@ function handleClickFighting() {
         }
         if (specialFunf) {
             if (didBossSpawn) {
-                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbývalo mu ${monsterHP} životů.`
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbývalo mu ${monsterHP - 9999999999} životů.`
             } else {
-                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbývalo mu ${monsterHP} životů.`
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbývalo mu ${monsterHP - 9999999999} životů.`
             }
             gameOverMenuScreen();
             unblockBtns();
@@ -2069,8 +2133,17 @@ function handleClickFighting() {
         if (monsterDead) {
             if (moneyGlitchCheck) {
                 unblockBtns();
+                monsterImg.classList.add('dies');
+                monsterImg.addEventListener('animationend', () => {
+                    monsterImg.classList.remove('appears');
+                    monsterImg.classList.remove('dies');
+                    maxwellCon.classList.remove('fighting');
+                }, {once: true});
                 isUserFighting = false;
                 if (didBossSpawn) {
+                    setTimeout(() => {
+                        monsterImg.removeAttribute(monsterKeys[bossMonsterIndex]);
+                    }, 200);
                     userGold = userGold + bossMonster.gold;
                     let dostanesZbran = randint(1,2);
                     switch (dostanesZbran) {
@@ -2092,6 +2165,9 @@ function handleClickFighting() {
                     }
 
                 } else {
+                    setTimeout(() => {
+                        monsterImg.removeAttribute(monsterKeys[monsterIndex]);
+                    }, 200);
                     userGold = userGold + normalMonster.gold;
                 }
                 statusGold.innerHTML = `ZLATO: ${userGold}`;
@@ -2123,6 +2199,7 @@ function handleClickFighting() {
                 console.log('Chcipl si noob L ez')
                 userDead = true;
                 special = true;
+                monsterHP = monsterHP + 9999999999;
                 if (didBossSpawn) {
                     specialInt = 5;
                 } else {
@@ -2165,7 +2242,6 @@ function handleClickFighting() {
             console.log('konečná šuhaj');
             index = -1;
             textDiv.addEventListener('click', gameOverNoob());
-
         } else if (special) {
             index = specialInt;
             specialZwei = true;
@@ -2228,6 +2304,15 @@ const mode = getGamemode();
 
 function gameOverMenuScreen() {
     event.stopPropagation();
+
+    userDeaths++;
+    monsterImg.classList.remove('appears');
+    maxwellCon.classList.remove('fighting');
+    if (didBossSpawn) {
+        monsterImg.removeAttribute(monsterKeys[bossMonsterIndex]);
+    } else {
+        monsterImg.removeAttribute(monsterKeys[monsterIndex]);
+    }
 
     deutschChecker = true;
     isMenuOpening = true;
