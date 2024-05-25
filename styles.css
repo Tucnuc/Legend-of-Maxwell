@@ -918,14 +918,12 @@ p {
     width: 65%;
     top: 0;
 }
-.maxwellCon.fighting {
-    width: 100%;
-    justify-content: space-evenly;
-}
 
 #monsterImg {
     display: none;
     opacity: 0;
+    position: absolute;
+    left: 90%;
 }
 #monsterImg.appears {
     animation: fade-in 200ms forwards ease;

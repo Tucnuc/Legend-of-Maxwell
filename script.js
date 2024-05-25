@@ -12,15 +12,15 @@ let corruptionCore = false;
 // USER VARIABLES
 let name = "";
 let userRank = "Začátečník";
-let userHP = 100;
+let userHP = 2000;
 let userMaxHP = 100;
 let userGold = 0;
 let userDeaths = 0;
 
 let userWeapon = "Dřevěný Meč";
 let userWeaponTier = 0;
-let userMinDmg = 2;
-let userMaxDmg = 5;
+let userMinDmg = 100;
+let userMaxDmg = 200;
 let userDmg = 0;
 
 let userArmor = "Žádné";
@@ -1703,19 +1703,23 @@ shopArmorBtns.forEach(button => {
 });
 
 function unlockingItem (element) {
-    deutschChecker = true;
-    element.classList.add('unlocked');
-    lockId = document.getElementById(element.id + 'Lock');
-    lockId.addEventListener('animationend', () => {
-        setTimeout(() => {
-            lockId.setAttribute('disappear', "");
+    if (element && element.classList) {
+        deutschChecker = true;
+        element.classList.add('unlocked');
+        lockId = document.getElementById(element.id + 'Lock');
+        if (lockId) {
             lockId.addEventListener('animationend', () => {
-                lockId.removeAttribute('disappear')
-                lockId.setAttribute('unlocked', "");
-                deutschChecker = false;
+                setTimeout(() => {
+                    lockId.setAttribute('disappear', "");
+                    lockId.addEventListener('animationend', () => {
+                        lockId.removeAttribute('disappear')
+                        lockId.setAttribute('unlocked', "");
+                        deutschChecker = false;
+                    }, {once: true});
+                }, 100);
             }, {once: true});
-        }, 100);
-    }, {once: true});
+        }
+    }
 };
 
 
@@ -1989,7 +1993,7 @@ function fight(monster, bossMonster) {
     maxwellCon.classList.add('fighting');
     monsterImg.style.display = 'block';
 
-    let normalOrBoss = randint(1, 4);
+    let normalOrBoss = 1 //randint(1, 4);
     if (normalOrBoss === 1) {
         didBossSpawn = true;
         let text = {
@@ -1999,7 +2003,8 @@ function fight(monster, bossMonster) {
             text4: `${bossMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
             text5: `Po drsném boji jsi porazil ${bossMonster.name}! Získáváš ${bossMonster.gold} zlata.`,
             text6: `Všechna tvá síla tě opouští. Umíráš...`,
-            text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`
+            text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`,
+            text8: `Kromě ${bossMonster.gold} zlata... Jsi získal něco, co vypadá jako jádro Lorda Korupce. Cítíš z něho velmi nepříjemnou energii.`
         };
 
         monsterImg.src = bossMonster.image;
@@ -2168,23 +2173,29 @@ function handleClickFighting() {
                         monsterImg.removeAttribute(monsterKeys[bossMonsterIndex]);
                     }, 200);
                     userGold = userGold + bossMonster.gold;
-                    let dostanesZbran = randint(1,2);
-                    switch (dostanesZbran) {
-                        case 1:
-                            if (userWeaponTier < bossMonster.tier+1) {
-                                index = 6;
-                                console.log('Zbraň pro tebe:)')
-                                userWeapon = droppedWeapon.name;
-                                userMinDmg = droppedWeapon.minDmg;
-                                userMaxDmg = droppedWeapon.maxDmg;
-                                userWeaponTier = droppedWeapon.tier;
-                
-                                swordGear.src = droppedWeapon.img;
-                            }
-                            break
-                        case 2:
-                            console.log('Nedostaneš nic, protože jsi zlobil!')
-                            break
+                    if (bossMonster.name === 'Lord Korupce' && !corruptionCore) {
+                        index = 7;
+                        corruptionCore = true;
+                        console.log('Hezky pěkně soudruhu')
+                    } else {
+                        let dostanesZbran = randint(1,2);
+                        switch (dostanesZbran) {
+                            case 1:
+                                if (userWeaponTier < bossMonster.tier+1) {
+                                    index = 6;
+                                    console.log('Zbraň pro tebe:)')
+                                    userWeapon = droppedWeapon.name;
+                                    userMinDmg = droppedWeapon.minDmg;
+                                    userMaxDmg = droppedWeapon.maxDmg;
+                                    userWeaponTier = droppedWeapon.tier;
+                    
+                                    swordGear.src = droppedWeapon.img;
+                                }
+                                break
+                            case 2:
+                                console.log('Nedostaneš nic, protože jsi zlobil!')
+                                break
+                        }
                     }
 
                 } else {
@@ -2240,7 +2251,8 @@ function handleClickFighting() {
                 text4: `${bossMonster.name} na tebe útočí za ${monsterDmg} dmg. Zbývá ti ${userHP} životů.`,
                 text5: `Po drsném boji jsi porazil ${bossMonster.name}! Získáváš ${bossMonster.gold} zlata.`,
                 text6: `Všechna tvá síla tě opouští. Umíráš...`,
-                text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`
+                text7: `Kromě ${bossMonster.gold} zlata... Se ti podařilo získat novou zbraň! ${droppedWeapon.name}, s útočnou silou o ${droppedWeapon.minDmg}-${droppedWeapon.maxDmg}.`,
+                text8: `Kromě ${bossMonster.gold} zlata... Jsi získal něco, co vypadá jako jádro Lorda Korupce. Cítíš z něho velmi nepříjemnou energii.`
             };
         } else {
             currentTextArray = text = {
@@ -2330,12 +2342,12 @@ function gameOverMenuScreen() {
 
     userDeaths++;
     monsterImg.classList.remove('appears');
-    maxwellCon.classList.remove('fighting');
     if (didBossSpawn) {
         monsterImg.removeAttribute(monsterKeys[bossMonsterIndex]);
     } else {
         monsterImg.removeAttribute(monsterKeys[monsterIndex]);
     }
+    maxwellCon.classList.remove('fighting');
 
     deutschChecker = true;
     isMenuOpening = true;
