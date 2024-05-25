@@ -12,15 +12,15 @@ let corruptionCore = false;
 // USER VARIABLES
 let name = "";
 let userRank = "Začátečník";
-let userHP = 2000;
+let userHP = 100;
 let userMaxHP = 100;
 let userGold = 0;
 let userDeaths = 0;
 
 let userWeapon = "Dřevěný Meč";
 let userWeaponTier = 0;
-let userMinDmg = 100;
-let userMaxDmg = 200;
+let userMinDmg = 2;
+let userMaxDmg = 5;
 let userDmg = 0;
 
 let userArmor = "Žádné";
@@ -1993,7 +1993,7 @@ function fight(monster, bossMonster) {
     maxwellCon.classList.add('fighting');
     monsterImg.style.display = 'block';
 
-    let normalOrBoss = 1 //randint(1, 4);
+    let normalOrBoss = randint(1, 4);
     if (normalOrBoss === 1) {
         didBossSpawn = true;
         let text = {
