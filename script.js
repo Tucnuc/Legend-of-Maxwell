@@ -524,7 +524,7 @@ const zones = {
             text3: 'Po chvíli co se koukáš po okolí, si všimneš v oltáři kulatého otvoru. Vypadá důležitě..'
         },
         background: "url('./Image-Library/altar.jpg')",
-        music: "./Music-Library/zonesTheme.mp3"
+        music: "./Music-Library/altarTheme.mp3"
     },
 }
 const zoneKeys =  Object.keys(zones);
@@ -718,6 +718,7 @@ const spawnEventBtn = document.getElementById('spawnEventBtn');
 const shopEventBtn = document.getElementById('shopEventBtn');
 const fountainEventBtn = document.getElementById('fountainEventBtn');
 const gateEventBtn = document.getElementById('gateEventBtn');
+const altarEventBtn = document.getElementById('altarEventBtn');
 
 const swordIconCon = document.getElementById('swordIconCon');
 const fightBtnBase = document.getElementById('fightBtnBase');
@@ -767,19 +768,7 @@ function zoneChange(direction) {
                     spawnEventBtn.setAttribute('appear', "");
                     currentEventBtn = spawnEventBtn;
                 }, {once: true});
-                if (fightBtn.style.display === 'block') {
-                    swordIconCon.setAttribute('disappear', "");
-                    fightBtnBase.setAttribute('disappear', "");
-                    swordIconCon.removeAttribute('appear');
-                    fightBtnBase.removeAttribute('appear');  
-                    fightBtnBase.addEventListener('animationend', () => {
-                        fightBtn.style.display = 'none';
-                        swordIconCon.style.display = 'none';
-                        fightBtnBase.style.display = 'none';
-                        swordIconCon.removeAttribute('disappear');
-                        fightBtnBase.removeAttribute('disappear');  
-                    }, {once: true});
-                }
+                fightBtnDisappear();
                 break
             case 'shop':
                 currentEventBtn.removeAttribute('appear');
@@ -811,33 +800,38 @@ function zoneChange(direction) {
                 break
             case 'gate':
                 visitedGate = true;
-                currentEventBtn.removeAttribute('appear');
-                currentEventBtn.setAttribute('disappear', "");
-                currentEventBtn.addEventListener('animationend', () => {
-                    currentEventBtn.style.visibility = 'hidden';
-                    currentEventBtn.style.zIndex = '-1';
-                    currentEventBtn.removeAttribute('disappear');
-            
-                    gateEventBtn.style.visibility = 'visible';
-                    gateEventBtn.style.zIndex = '3';
-                    gateEventBtn.setAttribute('appear', "");
-                    currentEventBtn = gateEventBtn;
-                }, {once: true});
-
-                // FIGHT BTN
-                if (fightBtn.style.display === 'block') {
-                    swordIconCon.setAttribute('disappear', "");
-                    fightBtnBase.setAttribute('disappear', "");
-                    swordIconCon.removeAttribute('appear');
-                    fightBtnBase.removeAttribute('appear');  
-                    fightBtnBase.addEventListener('animationend', () => {
-                        fightBtn.style.display = 'none';
-                        swordIconCon.style.display = 'none';
-                        fightBtnBase.style.display = 'none';
-                        swordIconCon.removeAttribute('disappear');
-                        fightBtnBase.removeAttribute('disappear');  
+                if (currentEventBtn !== gateEventBtn) {
+                    currentEventBtn.removeAttribute('appear');
+                    currentEventBtn.setAttribute('disappear', "");
+                    currentEventBtn.addEventListener('animationend', () => {
+                        currentEventBtn.style.visibility = 'hidden';
+                        currentEventBtn.style.zIndex = '-1';
+                        currentEventBtn.removeAttribute('disappear');
+                
+                        gateEventBtn.style.visibility = 'visible';
+                        gateEventBtn.style.zIndex = '3';
+                        gateEventBtn.setAttribute('appear', "");
+                        currentEventBtn = gateEventBtn;
                     }, {once: true});
                 }
+
+                // FIGHT BTN
+                function fightBtnDisappear() {
+                    if (fightBtn.style.display === 'block') {
+                        swordIconCon.setAttribute('disappear', "");
+                        fightBtnBase.setAttribute('disappear', "");
+                        swordIconCon.removeAttribute('appear');
+                        fightBtnBase.removeAttribute('appear');  
+                        fightBtnBase.addEventListener('animationend', () => {
+                            fightBtn.style.display = 'none';
+                            swordIconCon.style.display = 'none';
+                            fightBtnBase.style.display = 'none';
+                            swordIconCon.removeAttribute('disappear');
+                            fightBtnBase.removeAttribute('disappear');  
+                        }, {once: true});
+                    }
+                }
+                fightBtnDisappear();
                 break
             case 'plains':
                 visitedPlains = true;
@@ -908,7 +902,36 @@ function zoneChange(direction) {
                 visitedCorruptionZone = true;
                 currentMonster = 'corrupted';
                 currentBossMonster = 'corruptionLord';
+                if (currentEventBtn !== gateEventBtn) {
+                    currentEventBtn.removeAttribute('appear');
+                    currentEventBtn.setAttribute('disappear', "");
+                    currentEventBtn.addEventListener('animationend', () => {
+                        currentEventBtn.style.visibility = 'hidden';
+                        currentEventBtn.style.zIndex = '-1';
+                        currentEventBtn.removeAttribute('disappear');
+                
+                        gateEventBtn.style.visibility = 'visible';
+                        gateEventBtn.style.zIndex = '3';
+                        gateEventBtn.setAttribute('appear', "");
+                        currentEventBtn = gateEventBtn;
+                    }, {once: true});
+                }
                 fightBtnAppear();
+                break
+            case 'altar':
+                currentEventBtn.removeAttribute('appear');
+                currentEventBtn.setAttribute('disappear', "");
+                currentEventBtn.addEventListener('animationend', () => {
+                    currentEventBtn.style.visibility = 'hidden';
+                    currentEventBtn.style.zIndex = '-1';
+                    currentEventBtn.removeAttribute('disappear');
+            
+                    altarEventBtn.style.visibility = 'visible';
+                    altarEventBtn.style.zIndex = '3';
+                    altarEventBtn.setAttribute('appear', "");
+                    currentEventBtn = altarEventBtn;
+                }, {once: true});
+                fightBtnDisappear();
                 break
         };
 
@@ -2389,4 +2412,155 @@ function gameOverMenuScreen() {
         };
     };
     window.addEventListener('click', windowClickHandlerZones);
+};
+
+
+// ALTAR
+altarEventBtn.addEventListener('click', () => {
+    if (corruptionCore) {
+        blockBtns();
+        eventBtnShadow2.style.display = 'none';
+        text = {
+            text1: 'Prohlédneš v rychlosti svoje věci, jestli nemáš něco, co by pasovalo do kulatého otvoru v oltáři.',
+            text2: 'Vzpomeneš si, na ten divný kulatý předmět. Který si získal posledně, jen o zónu vedle.',
+            text3: 'Vložíš ho do otvoru. Zem se začne třást. Oltář začne absorbovat, energii z jádra. Po pár sekundách, se z temně fialového jádra, obklopeného temnou energíí, stane čirá a nádherně průhledná koule.',
+            text4: 'Na konci místnosti zahlédneš bíle zářící dveře. Cítíš z nich energii bohů. Rozhodneš se vstoupit.',
+            text5: `Zdravím, ${name}. Vítám tě v doméně bohů. Já jsem bohyně světla. Layila.`,
+            text6: 'Určitě musíš mít hodně otázek, nemusíš se obávat. Všechno se dozvíš, až přijde ten správný čas.',
+            text7: 'Prvně ti chci za všechny bohy poděkovat, že si vyřešil naší přetrvávající chybu. Lord Korupce.',
+            text8: 'I když jsme bohové, stále máme nějaká pravidla. To hlavní nám zabraňuje zasahovat do vašeho světa. Lord Korupce tohle věděl. Když jeho armáda byla na pokraji zničení, uprchl z této domény, dolů do vaší.',
+            text9: 'Naštěstí už netušil, že se to pravidlo vztahuje hlavně na vás, smrtelníky. Podařilo se nám ho tedy uvěznit a oslabit. Nedokázali jsme ovšem už, dílo dokonat.',
+            text10: 'Proto jsme vybudovali skupinu pod dimenzí, která vás udělá silnější a připraví vás, s doufáním, že se jednoho dne objeví někdo, kdo bude schopen za nás dílo dokončit.',
+            text11: `Ještě jednou, ti z celého srdce děkuji. Za tvůj statečný skutek. Jako odměnu, ti mohu splnit jakékoli přání. Je tu něco, co by sis přál? ${name}.`
+        }
+        stopAniText();
+        endingAniText(text);
+    } else {
+        text = {
+            text1: 'Prohlédneš v rychlosti svoje věci, jestli nemáš něco, co by pasovalo do kulatého otvoru v oltáři.',
+            text2: 'I když vyzkoušíš spoustu kulatých předmětů co máš po ruce, žádná reakce.'
+        }
+        stopAniText();
+        aniText(text);
+    }
+});
+
+
+let special = false;
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+const eventBtnBase = document.getElementById('eventBtnBase');
+const theEndText = document.querySelector('.theEndText');
+const deathCounter = document.getElementById('deathCounter');
+
+function endingAniText(textArray) {
+    const keys = Object.keys(textArray);
+    console.log(index)
+
+    if(keys.length > 0) {
+        timeoutId = setTimeout(() => {
+            console.log('F TO PAY RESPECT BITCH')
+            testIdkBro = true
+            aniText2End(textArray[keys[index]]);
+            index++
+        }, 200);
+    }
+
+    currentTextArray = textArray;
+    currentKeys = keys;
+
+    textDiv.removeEventListener('click', handleClick);
+}
+
+function handleClickEnd() {
+    if (isWriting === false) {
+        console.log(loc);
+
+        isWriting = true;
+        textDiv.style.cursor = 'default';
+
+        opacityRemover();
+
+        hlUp.removeAttribute('glow');
+        hlDown.removeAttribute('glow');
+        hlRight.removeAttribute('glow');
+        hlLeft.removeAttribute('glow');
+
+        // IDK MAN SMT WITH TEXT
+        if (special) {
+            textDiv.textContent = '';
+            setTimeout(() => {
+                background.style.backgroundImage = "url('./Image-Library/theEnd.jpg')"
+            }, 750);
+            setTimeout(() => {
+                leftBtn.setAttribute('disappear', "");
+                rightBtn.setAttribute('disappear', "");
+                arrowBtnShadow1.setAttribute('disappearEnd', "");
+                arrowBtnShadow2.setAttribute('disappearEnd', "");
+                eventBtnShadow1.setAttribute('disappearEnd', "");
+                eventBtnBase.setAttribute('disappear', "");
+                currentEventBtn.setAttribute('disappear', "");
+
+                leftBtn.addEventListener('animationend', () => {
+                    currentEventBtn.style.display = 'none';
+                    eventBtnBase.style.display = 'none';
+                    leftBtn.style.display = 'none';
+                    rightBtn.style.display = 'none';
+                    arrowBtnShadow1.style.display = 'none';
+                    arrowBtnShadow2.style.display = 'none';
+                    eventBtnShadow1.style.display = 'none';
+                });
+            }, 1500);
+            setTimeout(() => {
+                special = false;
+                aniText2End(currentTextArray[currentKeys[index]]);
+                index++;
+            }, 2250);
+
+        } else if (specialZwei) {
+            console.log('specialZwei')
+            backgroundBlur.style.display = 'block';
+            backgroundBlur.setAttribute('appearEnd', "");
+            backgroundBlur.addEventListener('animationend', () => {
+                setTimeout(() => {
+                    deathCounter.innerText = `Hru si dokončil s ${userDeaths} smrtí.`;
+                    theEndText.style.display = 'flex';
+                    theEndText.setAttribute('appear', "");
+                }, 100);
+            });
+        } else {
+            aniText2End(currentTextArray[currentKeys[index]]);
+
+            // INDEX SHENANIGANS
+            if (index === 3) {
+                special = true;
+            }
+            if (index === 10) {
+                specialZwei = true;
+            }
+            index++;
+        }
+    }
+}
+
+function aniText2End(text, i = 0) {
+    if (i === 0) {
+        textDiv.textContent = '';
+    }
+    textDiv.textContent += text[i];
+    if (i < text.length - 1 && testIdkBro) {
+        setTimeout(() => aniText2End(text, i + 1), 15);
+    } else if (!testIdkBro) {
+        return
+    } else {
+        isWriting = false;
+        hlUp.setAttribute('glow', "");
+        hlDown.setAttribute('glow', "");
+        hlRight.setAttribute('glow', "");
+        hlLeft.setAttribute('glow', "");
+        setTimeout(() => {
+            textDiv.style.cursor = 'pointer';
+            textDiv.addEventListener('click', handleClickEnd);
+        }, 50);
+    };
 };

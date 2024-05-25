@@ -767,6 +767,10 @@ p {
     fill: url(#myGradientUltraMega);
 }
 
+#coreIcon {
+    fill: url(#myGradientUltraMega2);
+}
+
 #spawnEventBtn:hover #mapPiece1,
 #spawnEventBtn:hover #mapPiece2,
 #spawnEventBtn:hover #mapPiece3,
@@ -783,6 +787,7 @@ p {
 #gateEventBtn:hover #part9,
 #gateEventBtn:hover #part10,
 #gateEventBtn:hover #part11,
+#altarEventBtn:hover #coreIcon,
 #fightBtn:hover ~ #swordIconCon #swordIcon {
     fill: ivory;
 }
@@ -796,7 +801,7 @@ p {
 
 
 
-#shopEventBtn, #fountainEventBtn, #gateEventBtn {
+#shopEventBtn, #fountainEventBtn, #gateEventBtn, #altarEventBtn {
     visibility: hidden;
     z-index: -1;
     opacity: 0;
@@ -1212,4 +1217,38 @@ p {
 }
 #normalModeBtn:hover, #hardModeBtn:hover {
     background-image: linear-gradient(ivory, ivory);
+}
+
+#leftBtn[disappear], #rightBtn[disappear], #eventBtnBase[disappear] {
+    animation: fade-out 500ms forwards;
+}
+#arrowBtnShadow1[disappearEnd], #arrowBtnShadow2[disappearEnd], #eventBtnShadow1[disappearEnd] {
+    animation: fade-out2 450ms forwards;
+}
+
+#backgroundBlur[appearEnd] {
+    animation: fade-in 2000ms forwards ease;
+}
+
+.theEndText {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+    opacity: 0;
+    display: none;
+}
+
+.theEndText p {
+    font-size: xx-large;
+}
+
+.theEndText[appear] {
+    animation: fade-in 1s forwards ease;
 }
