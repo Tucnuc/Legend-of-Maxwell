@@ -2219,30 +2219,6 @@ function handleClickFighting() {
         if (index != repeatIndex) {
             monsterHP = monsterHP - userDmg;
             monsterHP = monsterHP < 0 ? 0 : monsterHP
-            if (!monsterDead) {
-                // MAXWELL SFX
-                let chosenSfx = '';
-                let maxwellSfx = new Audio(chosenSfx);
-
-                chooseMaxwellSfx();
-                maxwellSfx.src = chosenSfx;
-                maxwellSfx.play();
-
-                function chooseMaxwellSfx() {
-                    let maxwellSfxNumber = randint(1, 3);
-                    switch (maxwellSfxNumber) {
-                        case 1:
-                            chosenSfx = './Music-Library/angryMeow1.mp3'
-                            break
-                        case 2:
-                            chosenSfx = './Music-Library/angryMeow2.mp3'
-                            break
-                        case 3:
-                            chosenSfx = './Music-Library/angryMeow3.mp3'
-                            break
-                    };
-                };
-            }
             if (monsterHP <= 0) {
                 console.log('Monster Chciplo')
                 monsterDead = true;
