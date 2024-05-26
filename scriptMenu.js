@@ -198,7 +198,7 @@ infoBtn.addEventListener('click', () => {
     text2.innerHTML = "Hráč může procházet mezi zónami jak chce.";
     text3.innerHTML = "Nedoporučuje se ale chodit do vyšších zón se špatným vybavením.";
     text4.innerHTML = "V každé zóně je také Boss monstrum. Má 25% šanci, že zaútočí.";
-    text5.innerHTML = "Poté je 50% šance, že hráč dostane zbraň příslušné úrovně.";
+    text5.innerHTML = "Hráč pak dostane zbraň příslušné úrovně, jako bonusovou kořist.";
     
     event.stopPropagation();
     openMenu();

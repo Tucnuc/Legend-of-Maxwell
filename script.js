@@ -1447,14 +1447,14 @@ const weapons = {
         maxDmg: 40,
         tier: 6,
         price: 10000,
-        img: './Image-Library/stormyxSword.png'
+        img: './Image-Library/stormyxSworxd.png'
     },
     mythrilSword: {
         name: 'Mythrilový Meč',
         minDmg: 20,
         maxDmg: 50,
         tier: 7,
-        price: 25000,
+        price: 20000,
         img: './Image-Library/mythrilSword.png'
     },
     adamantiteSword: {
@@ -1462,7 +1462,7 @@ const weapons = {
         minDmg: 25,
         maxDmg: 75,
         tier: 8,
-        price: 50000,
+        price: 40000,
         img: './Image-Library/adamantiteSword.png'
     },
     orichalcumSword: {
@@ -1470,7 +1470,7 @@ const weapons = {
         minDmg: 45,
         maxDmg: 90,
         tier: 9,
-        price: 80000,
+        price: 75000,
         img: './Image-Library/orichalcumSword.png'
     },
     celestialSword: {
@@ -1478,7 +1478,7 @@ const weapons = {
         minDmg: 60,
         maxDmg: 100,
         tier: 10,
-        price: 125000,
+        price: 100000,
         img: './Image-Library/celestialSword.png'
     }
 }
@@ -1523,35 +1523,35 @@ const armors = {
         name: 'Stormyxové Brnění',
         health: 450,
         tier: 6,
-        price: 15000,
+        price: 10000,
         img: './Image-Library/stormyxarmor.png'
     },
     mythrilArmor: {
         name: 'Mythrilové Brnění',
         health: 600,
         tier: 7,
-        price: 40000,
+        price: 20000,
         img: './Image-Library/mythrilArmor.png'
     },
     adamantiteArmor: {
         name: 'Adamantiové Brnění',
         health: 700,
         tier: 8,
-        price: 100000,
+        price: 40000,
         img: './Image-Library/adamantiteArmor.png'
     },
     orichalcumArmor: {
         name: 'Orichalcové Brnění',
         health: 800,
         tier: 9,
-        price: 150000,
+        price: 75000,
         img: './Image-Library/orichalcumArmor.png'
     },
     celestialArmor: {
         name: 'Nebeské Brnění',
         health: 1000,
         tier: 10,
-        price: 200000,
+        price: 100000,
         img: './Image-Library/celestialArmor.png'
     }
 }
@@ -2131,9 +2131,9 @@ function handleClickFighting() {
         }
         if (specialFunf) {
             if (didBossSpawn) {
-                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbylo mu ${monsterHP - 9999999999} životů.`
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbylo mu ${monsterHP + userDmg - 9999999999} životů.`
             } else {
-                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbylo mu ${monsterHP - 9999999999} životů.`
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbylo mu ${monsterHP + userDmg - 9999999999} životů.`
             }
             gameOverMenuScreen();
             unblockBtns();
@@ -2184,7 +2184,7 @@ function handleClickFighting() {
                         corruptionCore = true;
                         console.log('Hezky pěkně soudruhu')
                     } else {
-                        let dostanesZbran = randint(1,2);
+                        let dostanesZbran = 1   // randint(1,2);
                         switch (dostanesZbran) {
                             case 1:
                                 if (userWeaponTier < bossMonster.tier+1) {
@@ -2216,7 +2216,7 @@ function handleClickFighting() {
         }
 
         // PLAYER ATTACKING
-        if (index != repeatIndex) {
+        if (index != repeatIndex && !monsterDead) {
             monsterHP = monsterHP - userDmg;
             monsterHP = monsterHP < 0 ? 0 : monsterHP
             if (monsterHP <= 0) {
@@ -2232,18 +2232,20 @@ function handleClickFighting() {
 
         // MONSTER ATTACKING
         } else {
-            userHP = userHP - monsterDmg
-            userHP = userHP < 0 ? 0 : userHP
-            statusHealth.innerHTML = `HP: ${userHP}`;
-            if (userHP <= 0) {
-                console.log('Chcipl si noob L ez')
-                userDead = true;
-                special = true;
-                monsterHP = monsterHP + 9999999999;
-                if (didBossSpawn) {
-                    specialInt = 5;
-                } else {
-                    specialInt = 4;
+            if (!monsterDead) {
+                userHP = userHP - monsterDmg
+                userHP = userHP < 0 ? 0 : userHP
+                statusHealth.innerHTML = `HP: ${userHP}`;
+                if (userHP <= 0) {
+                    console.log('Chcipl si noob L ez')
+                    userDead = true;
+                    special = true;
+                    monsterHP = monsterHP + 9999999999;
+                    if (didBossSpawn) {
+                        specialInt = 5;
+                    } else {
+                        specialInt = 4;
+                    }
                 }
             }
         }
