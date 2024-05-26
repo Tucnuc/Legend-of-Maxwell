@@ -520,7 +520,7 @@ const zones = {
     altar: {
         text: {
             text1: 'Cítíš se zmaten. Všichni totiž ví, že v bráně je jen deset zón. Co je tedy tohle za místo?',
-            text2: 'Nacházíš se u oltáře. Vypadá, že tohle místo blokuje nechtěnou energii z předchozí zóny.',
+            text2: 'Nacházíš se u oltáře. Vypadá to, že tohle místo blokuje nechtěnou energii z předchozí zóny.',
             text3: 'Po chvíli co se koukáš po okolí, si všimneš v oltáři kulatého otvoru. Vypadá důležitě..'
         },
         background: "url('./Image-Library/altar.jpg')",
@@ -943,8 +943,14 @@ function zoneChange(direction) {
 
 fountainEventBtn.addEventListener('click', () => {
     console.log('FONTAN CHUJ');
+    hpDifference = userMaxHP - userHP;
     userHP = userMaxHP;
     statusHealth.innerHTML = `HP: ${userHP}`;
+    text = {
+        text1: `Voda z fontány tě vyléčila o ${hpDifference} životů. Cítíš se jako nový!`
+    }
+    stopAniText();
+    aniText(text);
 });
 
 
@@ -2125,9 +2131,9 @@ function handleClickFighting() {
         }
         if (specialFunf) {
             if (didBossSpawn) {
-                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbývalo mu ${monsterHP - 9999999999} životů.`
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${bossMonster.name}. Zbylo mu ${monsterHP - 9999999999} životů.`
             } else {
-                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbývalo mu ${monsterHP - 9999999999} životů.`
+                document.getElementById('gameOverMenuText').innerHTML = `Zabil tě ${normalMonster.name}. Zbylo mu ${monsterHP - 9999999999} životů.`
             }
             gameOverMenuScreen();
             unblockBtns();
@@ -2213,6 +2219,30 @@ function handleClickFighting() {
         if (index != repeatIndex) {
             monsterHP = monsterHP - userDmg;
             monsterHP = monsterHP < 0 ? 0 : monsterHP
+            if (!monsterDead) {
+                // MAXWELL SFX
+                let chosenSfx = '';
+                let maxwellSfx = new Audio(chosenSfx);
+
+                chooseMaxwellSfx();
+                maxwellSfx.src = chosenSfx;
+                maxwellSfx.play();
+
+                function chooseMaxwellSfx() {
+                    let maxwellSfxNumber = randint(1, 3);
+                    switch (maxwellSfxNumber) {
+                        case 1:
+                            chosenSfx = './Music-Library/angryMeow1.mp3'
+                            break
+                        case 2:
+                            chosenSfx = './Music-Library/angryMeow2.mp3'
+                            break
+                        case 3:
+                            chosenSfx = './Music-Library/angryMeow3.mp3'
+                            break
+                    };
+                };
+            }
             if (monsterHP <= 0) {
                 console.log('Monster Chciplo')
                 monsterDead = true;
@@ -2427,7 +2457,11 @@ function gameOverMenuScreen() {
 };
 
 
-// ALTAR
+
+// --------
+//  ENDING
+// --------
+
 altarEventBtn.addEventListener('click', () => {
     if (corruptionCore) {
         blockBtns();
