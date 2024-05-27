@@ -30,7 +30,7 @@ function openMenu() {
     backgroundBlur.setAttribute('open', "");
     openableMenu.style.display = 'block';
     openableMenu.classList.add('closableMenu')
-    body.style.overflow = 'hidden';
+
 
     openableMenu.addEventListener('animationend', () => {
         if (isMenuOpening) {
@@ -70,7 +70,6 @@ function openMenu() {
                 openableMenu.style.display = 'none';
                 openableMenu.classList.remove('closableMenu')
                 openableMenu.removeEventListener('animationend', animationEndHandler)
-                body.style.overflow = '';
                 onOff.style.display = 'none';
             }
 
@@ -102,7 +101,7 @@ function openMenu2() {
     backgroundBlur.setAttribute('open', "");
     openableMenu.style.display = 'block';
     openableMenu.classList.add('closableMenu')
-    body.style.overflow = 'hidden';
+
 
     openableMenu.addEventListener('animationend', () => {
         if (isMenuOpening) {
@@ -162,7 +161,6 @@ function openMenu2() {
             heading.setAttribute('disappear', "")
             textCon.setAttribute('disappear', "")
             onOff.setAttribute('disappear', "")
-
             let animationEndHandler = () => {
                 openableMenu.removeAttribute('close')
                 backgroundBlur.removeAttribute('close')
@@ -176,7 +174,7 @@ function openMenu2() {
                 onOff.removeAttribute('disappear')
                 openableMenu.classList.remove('closableMenu')
                 openableMenu.removeEventListener('animationend', animationEndHandler)
-                body.style.overflow = '';
+            
                 textCon.style.height = '655.350px';
                 textCon.style.marginTop = '';
                 document.getElementById('onOff').innerHTML = "";

@@ -358,3 +358,35 @@ body {
         margin-top: 3rem;
     }
 }
+
+#hubBtn {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 5px;
+    width: 75px;
+    height: 75px;
+    background-color: rgb(18, 26, 44);
+    border: 3px solid #C59563;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: translateY(10px);
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    overflow: hidden;
+}
+
+#controllerIcon {
+    width: 60px;
+    margin-bottom: 7px;
+}
+#controllerIconSvg {
+    fill: url(#myGradientUltraMega);;
+}
+
+#hubBtn:hover #controllerIconSvg {
+    fill: ivory;
+}
