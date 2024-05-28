@@ -2,8 +2,8 @@
 ![screenshot](./Image-Library/menuImg.png)
 ## RPG webová hra s příběhem.
 Probojuj se až 10 zónami plných nepřátel, vyzbroj se do maxima. Staň se nejsilnějším! <br><br>
-### Máš ještě nějaké otázky? Pokud ne, tak tady je odkaz a můžeš se vrhnout do hraní!
-#### https://tucnuc.github.io/Legend-of-Maxwell/menu.html
+## Máš ještě nějaké otázky? Pokud ne, tak tady je odkaz a můžeš se vrhnout do hraní!
+### Odkaz na GitHub Pages: https://tucnuc.github.io/Legend-of-Maxwell/menu.html
 ## Informace
 - Ve hře je **10 zón**, kterými hráč musí projít aby dokončil hru.
 - Hráč může procházet mezi zónami jak chce.
