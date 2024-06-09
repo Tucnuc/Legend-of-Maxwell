@@ -278,3 +278,62 @@ buttons.forEach(button => {
         buttonSound.play();
     });
 });
+
+
+// PROMO BTN
+const promoBtn = document.getElementById('promoBtn');
+const promoCon = document.querySelector('.promoCon');
+const promoMenu = document.getElementById('promoMenu');
+const promoSubCon2 = document.getElementById('promoSubCon2');
+
+function openPromoMenu() {
+    isMenuOpening = true;
+    promoMenu.setAttribute('open', "");
+    backgroundBlur.style.display = 'block';
+    backgroundBlur.setAttribute('open', "");
+    promoMenu.style.display = 'block';
+    promoCon.style.display = 'flex';
+    promoMenu.classList.add('closableMenu')
+
+    promoMenu.addEventListener('animationend', () => {
+        if (isMenuOpening) {
+            setTimeout(() => {
+                promoSubCon2.style.display = 'flex';
+                promoSubCon2.setAttribute('appear', "");
+            }, 250);
+        }
+    })
+
+    let windowClickHandler = () => {
+        if (promoMenu.classList.contains('closableMenu')) {
+            isMenuOpening = false;
+            promoMenu.removeAttribute('open');
+            backgroundBlur.removeAttribute('open');
+            promoSubCon2.removeAttribute('appear');
+            promoMenu.setAttribute('close', "");
+            backgroundBlur.setAttribute('close', "");
+            promoSubCon2.setAttribute('disappear', "");
+
+            let animationEndHandler = () => {
+                promoMenu.removeAttribute('close');
+                backgroundBlur.removeAttribute('close');
+                promoSubCon2.style.display = 'none';
+                promoSubCon2.removeAttribute('disappear')
+                backgroundBlur.style.display = 'none';
+                promoMenu.style.display = 'none';
+                promoCon.style.display = 'none';
+                promoMenu.classList.remove('closableMenu')
+                promoMenu.removeEventListener('animationend', animationEndHandler)
+            }
+
+            promoMenu.addEventListener('animationend', animationEndHandler)
+            window.removeEventListener('click', windowClickHandler)
+        }
+    }
+    window.addEventListener('click', windowClickHandler)
+}
+
+promoBtn.addEventListener('click', () => {
+    event.stopPropagation();
+    openPromoMenu();
+});
