@@ -367,7 +367,7 @@ body {
 #hubBtn, #promoBtn {
     position: absolute;
     z-index: 1;
-    bottom: -5px;
+    bottom: 0;
     right: 5px;
     width: 75px;
     height: 75px;
