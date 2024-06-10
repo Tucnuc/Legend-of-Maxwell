@@ -367,7 +367,7 @@ body {
 #hubBtn, #promoBtn {
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    bottom: -5px;
     right: 5px;
     width: 75px;
     height: 75px;
@@ -396,10 +396,14 @@ body {
 #videoIcon {
     height: 50px;
     width: 50px;
-    margin-top: 11px;
+    margin-top: 7px;
 }
 #controllerIconSvg, #videoIconSvg {
     fill: url(#myGradientUltraMega);
+}
+
+.speakerIconSvg {
+    fill: url(#myGradientUltraMega2);
 }
 
 #hubBtn:hover #controllerIconSvg, #promoBtn:hover #videoIconSvg {
@@ -457,7 +461,7 @@ body {
 #poster {
     height: 450px;
     z-index: 1;
-    border: 2px solid #EDD4AE;
+    border: 2px solid #d3a97c;
 }
 
 #poster, .promoSubCon {
@@ -479,8 +483,39 @@ body {
 iframe {
     height: 305px;
     width: 525px;
-    border: 2px solid #EDD4AE;
+    border: 2px solid #d3a97c;
 }
+
+.promoSubCon3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#muteBtn {
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #d3a97c;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#speakerIcon {
+    width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RESPOSIVITA :)  */
