@@ -286,6 +286,11 @@ const promoCon = document.querySelector('.promoCon');
 const promoMenu = document.getElementById('promoMenu');
 const promoSubCon2 = document.getElementById('promoSubCon2');
 
+const muteBtn = document.getElementById('muteBtn');
+const soundWaveSvg = document.getElementById('soundWaveSvg');
+let playing = false;
+let canMute = true;
+
 function openPromoMenu() {
     isMenuOpening = true;
     promoMenu.setAttribute('open', "");
@@ -303,6 +308,43 @@ function openPromoMenu() {
             }, 250);
         }
     })
+
+    muteBtn.addEventListener('click', event => event.stopPropagation());
+
+    muteBtn.addEventListener('click', () => {
+        if (canMute) {
+            canMute = false;
+            switch (playing) {
+                case false:
+                    console.log('muting')
+                    soundWaveSvg.style.display = 'none';
+                    playing = true;
+                    volumeChangeInterval = setInterval(() => {
+                        if (audio.volume > 0) {
+                            audio.volume -= 0.1;
+                        } else {
+                            clearInterval(volumeChangeInterval);
+                        }
+                    }, 75);
+                    break
+                case true:
+                    console.log('unmuting')
+                    soundWaveSvg.style.display = 'block';
+                    playing = false;
+                    volumeChangeInterval = setInterval(() => {
+                        if (audio.volume < 0.2) {
+                            audio.volume += 0.1;
+                        } else {
+                            clearInterval(volumeChangeInterval);
+                        }
+                    }, 75);
+                    break
+            }
+            setTimeout(() => {
+               canMute = true; 
+            }, 250);
+        }
+    });
 
     let windowClickHandler = () => {
         if (promoMenu.classList.contains('closableMenu')) {
@@ -336,4 +378,9 @@ function openPromoMenu() {
 promoBtn.addEventListener('click', () => {
     event.stopPropagation();
     openPromoMenu();
+});
+
+
+muteBtn.addEventListener('click', () => {
+
 });
